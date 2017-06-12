@@ -7,11 +7,11 @@
  * # MainCtrl
  * Controller of yapp
  */
-angular.module('yapp')
+angular.module('app')
   .controller('LoginCtrl', function($scope, $location) {
 
     $scope.submit = function() {
-      debugger
+     
       $location.path('/dashboard');
 
       return false;

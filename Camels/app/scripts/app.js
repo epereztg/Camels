@@ -9,14 +9,15 @@
  * Main module of the application.
  */
 angular
-  .module('yapp', [
+  .module('app', [
     'ui.router',
-    // 'ngAnimate'
+     'ngAnimate'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/login');//original
+    //$urlRouterProvider.otherwise('/dashboard');
 
     $stateProvider
       .state('base', {
