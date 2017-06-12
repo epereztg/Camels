@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38E82342-3F64-441C-AFFC-171E273BE610}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Camels</RootNamespace>
+    <AssemblyName>Camels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include=".bowerrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".jscsrc" />
+    <Content Include=".jshintrc" />
+    <Content Include=".yo-rc.json" />
+    <Content Include="app\styles___\base.less" />
+    <Content Include="app\styles___\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\styles___\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\styles___\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\styles___\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\styles___\less\.csscomb.json" />
+    <Content Include="app\styles___\less\.csslintrc" />
+    <Content Include="app\styles___\less\alerts.less" />
+    <Content Include="app\styles___\less\badges.less" />
+    <Content Include="app\styles___\less\bootstrap.less" />
+    <Content Include="app\styles___\less\breadcrumbs.less" />
+    <Content Include="app\styles___\less\button-groups.less" />
+    <Content Include="app\styles___\less\buttons.less" />
+    <Content Include="app\styles___\less\carousel.less" />
+    <Content Include="app\styles___\less\close.less" />
+    <Content Include="app\styles___\less\code.less" />
+    <Content Include="app\styles___\less\component-animations.less" />
+    <Content Include="app\styles___\less\dropdowns.less" />
+    <Content Include="app\styles___\less\forms.less" />
+    <Content Include="app\styles___\less\glyphicons.less" />
+    <Content Include="app\styles___\less\grid.less" />
+    <Content Include="app\styles___\less\input-groups.less" />
+    <Content Include="app\styles___\less\jumbotron.less" />
+    <Content Include="app\styles___\less\labels.less" />
+    <Content Include="app\styles___\less\list-group.less" />
+    <Content Include="app\styles___\less\media.less" />
+    <Content Include="app\styles___\less\mixins.less" />
+    <Content Include="app\styles___\less\mixins\alerts.less" />
+    <Content Include="app\styles___\less\mixins\background-variant.less" />
+    <Content Include="app\styles___\less\mixins\border-radius.less" />
+    <Content Include="app\styles___\less\mixins\buttons.less" />
+    <Content Include="app\styles___\less\mixins\center-block.less" />
+    <Content Include="app\styles___\less\mixins\clearfix.less" />
+    <Content Include="app\styles___\less\mixins\forms.less" />
+    <Content Include="app\styles___\less\mixins\gradients.less" />
+    <Content Include="app\styles___\less\mixins\grid-framework.less" />
+    <Content Include="app\styles___\less\mixins\grid.less" />
+    <Content Include="app\styles___\less\mixins\hide-text.less" />
+    <Content Include="app\styles___\less\mixins\image.less" />
+    <Content Include="app\styles___\less\mixins\labels.less" />
+    <Content Include="app\styles___\less\mixins\list-group.less" />
+    <Content Include="app\styles___\less\mixins\nav-divider.less" />
+    <Content Include="app\styles___\less\mixins\nav-vertical-align.less" />
+    <Content Include="app\styles___\less\mixins\opacity.less" />
+    <Content Include="app\styles___\less\mixins\pagination.less" />
+    <Content Include="app\styles___\less\mixins\panels.less" />
+    <Content Include="app\styles___\less\mixins\progress-bar.less" />
+    <Content Include="app\styles___\less\mixins\reset-filter.less" />
+    <Content Include="app\styles___\less\mixins\resize.less" />
+    <Content Include="app\styles___\less\mixins\responsive-visibility.less" />
+    <Content Include="app\styles___\less\mixins\size.less" />
+    <Content Include="app\styles___\less\mixins\tab-focus.less" />
+    <Content Include="app\styles___\less\mixins\table-row.less" />
+    <Content Include="app\styles___\less\mixins\text-emphasis.less" />
+    <Content Include="app\styles___\less\mixins\text-overflow.less" />
+    <Content Include="app\styles___\less\mixins\vendor-prefixes.less" />
+    <Content Include="app\styles___\less\modals.less" />
+    <Content Include="app\styles___\less\navbar.less" />
+    <Content Include="app\styles___\less\navs.less" />
+    <Content Include="app\styles___\less\normalize.less" />
+    <Content Include="app\styles___\less\pager.less" />
+    <Content Include="app\styles___\less\pagination.less" />
+    <Content Include="app\styles___\less\panels.less" />
+    <Content Include="app\styles___\less\popovers.less" />
+    <Content Include="app\styles___\less\print.less" />
+    <Content Include="app\styles___\less\progress-bars.less" />
+    <Content Include="app\styles___\less\responsive-embed.less" />
+    <Content Include="app\styles___\less\responsive-utilities.less" />
+    <Content Include="app\styles___\less\scaffolding.less" />
+    <Content Include="app\styles___\less\tables.less" />
+    <Content Include="app\styles___\less\theme.less" />
+    <Content Include="app\styles___\less\thumbnails.less" />
+    <Content Include="app\styles___\less\tooltip.less" />
+    <Content Include="app\styles___\less\type.less" />
+    <Content Include="app\styles___\less\utilities.less" />
+    <Content Include="app\styles___\less\variables.less" />
+    <Content Include="app\styles___\less\wells.less" />
+    <Content Include="app\styles___\main.less" />
+    <Content Include="app\styles___\pages\dashboard.less" />
+    <Content Include="app\styles___\pages\login.less" />
+    <Content Include="app\styles___\transitions\all.less" />
+    <Content Include="app\styles___\transitions\avatar.less" />
+    <Content Include="app\styles___\transitions\pages.less" />
+    <Content Include="app\styles___\widgets\input-underline.less" />
+    <Content Include="app\tasks\tasks.json" />
+    <Content Include="bower.json" />
+    <Content Include="bower_components\angular-animate\.bower.json" />
+    <Content Include="bower_components\angular-animate\angular-animate.min.js.map" />
+    <Content Include="bower_components\angular-animate\bower.json" />
+    <Content Include="bower_components\angular-animate\LICENSE.md" />
+    <Content Include="bower_components\angular-animate\package.json" />
+    <Content Include="bower_components\angular-animate\README.md" />
+    <Content Include="bower_components\angular-aria\.bower.json" />
+    <Content Include="bower_components\angular-aria\angular-aria.min.js.map" />
+    <Content Include="bower_components\angular-aria\bower.json" />
+    <Content Include="bower_components\angular-aria\LICENSE.md" />
+    <Content Include="bower_components\angular-aria\package.json" />
+    <Content Include="bower_components\angular-aria\README.md" />
+    <Content Include="bower_components\angular-cookies\.bower.json" />
+    <Content Include="bower_components\angular-cookies\angular-cookies.min.js.map" />
+    <Content Include="bower_components\angular-cookies\bower.json" />
+    <Content Include="bower_components\angular-cookies\LICENSE.md" />
+    <Content Include="bower_components\angular-cookies\package.json" />
+    <Content Include="bower_components\angular-cookies\README.md" />
+    <Content Include="bower_components\angular-messages\.bower.json" />
+    <Content Include="bower_components\angular-messages\angular-messages.min.js.map" />
+    <Content Include="bower_components\angular-messages\bower.json" />
+    <Content Include="bower_components\angular-messages\LICENSE.md" />
+    <Content Include="bower_components\angular-messages\package.json" />
+    <Content Include="bower_components\angular-messages\README.md" />
+    <Content Include="bower_components\angular-mocks\.bower.json" />
+    <Content Include="bower_components\angular-mocks\bower.json" />
+    <Content Include="bower_components\angular-mocks\LICENSE.md" />
+    <Content Include="bower_components\angular-mocks\package.json" />
+    <Content Include="bower_components\angular-mocks\README.md" />
+    <Content Include="bower_components\angular-resource\.bower.json" />
+    <Content Include="bower_components\angular-resource\angular-resource.min.js.map" />
+    <Content Include="bower_components\angular-resource\bower.json" />
+    <Content Include="bower_components\angular-resource\LICENSE.md" />
+    <Content Include="bower_components\angular-resource\package.json" />
+    <Content Include="bower_components\angular-resource\README.md" />
+    <Content Include="bower_components\angular-route\.bower.json" />
+    <Content Include="bower_components\angular-route\angular-route.min.js.map" />
+    <Content Include="bower_components\angular-route\bower.json" />
+    <Content Include="bower_components\angular-route\LICENSE.md" />
+    <Content Include="bower_components\angular-route\package.json" />
+    <Content Include="bower_components\angular-route\README.md" />
+    <Content Include="bower_components\angular-sanitize\.bower.json" />
+    <Content Include="bower_components\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="bower_components\angular-sanitize\bower.json" />
+    <Content Include="bower_components\angular-sanitize\LICENSE.md" />
+    <Content Include="bower_components\angular-sanitize\package.json" />
+    <Content Include="bower_components\angular-sanitize\README.md" />
+    <Content Include="bower_components\angular-touch\.bower.json" />
+    <Content Include="bower_components\angular-touch\angular-touch.min.js.map" />
+    <Content Include="bower_components\angular-touch\bower.json" />
+    <Content Include="bower_components\angular-touch\LICENSE.md" />
+    <Content Include="bower_components\angular-touch\package.json" />
+    <Content Include="bower_components\angular-touch\README.md" />
+    <Content Include="bower_components\angular-ui-router\.bower.json" />
+    <Content Include="bower_components\angular-ui-router\bower.json" />
+    <Content Include="bower_components\angular-ui-router\CHANGELOG.md" />
+    <Content Include="bower_components\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="bower_components\angular-ui-router\DOCS.md" />
+    <Content Include="bower_components\angular-ui-router\ISSUE_TEMPLATE.md" />
+    <Content Include="bower_components\angular-ui-router\LICENSE" />
+    <Content Include="bower_components\angular-ui-router\migrate\migrate.json" />
+    <Content Include="bower_components\angular-ui-router\README.md" />
+    <Content Include="bower_components\angular-ui-router\release\angular-ui-router.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\angular-ui-router.min.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\resolveService.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\resolveService.min.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\stateEvents.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\stateEvents.min.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\ui-router-angularjs.js.map" />
+    <Content Include="bower_components\angular-ui-router\release\ui-router-angularjs.min.js.map" />
+    <Content Include="bower_components\angular-ui-router\tslint.json" />
+    <Content Include="bower_components\angular-ui-router\yarn.lock" />
+    <Content Include="bower_components\angular\.bower.json" />
+    <Content Include="bower_components\angular\angular.min.js.gzip" />
+    <Content Include="bower_components\angular\angular.min.js.map" />
+    <Content Include="bower_components\angular\bower.json" />
+    <Content Include="bower_components\angular\LICENSE.md" />
+    <Content Include="bower_components\angular\package.json" />
+    <Content Include="bower_components\angular\README.md" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="test\.jshintrc" />
+    <Content Include="test\karma.conf.js.orig" />
+    <Content Include="test\spec\factories\tasks.spec.js.orig" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="app\404.html" />
+    <Content Include="app\components\bar-list.component.js" />
+    <Content Include="app\components\components.module.js" />
+    <Content Include="app\components\graph.component.js" />
+    <Content Include="app\components\item-detail.component.js" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\images\flat-avatar.png" />
+    <Content Include="app\images\walkingCamel.gif" />
+    <Content Include="app\images\yeoman.png" />
+    <Content Include="app\index.html" />
+    <Content Include="app\js\angular-animate.js" />
+    <Content Include="app\js\angular-ui-router.min.js" />
+    <Content Include="app\js\angular.js" />
+    <Content Include="app\js\app.module.js" />
+    <Content Include="app\scripts\app.js" />
+    <Content Include="app\scripts\controllers\dashboard.js" />
+    <Content Include="app\scripts\controllers\login.js" />
+    <Content Include="app\services\services.module.js" />
+    <Content Include="app\services\task.service.js" />
+    <Content Include="app\shoppinglist.service.js" />
+    <Content Include="app\styles\app.animation.css" />
+    <Content Include="app\styles\app.css" />
+    <Content Include="app\styles___\app.animation.css" />
+    <Content Include="app\styles___\app.css" />
+    <Content Include="app\styles___\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\views\bar-list.template.html" />
+    <Content Include="app\views\graph.template.html" />
+    <Content Include="app\views\home.template.html" />
+    <Content Include="app\views\item-detail.template.html" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bower_components\angular-animate\angular-animate.js" />
+    <Content Include="bower_components\angular-animate\angular-animate.min.js" />
+    <Content Include="bower_components\angular-animate\index.js" />
+    <Content Include="bower_components\angular-aria\angular-aria.js" />
+    <Content Include="bower_components\angular-aria\angular-aria.min.js" />
+    <Content Include="bower_components\angular-aria\index.js" />
+    <Content Include="bower_components\angular-cookies\angular-cookies.js" />
+    <Content Include="bower_components\angular-cookies\angular-cookies.min.js" />
+    <Content Include="bower_components\angular-cookies\index.js" />
+    <Content Include="bower_components\angular-messages\angular-messages.js" />
+    <Content Include="bower_components\angular-messages\angular-messages.min.js" />
+    <Content Include="bower_components\angular-messages\index.js" />
+    <Content Include="bower_components\angular-mocks\angular-mocks.js" />
+    <Content Include="bower_components\angular-mocks\ngAnimateMock.js" />
+    <Content Include="bower_components\angular-mocks\ngMock.js" />
+    <Content Include="bower_components\angular-mocks\ngMockE2E.js" />
+    <Content Include="bower_components\angular-resource\angular-resource.js" />
+    <Content Include="bower_components\angular-resource\angular-resource.min.js" />
+    <Content Include="bower_components\angular-resource\index.js" />
+    <Content Include="bower_components\angular-route\angular-route.js" />
+    <Content Include="bower_components\angular-route\angular-route.min.js" />
+    <Content Include="bower_components\angular-route\index.js" />
+    <Content Include="bower_components\angular-sanitize\angular-sanitize.js" />
+    <Content Include="bower_components\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="bower_components\angular-sanitize\index.js" />
+    <Content Include="bower_components\angular-touch\angular-touch.js" />
+    <Content Include="bower_components\angular-touch\angular-touch.min.js" />
+    <Content Include="bower_components\angular-touch\index.js" />
+    <Content Include="bower_components\angular-ui-router\karma.conf.js" />
+    <Content Include="bower_components\angular-ui-router\migrate\migratewarn.js" />
+    <Content Include="bower_components\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="bower_components\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="bower_components\angular-ui-router\release\resolveService.js" />
+    <Content Include="bower_components\angular-ui-router\release\resolveService.min.js" />
+    <Content Include="bower_components\angular-ui-router\release\stateEvents.js" />
+    <Content Include="bower_components\angular-ui-router\release\stateEvents.min.js" />
+    <Content Include="bower_components\angular-ui-router\release\ui-router-angularjs.js" />
+    <Content Include="bower_components\angular-ui-router\release\ui-router-angularjs.min.js" />
+    <Content Include="bower_components\angular-ui-router\rollup.config.js" />
+    <Content Include="bower_components\angular\angular-csp.css" />
+    <Content Include="bower_components\angular\angular.js" />
+    <Content Include="bower_components\angular\angular.min.js" />
+    <Content Include="bower_components\angular\index.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="test\karma.conf.js" />
+    <Content Include="test\spec\factories\tasks.spec.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\bar-detail\" />
+    <Folder Include="app\bar-list\" />
+    <Folder Include="app\graph\" />
+    <Folder Include="app\home\" />
+    <Folder Include="app\phone\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41011</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:41011/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

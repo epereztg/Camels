@@ -1,0 +1,162 @@
+﻿[
+  {
+    "label": "Task1",
+    "total": 70,
+    "current": 20,
+    "imageUrl": "images/walkingCamel.gif",
+    "milestones":
+    [
+      { "date": "20170503", "complete": "5" },
+      { "date": "20170503", "complete": "15" },
+      { "date": "20170503", "complete": "25" },
+      { "date": "20170503", "complete": "35" },
+      { "date": "20170503", "complete": "12" }
+    ]
+  },
+  {
+    "label": "Task2",
+    "total": 94,
+    "current": 10,
+    "imageUrl": "images/yeoman.png",
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "40" }
+    ]
+  },
+  {
+    "label": "Task3",
+    "total": 62,
+    "current": 50,
+    "imageUrl": "images/walkingCamel.gif",
+    "milestones":
+    [
+      { "date": "20170503", "complete": "5" },
+      { "date": "20170503", "complete": "15" },
+      { "date": "20170503", "complete": "25" },
+      { "date": "20170503", "complete": "35" },
+      { "date": "20170503", "complete": "45" }
+    ]
+  },
+  {
+    "label": "Task4",
+    "total": 300,
+    "current": 200,
+    "imageUrl": "images/yeoman.png",
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task5",
+    "total": 96,
+    "current": 10,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task6",
+    "total": 104,
+    "current": 56,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task7",
+    "total": 122,
+    "current": 110,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task8",
+    "total": 152,
+    "current": 150,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task9",
+    "total": 176,
+    "current": 140,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "20" },
+      { "date": "20170503", "complete": "40" },
+      { "date": "20170503", "complete": "60" },
+      { "date": "20170503", "complete": "80" },
+      { "date": "20170503", "complete": "150" }
+    ]
+  },
+  {
+    "label": "Task10",
+    "total": 180,
+    "current": 35,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task11",
+    "total": 252,
+    "current": 200,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  },
+  {
+    "label": "Task12",
+    "total": 342,
+    "current": 342,
+    "milestones":
+    [
+      { "date": "20170503", "complete": "2" },
+      { "date": "20170503", "complete": "4" },
+      { "date": "20170503", "complete": "6" },
+      { "date": "20170503", "complete": "8" },
+      { "date": "20170503", "complete": "10" }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+
+ TBD: Detail view for element<span>{{itemDetail.itemId}}</span>
+
+
+<div class="container">
+  <br /> ID: <br />
+  <input type="text" ng-model="itemDetail.itemId" />
+  <br /> Label: <br />
+  <input type="text" ng-model="itemDetail.label" />
+  <br /> Total: <br />
+  <input type="text" ng-model="itemDetail.total" />
+  <br /> Current: <br />
+  <input type="text" ng-model="itemDetail.current" />
+  <br />
+
+  <button ng-click="itemDetail.getSomeItem(itemDetail.itemId)">getSomeItem</button>
+
+
+
+</div>
