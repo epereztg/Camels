@@ -27,7 +27,7 @@ service.factory('TasksService', function ($http) {
     },
   
     GetApiCall : function () {
-      result = $http.get('http://localhost:21275/api/editDetails').success(function (data, status) {
+      result = $http.get('http://localhost:21275/editDetails').success(function (data, status) {
         result = (data);
         
       }).error(function () {
@@ -38,7 +38,7 @@ service.factory('TasksService', function ($http) {
 
     // This is used for calling post methods from web api with passing some data to the web api controller
     PostApiCall: function (controllerName, methodName, obj) {
-      result = $http.post('http://localhost:21275/api/editDetails', obj).success(function (data, status) {
+      result = $http.post('http://localhost:21275/editDetails', obj).success(function (data, status) {
         result = (data);
       }).error(function () {
         alert("Something went wrong");

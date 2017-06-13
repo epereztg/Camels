@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels", "Camels\Camels.csproj", "{38E82342-3F64-441C-AFFC-171E273BE610}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels.Web", "Camels\Camels.Web.csproj", "{38E82342-3F64-441C-AFFC-171E273BE610}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels.Test", "Camels.Test\Camels.Test.csproj", "{1F62FF1C-D371-456E-B2DD-662376DA8B48}"
 EndProject

@@ -5,33 +5,36 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Http.Cors;
-using System.Web.Mvc;
+//using System.Web.Mvc;
 using Newtonsoft.Json;
 using Camels.Backend.Models;
-
+using System.Web.Http;
+using System.Web.Http.Routing;
+using System.Web.Script.Serialization;
 
 namespace Camels.Project.Controllers
 {
 
 
     [RoutePrefix("editDetails")]
-    public class EditDetailsController : Controller
+    public class EditDetailsController : ApiController
     {
         List<Task> items;
         string s;
-       
-      
-        public List<Task> LoadJson(string s)
-        {
-            using (System.IO.StreamReader r = new StreamReader(s))
-            {
-                string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<Task>>(json);
-            }
-            return items;
-        }
-        [HttpGet]
+
+
+        //public List<Task> LoadJson(string s)
+        //{
+        //    using (System.IO.StreamReader r = new StreamReader(s))
+        //    {
+        //        string json = r.ReadToEnd();
+        //        items = JsonConvert.DeserializeObject<List<Task>>(json);
+        //    }
+        //    return items;
+        //}
+
         [Route("")]
+        [HttpGet]
         public string GetDropdownList()
         {
             string result = string.Empty;
@@ -50,8 +53,8 @@ namespace Camels.Project.Controllers
             lstStates.Add(objStates);
 
             //json stringfy the result
-           // result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(lstStates);
-            result = "Funcionaaaaaaaaaaaa";
+            result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(lstStates);
+            
             return result;
         }
 
@@ -94,13 +97,14 @@ namespace Camels.Project.Controllers
         //    return result;
         //}
 
+        [Route("")]
         [HttpPost]
         public string GetResult(States obj)
         {
             string result = string.Empty;
             result = "My state name is " + obj.stateName;
             //json stringfy the result
-           // result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(result);
+            result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(result);
             return result;
         }
 

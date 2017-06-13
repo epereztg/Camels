@@ -30,10 +30,10 @@ namespace Camels.Project
         {
 
             //ApiConfiguration;
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional });
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional });
 
         }
 

@@ -25,11 +25,13 @@
 
 
     itemDetail.result = TasksService.GetApiCall().success(function (data) {
-      debugger;
+      
       console.log("Start");
-      var data = $.parseJSON(JSON.parse(data));
-      console.log(data);
+        //var data = $.parseJSON(JSON.parse(data));
+      var data = data;
+      console.log("End");
       itemDetail.StateList = data;
+      debugger;
     });
 
 
