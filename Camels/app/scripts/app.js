@@ -11,7 +11,9 @@
 angular
   .module('app', [
     'ui.router',
-     'ngAnimate'
+     'ngAnimate',
+    'core.components',
+    'core.services'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -29,13 +31,13 @@ angular
         url: '/login',
         parent: 'base',
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        //controller: 'LoginCtrl'
       })
       .state('dashboard', {
         url: '/dashboard',
         parent: 'base',
         templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
+        //controller: 'DashboardCtrl'
       })
       .state('overview', {
         url: '/overview',

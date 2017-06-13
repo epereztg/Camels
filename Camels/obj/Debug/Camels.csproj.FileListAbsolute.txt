@@ -38,3 +38,5 @@ C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\Camels\Camels\Camels\bin
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\Camels\Camels\Camels\obj\Debug\Camels.csprojResolveAssemblyReference.cache
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\Camels\Camels\Camels\obj\Debug\Camels.dll
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\Camels\Camels\Camels\obj\Debug\Camels.pdb
+D:\Projects\Camels\Camels\Camels\bin\Less.dll
+D:\Projects\Camels\Camels\Camels\bin\Less.pdb
