@@ -1,12 +1,11 @@
 (function() {
   'use strict';
 
-  angular.module('core.components')
-    //angular.module('itemDetail')
+  angular.module('core.components')    
     .controller('ItemDetailController', ItemDetailController);
 
   // 'item' is injected through state's resolve
-  ItemDetailController.$inject = ['item', 'itemId', 'TasksService']
+  ItemDetailController.$inject = ['item', 'itemId', 'TasksService'];
 
   function ItemDetailController($scope, itemId, TasksService) {
 
@@ -21,14 +20,19 @@
 
     itemDetail.getSomeItem = function(itemId) {
       //Op2
-      var itemNew= TasksService.getSomeItem(itemId);
-      
-      /////itemDetail.label =  JSON.stringify(itemNew);
-      //Op1
-      // TasksService.getSomeItem()
-      //   .then(function(data) {
-      //     itemDetail.label =  JSON.stringify(data);
-      //   });
+      var itemNew= TasksService.getSomeItem(itemId);     
     }
+
+
+    itemDetail.result = TasksService.GetApiCall().success(function (data) {
+      debugger;
+      console.log("Start");
+      var data = $.parseJSON(JSON.parse(data));
+      console.log(data);
+      itemDetail.StateList = data;
+    });
+
+
+
   };
 })();

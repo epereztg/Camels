@@ -27,8 +27,7 @@ component("graph", {
           // PhantomJS only supports a small subset of ES6.
           // https://stackoverflow.com/questions/39026881/unexpected-token-using-array-some-with-karma-and-phantomjs
           // self.max = data.reduce((acc, task) => acc >= task.total ? acc : task.total, 0)
-          var arrLength = self.data.length;
-          console.log("datalenght: " + self.data.length);
+                    
           for (var i = 0; i < arrLength; i++) {
             // Find Maximum X Axis Value
             if (self.data[i].total > self.max)
