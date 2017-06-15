@@ -13,6 +13,7 @@ namespace Camels.Test
         public void TestMethod1()
         {
             EditDetailsController controller = new EditDetailsController();
+            //Testing
 
             //Assert.AreEqual(controller.GetDropdownList().Count(), 12);
 
