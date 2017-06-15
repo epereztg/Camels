@@ -5,7 +5,7 @@
     "total": 70,
     "current": 20,
     "imageUrl": "images/walkingCamel.gif",
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "5"
@@ -34,7 +34,7 @@
     "total": 94,
     "current": 10,
     "imageUrl": "images/yeoman.png",
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -63,7 +63,7 @@
     "total": 62,
     "current": 50,
     "imageUrl": "images/walkingCamel.gif",
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "5"
@@ -92,7 +92,7 @@
     "total": 300,
     "current": 200,
     "imageUrl": "images/yeoman.png",
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -120,7 +120,7 @@
     "label": "Task5",
     "total": 96,
     "current": 10,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -148,7 +148,7 @@
     "label": "Task6",
     "total": 104,
     "current": 56,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -176,7 +176,7 @@
     "label": "Task7",
     "total": 122,
     "current": 110,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -204,7 +204,7 @@
     "label": "Task8",
     "total": 152,
     "current": 150,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -232,7 +232,7 @@
     "label": "Task9",
     "total": 176,
     "current": 140,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "20"
@@ -260,7 +260,7 @@
     "label": "Task10",
     "total": 180,
     "current": 35,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -289,7 +289,7 @@
     "label": "Task11",
     "total": 252,
     "current": 200,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"
@@ -317,7 +317,7 @@
     "label": "Task12",
     "total": 342,
     "current": 342,
-    "milestones": [
+    "timeline": [
       {
         "date": "20170503",
         "complete": "2"

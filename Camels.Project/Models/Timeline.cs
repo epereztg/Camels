@@ -7,8 +7,6 @@ namespace Camels.Project.Models
 {
     public class Timeline
     {
-        public DateTime Date { get; set; }
-        public int Complete { get; set; }
         Dictionary<int, DateTime> Milestones = new Dictionary<int, DateTime>();
 
         public Timeline() { }

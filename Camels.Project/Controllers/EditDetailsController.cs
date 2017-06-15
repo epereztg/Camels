@@ -26,7 +26,6 @@ namespace Camels.Project.Controllers
 
         public List<TaskItem> LoadJson(string s)
         {
-           // D://Projects//CamelsRace//Camels//Camels.Project//Data//tasks.json
             s = AppDomain.CurrentDomain.BaseDirectory + s;
             using (System.IO.StreamReader r = new StreamReader(s))
             {
