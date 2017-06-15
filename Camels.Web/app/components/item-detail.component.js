@@ -43,11 +43,7 @@
     itemDetail.onTaskChange = function () {
       
       TasksService.GetApiCall(controllerRoute).success(function(data) {
-        data = JSON.parse(data);
-       
-        //$scope.label = data[itemDetail.itemSelected.ItemId].label;
-        
-        //itemDetail = data[itemDetail.itemSelected.ItemId];                
+        data = JSON.parse(data);               
       });
 
 

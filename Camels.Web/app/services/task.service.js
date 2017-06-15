@@ -13,19 +13,8 @@ service.factory('TasksService', function ($http) {
           throw 'There was an error getting data';
         });
     },
-    //Op1
-    getSomeItem: function (itemId) {
-      return $http.get('tasks/tasks.json')
-        .success(function (items) {
-          var aux = JSON.parse(JSON.stringify(items));
-          items[itemId].label = "TaskModifieditems";
-          console.log(items[itemId]);
-          return items;
-        })
-        .error(function (data) {
-          throw new Error(data + status + headers + config);
-        });
-    },
+    
+    
 
     GetApiCall: function (controllerRoute) {
       result = $http.get('http://localhost:21275/' + controllerRoute).success(function(data, status) {

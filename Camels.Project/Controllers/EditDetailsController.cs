@@ -4,6 +4,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Http.Cors;
 //using System.Web.Mvc;
 using Newtonsoft.Json;
@@ -52,8 +53,8 @@ namespace Camels.Project.Controllers
         public string UpdateTask(TaskItem taskItem)
         {
             string result = String.Empty;
-            s = ConfigurationManager.AppSettings["JSONPath"];            
-
+            s = ConfigurationManager.AppSettings["JSONPath"];
+            var sTest = "D:/Projects/CamelsRace/Camels/Camels.Web/app/tasks/tasks.json";
 
             ////Read Json File as array
             this.items = LoadJson(s);
@@ -69,6 +70,7 @@ namespace Camels.Project.Controllers
                 //Serialize json object
                 result = Newtonsoft.Json.JsonConvert.SerializeObject(this.items, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(s, result);
+                System.IO.File.WriteAllText(sTest, result);                
             }
             else
             {                
