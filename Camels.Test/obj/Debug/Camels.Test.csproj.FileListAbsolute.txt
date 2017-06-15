@@ -1,7 +1,0 @@
-D:\Projects\Camels\Camels\Camels.Test\bin\Debug\Camels.Test.dll
-D:\Projects\Camels\Camels\Camels.Test\bin\Debug\Camels.Test.pdb
-D:\Projects\Camels\Camels\Camels.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\Projects\Camels\Camels\Camels.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
-D:\Projects\Camels\Camels\Camels.Test\obj\Debug\Camels.Test.csprojResolveAssemblyReference.cache
-D:\Projects\Camels\Camels\Camels.Test\obj\Debug\Camels.Test.dll
-D:\Projects\Camels\Camels\Camels.Test\obj\Debug\Camels.Test.pdb
