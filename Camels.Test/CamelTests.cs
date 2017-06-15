@@ -13,9 +13,8 @@ namespace Camels.Test
         public void TestMethod1()
         {
             EditDetailsController controller = new EditDetailsController();
-            //Testing
+            //jkbdglbsdfjklgf
 
-            //Menudo conflictazo va dar rebaseee
 
 
         }
