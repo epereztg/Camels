@@ -34,14 +34,15 @@ namespace Camels.Project.Controllers
 
         [Route("")]
         [HttpGet]
-        public string GetDropdownList()
+        public Object GetDropdownList()
         {
             string result = string.Empty;
 
             s = ConfigurationManager.AppSettings["JSONPath"];
             this.items = LoadJson(s);
             result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(this.items);
-
+            //result = this.items;
+            //return this.items;
             return result;
         }
 

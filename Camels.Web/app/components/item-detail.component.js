@@ -13,18 +13,22 @@
 
     
     
+    //itemDetail.label = $scope.label;
+    //itemDetail.total = $scope.total;
+    //itemDetail.current = $scope.current;
+    //itemDetail.itemId = itemId;
     itemDetail.label = $scope.label;
     itemDetail.total = $scope.total;
     itemDetail.current = $scope.current;
     itemDetail.itemId = itemId;
 
-
+    itemDetail.Label = $scope.label;
     //Read from JSON with backend
     itemDetail.result = TasksService.GetApiCall(controllerRoute).success(function (data) {            
       data = JSON.parse(data);            
       itemDetail.StateList = data;
     });
-    itemDetail.itemSelected = itemId;
+
 
     //Save Task details button
     itemDetail.btnPostCall = function () {            
@@ -36,17 +40,23 @@
       }        
       var result = TasksService.PostApiCall(controllerRoute,obj).success(function (data) {       
         data = JSON.parse(data);       
-        itemDetail.message = data;        
+        itemDetail.message = data;
       });
     };
   
+
+    //On DropDownList Change 
     itemDetail.onTaskChange = function () {
-      TasksService.GetApiCall(controllerRoute).success(function (data) {
+      
+      TasksService.GetApiCall(controllerRoute).success(function(data) {
         data = JSON.parse(data);
         debugger;
-        itemDetail.ItemId = data[itemDetail.itemSelected.ItemId];
+        $scope.label = data[itemDetail.itemSelected.ItemId].label;
+        
+        //itemDetail = data[itemDetail.itemSelected.ItemId];                
       });
-      
+
+
     };
 
 
