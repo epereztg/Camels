@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Camels.Backend.Models
+namespace Camels.Project.Models
 {
     public class States
     {

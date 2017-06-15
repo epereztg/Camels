@@ -18,10 +18,11 @@ namespace Camels.Project
 
             var httpConfiguration = new HttpConfiguration();
             app.Map("/api", appBuilder => ConfigureApi(app, httpConfiguration));
+           
 
-
-            var corsAttr = new EnableCorsAttribute("http://localhost:21275", "*", "*", "Content-Disposition");
-             httpConfiguration.EnableCors(corsAttr);            
+            //var corsAttr = new EnableCorsAttribute("http://localhost:21275", "*", "*", "Content-Disposition");
+            
+            //httpConfiguration.EnableCors(corsAttr);            
 
 
         }
@@ -32,8 +33,8 @@ namespace Camels.Project
             //ApiConfiguration;
             //config.Routes.MapHttpRoute(
             //    name: "DefaultApi",
-            //    routeTemplate: "{controller}/{id}",
-            //    defaults: new { id = RouteParameter.Optional });
+            //    routeTemplate: "{controller}/{ItemId}",
+            //    defaults: new { ItemId = RouteParameter.Optional });
 
         }
 

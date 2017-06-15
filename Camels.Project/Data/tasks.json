@@ -1,0 +1,74 @@
+[
+  {
+    "ItemId": 0,
+    "Label": "Task1",
+    "Total": 70,
+    "Current": 20
+  },
+  {
+    "ItemId": 1,
+    "Label": "Task2",
+    "Total": 94,
+    "Current": 10
+  },
+  {
+    "ItemId": 2,
+    "Label": "Task3",
+    "Total": 62,
+    "Current": 50
+  },
+  {
+    "ItemId": 3,
+    "Label": "Task4",
+    "Total": 300,
+    "Current": 200
+  },
+  {
+    "ItemId": 4,
+    "Label": "Task5",
+    "Total": 96,
+    "Current": 10
+  },
+  {
+    "ItemId": 5,
+    "Label": "Task6",
+    "Total": 104,
+    "Current": 56
+  },
+  {
+    "ItemId": 6,
+    "Label": "Task7",
+    "Total": 122,
+    "Current": 110
+  },
+  {
+    "ItemId": 7,
+    "Label": "Task8",
+    "Total": 152,
+    "Current": 150
+  },
+  {
+    "ItemId": 8,
+    "Label": "Task999999",
+    "Total": 176,
+    "Current": 176
+  },
+  {
+    "ItemId": 9,
+    "Label": "Task10",
+    "Total": 180,
+    "Current": 35
+  },
+  {
+    "ItemId": 10,
+    "Label": "Task11",
+    "Total": 200,
+    "Current": 50
+  },
+  {
+    "ItemId": 11,
+    "Label": "Task12",
+    "Total": 400,
+    "Current": 400
+  }
+]

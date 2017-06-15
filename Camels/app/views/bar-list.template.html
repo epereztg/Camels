@@ -1,10 +1,12 @@
-<div ng-repeat="bar in $ctrl.data"  class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.current / $ctrl.max * $ctrl.width}}px; top:{{$index / $ctrl.data.length * $ctrl.width}}px; ">
-<!-- TaskItem Label over bar-->
-  <a class="label " align="left " ui-sref="itemDetail({itemId: $index}) ">{{bar.label}}</a>
+<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.current / $ctrl.max * $ctrl.width}}px; top:{{$index / $ctrl.data.length * $ctrl.width}}px; ">
 
-  <div class="bar bar-list-item camel ">
-    <img ng-src="{{$ctrl.image}} " height="42 " width="42 "   top="-5px " />
-  </div>
+
+  <!-- TaskItem Label over bar-->
+  <a class="label " align="left " ui-sref="itemDetail({itemId: $index}) ">{{bar.label}}-{{bar.current}} of {{bar.total}}</a>
+
+  <!--<div class="bar bar-list-item camel ">
+    <img ng-src="{{$ctrl.image}} " height="42 " width="42 " top="-5px " />
+  </div>-->
 
   <!--Milestones-->
   <!-- <div class="milestone tooltip " ng-repeat="mls in bar.milestones " style="margin-left: {{mls.complete / $ctrl.max * $ctrl.height}}px; ">
@@ -12,4 +14,4 @@
 </div>
 
 
-  <!-- <span class="tooltiptext ">"{{mls.complete}} ({{bar.label}})}} "</span> -->
+<!-- <span class="tooltiptext ">"{{mls.complete}} ({{bar.label}})}} "</span> -->

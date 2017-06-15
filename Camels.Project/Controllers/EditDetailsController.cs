@@ -7,108 +7,75 @@ using System.Web;
 using System.Web.Http.Cors;
 //using System.Web.Mvc;
 using Newtonsoft.Json;
-using Camels.Backend.Models;
 using System.Web.Http;
 using System.Web.Http.Routing;
 using System.Web.Script.Serialization;
+using Camels.Project.Models;
 
 namespace Camels.Project.Controllers
 {
-
-
+    [EnableCors(origins: "http://localhost:21275", headers: "*", methods: "*")]
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
     {
-        List<Task> items;
+        List<TaskItem> items;
         string s;
 
 
-        //public List<Task> LoadJson(string s)
-        //{
-        //    using (System.IO.StreamReader r = new StreamReader(s))
-        //    {
-        //        string json = r.ReadToEnd();
-        //        items = JsonConvert.DeserializeObject<List<Task>>(json);
-        //    }
-        //    return items;
-        //}
+        public List<TaskItem> LoadJson(string s)
+        {
+            using (System.IO.StreamReader r = new StreamReader(s))
+            {
+                string json = r.ReadToEnd();
+                items = JsonConvert.DeserializeObject<List<TaskItem>>(json);
+            }
+            return items;
+        }
 
         [Route("")]
         [HttpGet]
         public string GetDropdownList()
         {
             string result = string.Empty;
-            List<States> lstStates = new List<States>();
-            States objStates = new States();
-            objStates.stateId = 1;
-            objStates.stateName = "Karnataka";
-            lstStates.Add(objStates);
-            objStates = new States();
-            objStates.stateId = 2;
-            objStates.stateName = "Maharastra";
-            lstStates.Add(objStates);
-            objStates = new States();
-            objStates.stateId = 3;
-            objStates.stateName = "Delhi";
-            lstStates.Add(objStates);
 
-            //json stringfy the result
-            result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(lstStates);
-            
+            s = ConfigurationManager.AppSettings["JSONPath"];
+            this.items = LoadJson(s);
+            result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(this.items);
+
             return result;
         }
 
-        //[HttpPost]
-        //[OutputCacheAttribute(VaryByParam = "*", Duration = 0, NoStore = true)]
-        //public string UpdateTask()
-        //{
-
-        //    s = ConfigurationManager.AppSettings["JSONPath"];
-
-
-        //    //var dateTime = System.DateTime.UtcNow;
-        //    ////----Add bid to list of bids for that product
-        //    ////Read Json File as array
-        //    this.items = LoadJson(s);
-        //    ////Get selected product in json file
-        //    //var jsonProduct = items.Where(q => q.id.Equals(Int32.Parse(productId))).Single();
-        //    //if (jsonProduct.price < decBidPrice)
-        //    //{
-        //    //    //Create new bid && Add new bid to Json file
-        //    //    if (jsonProduct.bids != null)
-        //    //    {
-        //    //        jsonProduct.bids.Add(new Bid(firstname, lastname, decBidPrice, dateTime));
-        //    //    }
-        //    //    else jsonProduct.bids = new List<Bid> { new Bid(firstname, lastname, decBidPrice, dateTime) };
-        //    //    //----Change product price to that value (if we got to that point, it should be currently the max bid)
-        //    //    jsonProduct.price = decBidPrice;
-        //    //    //Serialize json object
-        //    //    string output = Newtonsoft.Json.JsonConvert.SerializeObject(this.items, Newtonsoft.Json.Formatting.Indented);
-        //    //    System.IO.File.WriteAllText(s, output);
-        //    //}
-        //    //else
-        //    //{
-        //    //    //Somebody updated the bid before you!
-        //    //    //You should bid higher man!
-
-        //    //}
-        //    //return RedirectToAction("Index");
-        //    string result = string.Empty;
-        //    return result;
-        //}
-
-        [Route("")]
         [HttpPost]
-        public string GetResult(States obj)
+        [Route("")]
+       // [OutputCacheAttribute(VaryByParam = "*", Duration = 0, NoStore = true)]       
+        public string UpdateTask(TaskItem taskItem)
         {
-            string result = string.Empty;
-            result = "My state name is " + obj.stateName;
-            //json stringfy the result
-            result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(result);
+            string result = String.Empty;
+            s = ConfigurationManager.AppSettings["JSONPath"];            
+
+
+            ////Read Json File as array
+            this.items = LoadJson(s);
+            ////Get selected product in json file
+            var jsonProduct = items.Where(q => q.ItemId.Equals(taskItem.ItemId)).Single();
+
+            
+            if (taskItem.Current <= taskItem.Total)
+            {
+                jsonProduct.Total = taskItem.Total;
+                jsonProduct.Label = taskItem.Label;
+                jsonProduct.Current = taskItem.Current;
+                //Serialize json object
+                result = Newtonsoft.Json.JsonConvert.SerializeObject(this.items, Newtonsoft.Json.Formatting.Indented);
+                System.IO.File.WriteAllText(s, result);
+            }
+            else
+            {                
+             //Cannot update task    
+                
+            }
             return result;
         }
-
-
 
     }
 }
