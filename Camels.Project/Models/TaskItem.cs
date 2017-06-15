@@ -12,16 +12,18 @@ namespace Camels.Project.Models
         public int Total { get; set; }
         public int Current { get; set; }
 
+        public Timeline Timeline{ get; set; }
 
-        public TaskItem() { }
 
-        public TaskItem(int itemId, string label, int total, int current)
+    public TaskItem() { }
+
+        public TaskItem(int itemId, string label, int total, int current, Timeline timeline)
         {
             this.ItemId = itemId;
             this.Label = label;
             this.Total = total;
             this.Current = current;
-
+            this.Timeline = timeline;
         }
     }
 }
