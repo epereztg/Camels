@@ -1,34 +1,72 @@
- TBD: Detail view for element<span>{{itemDetail.itemId}}</span>
+<div class="dashboard-page">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-3 col-md-2 sidebar">
+        <div class="text-center">
+          <h2 class="brand">
+            Camel Race<small>GO!</small>
+          </h2>
+          <img src="images/flat-avatar.png" class="user-avatar" /><br />
+          <a ui-sref="login" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
+        </div>
+
+        <ul class="nav nav-sidebar">
+          <li ng-class="{active: $state.includes('overview')}"><a ui-sref="overview">Overview <span class="sr-only">(current)</span></a></li>
+          <!--<li ng-class="{active: $state.includes('reports')}"><a ui-sref="reports">Reports</a></li>-->
+        </ul>
+      </div>
+
+      <!--Here-->
 
 
-<div class="container">
-  <br /> ID: {{itemDetail.itemId}}<br />
 
-  <br /> Label: <br />
-  <input type="text" ng-model="itemDetail.label" />
-  <br /> Total: <br />
-  <input type="text" ng-model="itemDetail.total" />
-  <br /> Current: <br />
-  <input type="text" ng-model="itemDetail.current" />
-  <br />
+      <div class="container">
+        <div class="detail ">
+          TBD: Detail view for element <span>{{itemDetail.itemId}}</span>
+          <div class="col-sm-4">
 
-  <div class="col-sm-4" style="padding-right: 0;">
-    <select style="padding: 3px 3px" class="form-control" ng-model="State" ng-options="State.Label for State  in itemDetail.StateList">
-      <option value="">Select State</option>
-    </select>
+            <br /> ID: {{itemDetail.itemId}}<br />
+
+            <br /> Label: <br />
+            <input type="text" ng-model="itemDetail.label" />                      
+            <br /> Total: <br />
+            <input type="text" ng-model="itemDetail.total" />            
+            <br /> Current: <br />
+            <input type="text" ng-model="itemDetail.current" />            
+            <br />
+            <br />
+            
+
+            <!--Show Dropdown with tasks-->
+            <div style="padding-right: 0;">
+              <select class="form-control" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-init="itemDetail.itemSelected" ng-options="task.Label for task in itemDetail.StateList">                             
+              </select>              
+              <span>Selected Load Task: {{itemDetail.itemSelected.Label}}</span>
+            </div>
+            
+            
+            
+
+            <br />
+            <button ng-click="itemDetail.btnPostCall()">Save</button>
+            <button ui-sref="overview">Home</button>   
+
+
+            <div>
+              <!--<span>JSON content:</span>
+              <span>{{itemDetail.message}}</span>-->
+            </div>
+          </div>
+        </div>
+        <!--Here-->
+
+
+      </div>
+    </div>
   </div>
 
 
-  <button ng-click="itemDetail.btnPostCall()">btnPostCall</button>
-  <button ng-click="itemDetail.btnPostCall()">Home</button>
 
 
-  <!--<button ng-click="itemDetail.getSomeItem(itemDetail.itemId)">getSomeItem</button>
-  <button ng-click="itemDetail.getItem(itemDetail.itemId)">getItem</button>-->
-  
-  </br>
-  <span>JSON content:</span>
-  <span>{{itemDetail.message}}</span>
 
-
-</div>

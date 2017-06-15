@@ -58,12 +58,18 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
         ],
         item: ['$stateParams', 'TasksService',
           function($stateParams, TasksService) {
-            var items;
-            return TasksService.getList()
-              .then(function(items) {
-                return items[$stateParams.itemId];
-              });
+            var items;           
+            var controllerRoute = 'editDetails';
+            TasksService.GetApiCall(controllerRoute).success(function (data) {
+              data = JSON.parse(data);
+              return data;
+            });
+            //TasksService.getList()
+            //  .then(function(items) {
+            //    return items[$stateParams.itemId];
+            //  });
           }
+
         ]
       }
     })

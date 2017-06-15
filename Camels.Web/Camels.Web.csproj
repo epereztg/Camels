@@ -119,6 +119,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\styles\main.css" />
     <Content Include="app\views\base.html" />
     <Content Include="app\views\dashboard.html" />

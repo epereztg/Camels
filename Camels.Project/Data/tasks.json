@@ -9,7 +9,7 @@
     "ItemId": 1,
     "Label": "Task2",
     "Total": 94,
-    "Current": 10
+    "Current": 50
   },
   {
     "ItemId": 2,
@@ -38,7 +38,7 @@
   {
     "ItemId": 6,
     "Label": "Task7",
-    "Total": 122,
+    "Total": 1225,
     "Current": 110
   },
   {
@@ -68,7 +68,7 @@
   {
     "ItemId": 11,
     "Label": "Task12",
-    "Total": 400,
-    "Current": 400
+    "Total": 342,
+    "Current": 342
   }
 ]

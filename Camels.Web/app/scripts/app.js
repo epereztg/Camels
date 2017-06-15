@@ -18,8 +18,8 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-    //$urlRouterProvider.otherwise('/login');//original
-    $urlRouterProvider.otherwise('dashboard/overview');
+    $urlRouterProvider.otherwise('/login');//original
+    //$urlRouterProvider.otherwise('dashboard/overview');
 
     $stateProvider
       .state('base',
@@ -70,6 +70,12 @@ angular
               '$stateParams', 'TasksService',
               function($stateParams, TasksService) {
                 var items;
+                var controllerRoute = 'editDetails';
+                //TasksService.GetApiCall(controllerRoute).success(function (data) {
+                //  console.log('into');
+                //  data = JSON.parse(data);       
+                //  return data[$stateParams.itemId];
+                //});
                 return TasksService.getList()
                   .then(function(items) {
                     return items[$stateParams.itemId];

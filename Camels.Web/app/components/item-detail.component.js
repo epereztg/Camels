@@ -10,6 +10,7 @@
   function ItemDetailController($scope, itemId, TasksService) {
     var controllerRoute = 'editDetails';
     var itemDetail = this;
+
     
     
     itemDetail.label = $scope.label;
@@ -18,19 +19,12 @@
     itemDetail.itemId = itemId;
 
 
-    //itemDetail.getSomeItem = function(itemId) {
-    //  //Op2
-    //  var itemNew= TasksService.getSomeItem(itemId);     
-    //}
-
-
-
     //Read from JSON with backend
     itemDetail.result = TasksService.GetApiCall(controllerRoute).success(function (data) {            
       data = JSON.parse(data);            
       itemDetail.StateList = data;
     });
-   
+    itemDetail.itemSelected = itemId;
 
     //Save Task details button
     itemDetail.btnPostCall = function () {            
@@ -46,6 +40,17 @@
       });
     };
   
+    itemDetail.onTaskChange = function () {
+      TasksService.GetApiCall(controllerRoute).success(function (data) {
+        data = JSON.parse(data);
+        debugger;
+        itemDetail.ItemId = data[itemDetail.itemSelected.ItemId];
+      });
+      
+    };
+
+
+
 
 
   };
