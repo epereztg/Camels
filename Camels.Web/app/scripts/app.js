@@ -72,17 +72,14 @@ angular
                 var items;
                 var controllerRoute = 'editDetails';
 
-                //TasksService.GetApiCall(controllerRoute).success(function (data) {
-                //  console.log('into');
+                //Call Using Backend:
+                //return TasksService.GetApiCall(controllerRoute).success(function (data) {                  
                 //  debugger;
                 //  data = JSON.parse(data);       
                 //  return data[$stateParams.itemId];
                 //});
 
-                //TasksService.GetApiCall(controllerRoute).then(function (response) {
-                //  return response.data[$stateParams.itemId];
-                //});
-
+                ////Call Using AngularJS Service:                
                 return TasksService.getList()
                   .then(function(items) {
                     return items[$stateParams.itemId];

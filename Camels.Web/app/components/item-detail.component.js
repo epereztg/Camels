@@ -9,20 +9,14 @@
 
   function ItemDetailController($scope, itemId, TasksService) {
     var controllerRoute = 'editDetails';
-    var itemDetail = this;
 
-    
-    
-    //itemDetail.label = $scope.label;
-    //itemDetail.total = $scope.total;
-    //itemDetail.current = $scope.current;
-    //itemDetail.itemId = itemId;
+    var itemDetail = this; 
+
     itemDetail.label = $scope.label;
     itemDetail.total = $scope.total;
     itemDetail.current = $scope.current;
     itemDetail.itemId = itemId;
-
-    itemDetail.Label = $scope.label;
+   
     //Read from JSON with backend
     itemDetail.result = TasksService.GetApiCall(controllerRoute).success(function (data) {            
       data = JSON.parse(data);            
@@ -50,8 +44,8 @@
       
       TasksService.GetApiCall(controllerRoute).success(function(data) {
         data = JSON.parse(data);
-        debugger;
-        $scope.label = data[itemDetail.itemSelected.ItemId].label;
+       
+        //$scope.label = data[itemDetail.itemSelected.ItemId].label;
         
         //itemDetail = data[itemDetail.itemSelected.ItemId];                
       });
