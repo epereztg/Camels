@@ -12,6 +12,7 @@ using System.Web.Http;
 using System.Web.Http.Routing;
 using System.Web.Script.Serialization;
 using Camels.Project.Models;
+using System.Collections;
 
 namespace Camels.Project.Controllers
 {
@@ -25,10 +26,11 @@ namespace Camels.Project.Controllers
 
         public List<TaskItem> LoadJson(string s)
         {
+            s = AppDomain.CurrentDomain.BaseDirectory + s;
             using (System.IO.StreamReader r = new StreamReader(s))
             {
                 string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<TaskItem>>(json);
+                List <TaskItem> items= JsonConvert.DeserializeObject<List<TaskItem>>(json);
             }
             return items;
         }
@@ -54,7 +56,7 @@ namespace Camels.Project.Controllers
         {
             string result = String.Empty;
             s = ConfigurationManager.AppSettings["JSONPath"];
-            var sTest = "D:/Projects/CamelsRace/Camels/Camels.Web/app/tasks/tasks.json";
+            var sTest = ConfigurationManager.AppSettings["JSONWPath"];// "D:/Projects/CamelsRace/Camels/Camels.Web/app/tasks/tasks.json";
 
             ////Read Json File as array
             this.items = LoadJson(s);
