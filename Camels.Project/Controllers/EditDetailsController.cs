@@ -26,11 +26,13 @@ namespace Camels.Project.Controllers
 
         public List<TaskItem> LoadJson(string s)
         {
+            List<TaskItem> items;
+
             s = AppDomain.CurrentDomain.BaseDirectory + s;
             using (System.IO.StreamReader r = new StreamReader(s))
             {
                 string json = r.ReadToEnd();
-                List <TaskItem> items= JsonConvert.DeserializeObject<List<TaskItem>>(json);
+                items= JsonConvert.DeserializeObject<List<TaskItem>>(json);
             }
             return items;
         }

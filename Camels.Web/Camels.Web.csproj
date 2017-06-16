@@ -428,7 +428,6 @@
     <Folder Include="app\bar-list\" />
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
-    <Folder Include="app\phone\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
