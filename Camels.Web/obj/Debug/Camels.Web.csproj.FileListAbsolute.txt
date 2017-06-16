@@ -51,7 +51,6 @@ D:\Projects\CamelsRace\Camels\Camels\bin\Newtonsoft.Json.xml
 D:\Projects\CamelsRace\Camels\Camels\bin\System.Net.Http.Formatting.xml
 D:\Projects\CamelsRace\Camels\Camels\bin\System.Web.Http.xml
 D:\Projects\CamelsRace\Camels\Camels\bin\System.Web.Http.Cors.xml
-D:\Projects\CamelsRace\Camels\Camels.Web\bin\ApplicationInsights.config
 D:\Projects\CamelsRace\Camels\Camels.Web\bin\roslyn\csc.exe
 D:\Projects\CamelsRace\Camels\Camels.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\Projects\CamelsRace\Camels\Camels.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll

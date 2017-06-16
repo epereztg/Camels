@@ -73,17 +73,28 @@ angular
                 var controllerRoute = 'editDetails';
 
                 //Call Using Backend:
-                //return TasksService.GetApiCall(controllerRoute).success(function (data) {                  
-                //  debugger;
-                //  data = JSON.parse(data);       
-                //  return data[$stateParams.itemId];
-                //});
+                return TasksService.GetApiCall(controllerRoute).success(function (data) {                  
+                 
+                  data = JSON.parse(data);
+
+                  var id = _.result(_.find(data, function (obj) {
+                    console.log(obj);
+                    console.log($stateParams.itemId);
+                    
+                    return obj.ItemId === $stateParams.itemId;
+                    debugger;
+                  }));
+
+                  
+
+                  return data[id];
+                });
 
                 ////Call Using AngularJS Service:                
-                return TasksService.getList()
-                  .then(function(items) {
-                    return items[$stateParams.itemId];
-                  });
+                //return TasksService.getList()
+                //  .then(function(items) {
+                //    return items[$stateParams.itemId];
+                //  });
               }
             ]
           }

@@ -39,7 +39,7 @@ namespace Camels.Project.Controllers
 
         [Route("")]
         [HttpGet]
-        public Object GetDropdownList()
+        public string GetDropdownList()
         {
             string result = string.Empty;
 
@@ -49,6 +49,17 @@ namespace Camels.Project.Controllers
             //result = this.items;
             //return this.items;
             return result;
+        }
+        [Route("{id}")]
+        [HttpGet]
+        public Object GetItem(int id)
+        {
+            string result = string.Empty;
+
+            s = ConfigurationManager.AppSettings["JSONPath"];
+            this.items = LoadJson(s);
+            
+            return this.items.First(q=>q.ItemId.Equals(id));
         }
 
         [HttpPost]
