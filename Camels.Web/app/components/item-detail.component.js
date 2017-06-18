@@ -7,14 +7,15 @@
   // 'item' is injected through state's resolve
   ItemDetailController.$inject = ['item', 'itemId', 'TasksService'];
 
-  function ItemDetailController($scope, itemId, TasksService) {
+    //function ItemDetailController($scope, itemId, TasksService) {
+  function ItemDetailController(item, itemId, TasksService) {
     var controllerRoute = 'editDetails';
 
     var itemDetail = this; 
 
-    itemDetail.label = $scope.label;
-    itemDetail.total = $scope.total;
-    itemDetail.current = $scope.current;
+    itemDetail.label = item.label;
+    itemDetail.total = item.total;
+    itemDetail.current = item.current;
     itemDetail.itemId = itemId;
    
     //Read from JSON with backend

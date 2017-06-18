@@ -46,8 +46,7 @@ namespace Camels.Project.Controllers
             s = ConfigurationManager.AppSettings["JSONPath"];
             this.items = LoadJson(s);
             result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(this.items);
-            //result = this.items;
-            //return this.items;
+           
             return result;
         }
         [Route("{id}")]
@@ -63,8 +62,7 @@ namespace Camels.Project.Controllers
         }
 
         [HttpPost]
-        [Route("")]
-       // [OutputCacheAttribute(VaryByParam = "*", Duration = 0, NoStore = true)]       
+        [Route("")]     
         public string UpdateTask(TaskItem taskItem)
         {
             string result = String.Empty;

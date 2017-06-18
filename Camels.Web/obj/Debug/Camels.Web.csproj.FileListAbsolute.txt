@@ -81,7 +81,6 @@ D:\Projects\CamelsRace\Camels\Camels.Web\bin\System.Web.Http.Cors.xml
 D:\Projects\CamelsRace\Camels\Camels.Web\obj\Debug\Camels.Web.csprojResolveAssemblyReference.cache
 D:\Projects\CamelsRace\Camels\Camels.Web\obj\Debug\Camels.dll
 D:\Projects\CamelsRace\Camels\Camels.Web\obj\Debug\Camels.pdb
-C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\ApplicationInsights.config
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\roslyn\csc.exe
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
