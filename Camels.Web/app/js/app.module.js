@@ -51,20 +51,20 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       templateUrl: 'views/item-detail.template.html',
       controller: 'ItemDetailController as itemDetail',
       resolve: {
-        itemId: ['$stateParams', 'TasksService',
+        itemId: ['$stateParams', 'tasksService',
           function($stateParams) {
             return $stateParams.itemId
           },
         ],
-        item: ['$stateParams', 'TasksService',
-          function($stateParams, TasksService) {
+        item: ['$stateParams', 'tasksService',
+          function($stateParams, tasksService) {
             var items;           
             var controllerRoute = 'editDetails';
-            TasksService.getList(controllerRoute).success(function (data) {
+            tasksService.getList(controllerRoute).success(function (data) {
               data = JSON.parse(data);
               return data;
             });
-            //TasksService.getList()
+            //tasksService.getList()
             //  .then(function(items) {
             //    return items[$stateParams.itemId];
             //  });

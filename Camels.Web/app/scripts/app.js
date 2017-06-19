@@ -61,33 +61,24 @@ angular
           controller: 'ItemDetailController as itemDetail',
           resolve: {
             itemId: [
-              '$stateParams', 'TasksService',
+              '$stateParams', 'tasksService',
               function ($stateParams) {
                 return $stateParams.itemId;
               },
             ],
             item: [
-              '$stateParams', 'TasksService',
-              function ($stateParams, TasksService) {
+              '$stateParams', 'tasksService',
+              function ($stateParams, tasksService) {
                 var items;
                 var controllerRoute = 'editDetails';
                 //Call Using Backend:
-                //return TasksService.getItemsList(controllerRoute).success(function (items) {
-                //  items = JSON.parse(items);
-                //  var id = _.result(_.find(items, function (obj) {
-                //    return obj.ItemId === parseInt($stateParams.itemId);
-                //  }), 'ItemId');
-
-                //  return items[id];
-                //});
-
-                return TasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).success(function (items) {
+                return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).success(function (items) {
                  
                   return items;
                 });
 
                 ////Call Using AngularJS Service:                
-                //return TasksService.getList()
+                //return tasksService.getList()
                 //  .then(function(items) {
                 //    return items[$stateParams.itemId];
                 //  });

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Factory: TasksService', function() {
+describe('Factory: tasksService', function() {
   var myService = null;
   var responseData = null;
   var items = null;
@@ -20,11 +20,11 @@ describe('Factory: TasksService', function() {
   }));
   //});
   //Example
-  var TasksService;
-  //Tasksservice
-  it('can get an instance', inject(function(TasksService) {
+  var tasksService;
+  //tasksService
+  it('can get an instance', inject(function(tasksService) {
 
-    expect(TasksService).toBeDefined();
+    expect(tasksService).toBeDefined();
   }));
 
   it('should return 12 items', function() {

@@ -13,13 +13,13 @@ component("graph", {
 
   templateUrl: 'views/graph.template.html',
 
-  controller: ['$http', 'TasksService', function graphController($http, TasksService) {
+  controller: ['$http', 'tasksService', function graphController($http, tasksService) {
     var self = this;
     var controllerRoute = 'editDetails';
 
 
 
-    TasksService.getList()
+    tasksService.getList()
       .then(function (data) {
 
         self.data = data;
@@ -40,7 +40,7 @@ component("graph", {
       });
 
 
-    //self.result = TasksService.GetItemsList(controllerRoute).success(function (data) {
+    //self.result = tasksService.GetItemsList(controllerRoute).success(function (data) {
     //  data = JSON.parse(data);
     //  self.StateList = data;
     //  self.data = data;

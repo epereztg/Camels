@@ -5,10 +5,10 @@
     .controller('ItemDetailController', ItemDetailController);
 
   // 'item' is injected through state's resolve
-  ItemDetailController.$inject = ['item', 'itemId', 'TasksService', '$window'];
+  ItemDetailController.$inject = ['item', 'itemId', 'tasksService', '$window'];
 
-  //function ItemDetailController($scope, itemId, TasksService) {
-  function ItemDetailController(item, itemId, TasksService) {
+  //function ItemDetailController($scope, itemId, tasksService) {
+  function ItemDetailController(item, itemId, tasksService) {
     var controllerRoute = 'editDetails';
 
     var itemDetail = this;
@@ -22,7 +22,7 @@
 
 
     //Read from JSON with backend
-    itemDetail.result = TasksService.getItemsList(controllerRoute).success(function (data) {
+    itemDetail.result = tasksService.getItemsList(controllerRoute).success(function (data) {
       data = JSON.parse(data);
       itemDetail.TasksList = data;
     });
@@ -36,7 +36,7 @@
         'Total': itemDetail.total,
         'Current': itemDetail.current
       }
-      var result = TasksService.PostApiCall(controllerRoute, obj).success(function (data) {
+      var result = tasksService.PostApiCall(controllerRoute, obj).success(function (data) {
         data = JSON.parse(data);
         itemDetail.message = data;
       });
@@ -46,7 +46,7 @@
     //On DropDownList Change 
     itemDetail.onTaskChange = function () {
 
-      TasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).success(function (data) {
+      tasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).success(function (data) {
         //data = JSON.parse(data);               
         itemDetail.label = data.Label;
         itemDetail.label = data.Label;

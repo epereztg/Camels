@@ -1,6 +1,6 @@
 var service = angular.module('core.services');
 
-service.factory('TasksService', function ($http) {
+service.factory('tasksService', function ($http) {
   var result;
 
 
