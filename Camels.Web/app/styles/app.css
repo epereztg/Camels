@@ -107,27 +107,55 @@ body {
   float: right;
 }
 
-.dot {
+/*.dot {
   background: black;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  /*position: absolute;*/
+  
   float: right;
   margin-top: -2px;
   position:absolute;
+  animation-delay: 1150ms;
 
 
 }
 
-
-/*.camel {
-    float: right;
-    position: relative;
-}*/
-
 .dot .right {
   float: right;
+}*/
+.dot {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  background: #777777;
+  cursor: pointer;
+  animation: dots 100ms linear forwards;
+}
+.dot:after {
+  content: attr(data-title);
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #777777;
+  color: white;
+  position: absolute;
+  padding: 10px;
+  left: 150%;
+  top: -15px;
+  width: 0;
+  opacity: 0;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.dot:hover {
+  background: #777777;
+}
+.dot:hover:after {
+  width: auto;
+  opacity: 1;
+  z-index: 9999;
 }
 
 .milestone {
