@@ -22,10 +22,10 @@
 
 
     //Read from JSON with backend
-    itemDetail.result = tasksService.getItemsList(controllerRoute).success(function (data) {
-      data = JSON.parse(data);
-      itemDetail.TasksList = data;
-    });
+    //itemDetail.result = tasksService.getItemsList(controllerRoute).success(function (data) {
+    //  data = JSON.parse(data);
+    //  itemDetail.TasksList = data;
+    //});
 
 
     //Save Task details button

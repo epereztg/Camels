@@ -1,10 +1,10 @@
 <div class="chart" style="width:{{$ctrl.width}}px; height:{{($ctrl.width / ($ctrl.data.length)) * $ctrl.data.length}}px;">
   <!-- Labels -->
   <!--Vertical axis text-->
-  <div class="y" style="width:{{$ctrl.height}}px;">{{$ctrl.yAxis}}</div>
+  <div class="y" style="width:{{$ctrl.height}}px;">{{$ctrl.yAxisLabel}}</div>
 
   <!--Horizontal axis text-->
-  <div class="x">{{$ctrl.xAxis}}</div>
+  <div class="x">{{$ctrl.xAxisLabel}}</div>
 
   <!-- Data -->
   <bar-list width="$ctrl.width" height="$ctrl.height" max="$ctrl.max" data="$ctrl.data"></bar-list>

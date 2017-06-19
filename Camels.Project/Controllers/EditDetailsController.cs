@@ -37,17 +37,24 @@ namespace Camels.Project.Controllers
             return items;
         }
 
+        //[Route("")]
+        //[HttpGet]
+        //public string GetDropdownList()
+        //{
+        //    string result = string.Empty;
+
+        //    s = ConfigurationManager.AppSettings["JSONPath"];
+        //    this.items = LoadJson(s);
+        //    result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(this.items);
+
+        //    return result;
+        //}
         [Route("")]
         [HttpGet]
-        public string GetDropdownList()
-        {
-            string result = string.Empty;
-
-            s = ConfigurationManager.AppSettings["JSONPath"];
-            this.items = LoadJson(s);
-            result = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(this.items);
-           
-            return result;
+        public List<TaskItem> GetItems()
+        {           
+            s = ConfigurationManager.AppSettings["JSONPath"];         
+            return LoadJson(s);
         }
         [Route("{id}")]
         [HttpGet]

@@ -7,8 +7,8 @@ component("graph", {
   bindings: {
     width: '=',
     height: '=',
-    yAxis: '@',
-    xAxis: '@'
+    yAxisLabel: '@',
+    xAxisLabel: '@'
   },
 
   templateUrl: 'views/graph.template.html',
@@ -36,13 +36,14 @@ component("graph", {
           if (self.data[i].total > self.max)
             self.max = self.data[i].total;
         }
-        
+
       });
 
 
-    //self.result = tasksService.GetItemsList(controllerRoute).success(function (data) {
-    //  data = JSON.parse(data);
-    //  self.StateList = data;
+   
+    //tasksService.getItems(controllerRoute).success(function (data) {
+    //  //data = JSON.parse(data);
+
     //  self.data = data;
 
     //  self.max = 0;
@@ -52,10 +53,9 @@ component("graph", {
     //    // Find Maximum X Axis Value
     //    if (self.data[i].Total > self.max) {
     //      self.max = self.data[i].Total;
+
     //    }
     //  }
-
-    //  
     //});
 
 

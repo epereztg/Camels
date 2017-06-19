@@ -14,18 +14,26 @@ service.factory('tasksService', function ($http) {
           throw 'There was an error getting data';
         });
     },
-    
-    
-    //Use Backend
-    getItemsList: function (controllerRoute) {
-      result = $http.get('http://localhost:21275/' + controllerRoute).success(function(data, status) {
+    getItems: function (controllerRoute) {
+      result = $http.get('http://localhost:21275/' + controllerRoute).success(function (data, status) {
         result = (data);
 
-      }).error(function() {
+      }).error(function () {
         alert("Something went wrong with getItemsList");
       });
       return result;
     },
+    
+    //Use Backend
+    //getItemsList: function (controllerRoute) {
+    //  result = $http.get('http://localhost:21275/' + controllerRoute).success(function(data, status) {
+    //    result = (data);
+
+    //  }).error(function() {
+    //    alert("Something went wrong with getItemsList");
+    //  });
+    //  return result;
+    //},
     getItem: function (controllerRoute, id) {
       result = $http.get('http://localhost:21275/' + controllerRoute+'/'+id).success(function (data, status) {
         result = (data);
