@@ -2,7 +2,7 @@
   {
     "ItemId": 1,
     "Label": "Task1",
-    "Total": 70,
+    "Total": 80,
     "Current": 30,
     "Timeline": [
       {
@@ -29,8 +29,8 @@
   },
   {
     "ItemId": 2,
-    "Label": "Task2",
-    "Total": 70,
+    "Label": "Task24",
+    "Total": 75,
     "Current": 30,
     "Timeline": [
       {
