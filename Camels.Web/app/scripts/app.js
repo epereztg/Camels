@@ -73,7 +73,7 @@ angular
                         var controllerRoute = 'editDetails';
 
                         //Call Using Backend:
-                        return TasksService.GetApiCall(controllerRoute).success(function (items) {
+                        return TasksService.GetItemsList(controllerRoute).success(function (items) {
 
                           items = JSON.parse(items);
                             

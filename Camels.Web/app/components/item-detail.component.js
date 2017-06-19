@@ -19,7 +19,7 @@
     itemDetail.itemId = itemId;
    
     //Read from JSON with backend
-    itemDetail.result = TasksService.GetApiCall(controllerRoute).success(function (data) {            
+    itemDetail.result = TasksService.GetItemsList(controllerRoute).success(function (data) {
       data = JSON.parse(data);            
       itemDetail.StateList = data;
     });
@@ -43,7 +43,7 @@
     //On DropDownList Change 
     itemDetail.onTaskChange = function () {
       
-      TasksService.GetApiCall(controllerRoute).success(function(data) {
+      TasksService.GetItemsList(controllerRoute).success(function (data) {
         data = JSON.parse(data);               
       });
 

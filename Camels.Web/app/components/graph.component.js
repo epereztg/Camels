@@ -40,7 +40,7 @@ component("graph", {
       });
 
 
-    //self.result = TasksService.GetApiCall(controllerRoute).success(function (data) {
+    //self.result = TasksService.GetItemsList(controllerRoute).success(function (data) {
     //  data = JSON.parse(data);
     //  self.StateList = data;
     //  self.data = data;
