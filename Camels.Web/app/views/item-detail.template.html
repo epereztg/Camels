@@ -1,100 +1,106 @@
 <div class="dashboard-page">
-  <div class="container-fluid">
-    <form name="taskDetailForm">
-      <div class="row">
+    <div class="container-fluid">
+        <form name="taskDetailForm">
+            <div class="row">
 
-        <div class="col-sm-3 col-md-2 sidebar">
-          <div class="text-center">
-            <h2 class="brand">
-              Camel Race<small>GO!</small>
-            </h2>
-            <img src="images/flat-avatar.png" class="user-avatar" /><br />
-            <a ui-sref="login" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
-          </div>
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <div class="text-center">
+                        <h2 class="brand">
+                            Camel Race<small>GO!</small>
+                        </h2>
+                        <img src="images/flat-avatar.png" class="user-avatar" /><br />
+                        <a ui-sref="login" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
+                    </div>
 
-          <ul class="nav nav-sidebar">
-            <li ng-class="{active: $state.includes('overview')}"><a ui-sref="overview">Overview <span class="sr-only">(current)</span></a></li>            
-          </ul>
+                    <ul class="nav nav-sidebar">
+                        <li ng-class="{active: $state.includes('overview')}"><a ui-sref="overview">Overview <span class="sr-only">(current)</span></a></li>
+                    </ul>
 
-          <!--Show Dropdown with tasks-->
-          <div style="padding-right: 0;">
-            <span>Selected Task: {{itemDetail.itemSelected.Label}}</span>
-            <select class="form-control" ng-model="itemDetail.itemSelected= itemDetail.itemId" ng-change="itemDetail.onTaskChange()" ng-options="task.Label for task in itemDetail.TasksList track by task.ItemId"></select>
-          </div>
-        </div>
-
-
-
-        <div class="container">
-          <div class="detail ">
-            <h2>
-              Detail view for element:
-              <span>{{itemDetail.itemId}}</span>
-            </h2>
-
-            <div class="col-sm-4">
-              <br /> ID: {{itemDetail.itemId}}<br />
-              <br /> Label: <br />
-              <input type="text" name="inputLabel" ng-model="itemDetail.label" required />
-              <div role="alert">
-                <span class="error" ng-show="taskDetailForm.inputLabel.$error.required">
-                  Required value!
-                </span>
-              </div>
-
-
-              <br /> Total: <br />
-              <input type="number" name="inputTotal" ng-model="itemDetail.total" required />
-              <div role="alert">
-                <span class="error" ng-show="taskDetailForm.inputTotal.$error.required">
-                  Required value!
-                </span>
-                <span class="error" ng-show="taskDetailForm.inputTotal.$error.number">
-                  Not valid number!
-                </span>
-              </div>
-
-
-              <br /> Current: <br />              
-              <input type="number" name="inputCurrent" ng-model="itemDetail.current" min="0" max="{{itemDetail.total}}" required />
-              <br />
-              <div role="alert">
-                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.required">
-                  Required value!
-                </span>
-                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.number">
-                  Not valid number!
-                </span>
-                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.max">
-                  Current value cannot be greater than Total!
-                </span>
-              </div>
-              <br />
-
-              <!--Milestones-->
-              <h2>Milestones:</h2>
-              <div ng-repeat="mls in itemDetail.timeline">
-                <div>
-                  Date: <input ng-model="mls.date">
-                  <br />
-                  Complete: <input ng-model="mls.complete">
-                  <br />
-                  <br />
+                    <!--Show Dropdown with tasks-->
+                    <div style="padding-right: 0;">
+                        <span>Selected Task: {{itemDetail.itemSelected.Label}}</span>
+                        <select class="form-control" ng-model="itemDetail.itemSelected= itemDetail.itemId" ng-change="itemDetail.onTaskChange()" ng-options="task.Label for task in itemDetail.TasksList track by task.ItemId"></select>
+                    </div>
                 </div>
-              </div>                      
-              
-              <button type="submit" ng-click="itemDetail.btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
-              <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Back</button>
 
+
+
+                <div class="container">
+                    <div class="detail ">
+                        <h2>
+                            Detail view for element:
+                            <span>{{itemDetail.itemId}}</span>
+                        </h2>
+
+                        <div class="col-sm-4">
+                            <span class="jsonlabel">ID:</span>
+                            {{itemDetail.itemId}}<br />                          
+                            <span class="jsonlabel">Label:</span>
+                            <input type="text" name="inputLabel" ng-model="itemDetail.label" required />
+                            <div role="alert">
+                                <span class="error" ng-show="taskDetailForm.inputLabel.$error.required">
+                                    Required value!
+                                </span>
+                            </div>
+
+                          
+                            <span class="jsonlabel">Total:</span>
+                            <input type="number" name="inputTotal" ng-model="itemDetail.total" required />
+                            <div role="alert">
+                                <span class="error" ng-show="taskDetailForm.inputTotal.$error.required">
+                                    Required value!
+                                </span>
+                                <span class="error" ng-show="taskDetailForm.inputTotal.$error.number">
+                                    Not valid number!
+                                </span>
+                            </div>
+
+
+                            <span class="jsonlabel">Current:</span>
+                            <input type="number" name="inputCurrent" ng-model="itemDetail.current"  max="{{itemDetail.total}}" required />
+                            <br />
+                            <div role="alert">
+                                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.required">
+                                    Required value!
+                                </span>
+                                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.number">
+                                    Not valid number!
+                                </span>
+                                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.max">
+                                    Current value cannot be greater than Total!
+                                </span>
+                            </div>
+                            <br />
+
+                            <!--Milestones-->
+                            <h2>Milestones:</h2>
+                            <div ng-repeat="mls in itemDetail.timeline">
+                                <div>
+                                    <!--Date: <input ng-model="mls.date">-->
+                                    <span class="jsonlabel">Date:</span>
+                                    <input ng-model="mls.date">
+
+                                    <br />
+                                    <span class="jsonlabel">Complete:</span>
+                                    <input ng-model="mls.complete">
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+
+
+                            <button type="submit" ng-click="itemDetail.btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
+                            <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Back</button>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
             </div>
-
-           
-
-          </div>        
-        </div>        
-      </div>      
-    </form>
-  </div>
+        </form>
+    </div>
 </div>
 
 
