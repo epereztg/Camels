@@ -72,7 +72,8 @@
             {
                 jsonProduct.Total = taskItem.Total;
                 jsonProduct.Label = taskItem.Label;
-                jsonProduct.Current = taskItem.Current;                
+                jsonProduct.Current = taskItem.Current;
+                jsonProduct.Timeline = taskItem.Timeline;              
 
                 //Update Item
                 items[idx] = jsonProduct;

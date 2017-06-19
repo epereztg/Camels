@@ -60,7 +60,7 @@
               <input type="number" name="inputCurrent" ng-model="itemDetail.current" min="0" max="{{itemDetail.total}}" required />
               <br />
               <div role="alert">
-                <span class="fa fa-times-circle" ng-show="taskDetailForm.inputCurrent.$error.required">
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.required">
                   Required value!
                 </span>
                 <span class="error" ng-show="taskDetailForm.inputCurrent.$error.number">
