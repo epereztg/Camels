@@ -17,11 +17,8 @@ component("graph", {
     var self = this;
     var controllerRoute = 'tasks';
   
-    tasksService.getItems(controllerRoute).success(function (data) {
-      //data = JSON.parse(data);
-          
+    tasksService.getItems(controllerRoute).success(function (data) {    
       self.data = data;
-
       self.max = 0;
      
       // https://stackoverflow.com/questions/39026881/unexpected-token-using-array-some-with-karma-and-phantomjs

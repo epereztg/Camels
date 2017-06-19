@@ -1,5 +1,4 @@
-﻿<!--<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.Current / $ctrl.max * $ctrl.width}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px; ">-->
-<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{($ctrl.width*bar.Current) /bar.Total}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px;">
+﻿<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{($ctrl.width*bar.Current) /bar.Total}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px;">
 
   <!-- TaskItem Label over bar-->
   <a class="label " align="left " ui-sref="itemDetail({itemId: $index + 1}) ">{{bar.Label}}-{{bar.Current}} of {{bar.Total}}</a>
@@ -20,11 +19,3 @@
     </li>
   </ul>
 </div>
-
-
-
-
-
-
-
-<!-- <span class="tooltiptext ">"{{mls.complete}} ({{bar.label}})}} "</span> -->
