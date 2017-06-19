@@ -23,17 +23,7 @@ service.factory('tasksService', function ($http) {
       });
       return result;
     },
-    
-    //Use Backend
-    //getItemsList: function (controllerRoute) {
-    //  result = $http.get('http://localhost:21275/' + controllerRoute).success(function(data, status) {
-    //    result = (data);
 
-    //  }).error(function() {
-    //    alert("Something went wrong with getItemsList");
-    //  });
-    //  return result;
-    //},
     getItem: function (controllerRoute, id) {
       result = $http.get('http://localhost:21275/' + controllerRoute+'/'+id).success(function (data, status) {
         result = (data);
