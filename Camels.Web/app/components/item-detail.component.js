@@ -36,7 +36,7 @@
         'Total': itemDetail.total,
         'Current': itemDetail.current
       }
-      var result = tasksService.PostApiCall(controllerRoute, obj).success(function (data) {
+      var result = tasksService.saveItem(controllerRoute, obj).success(function (data) {
         data = JSON.parse(data);
         itemDetail.message = data;
       });

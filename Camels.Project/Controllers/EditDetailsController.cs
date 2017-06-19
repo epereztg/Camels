@@ -15,7 +15,9 @@
     using System.Web.Script.Serialization;
     using Camels.Project.Models;
     using System.Collections;
-    
+
+
+    [EnableCors(origins: "http://localhost:21275", headers: "*", methods: "*")]
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
     {                
@@ -73,10 +75,13 @@
                 jsonProduct.Total = taskItem.Total;
                 jsonProduct.Label = taskItem.Label;
                 jsonProduct.Current = taskItem.Current;
+                jsonProduct.Timeline = taskItem.Timeline;
+
+                items[jsonProduct.ItemId] = jsonProduct;
                 //Serialize json object
                 result = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(s, result);
-                System.IO.File.WriteAllText(sTest, result);                
+                //System.IO.File.WriteAllText(sTest, result);                
             }
             else
             {                

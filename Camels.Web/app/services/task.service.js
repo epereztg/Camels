@@ -35,7 +35,7 @@ service.factory('tasksService', function ($http) {
     },
 
 
-    PostApiCall: function (controllerRoute, obj) {
+    saveItem: function (controllerRoute, obj) {
       return $http({
         method: 'POST',
         url: "http://localhost:21275/" + controllerRoute,
@@ -48,7 +48,7 @@ service.factory('tasksService', function ($http) {
           result = (data);
 
         }).error(function () {
-          alert("Something went wrong");
+          alert("Something went wrong in the post call");
         });
     }
 

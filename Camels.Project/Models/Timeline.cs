@@ -7,14 +7,24 @@ namespace Camels.Project.Models
 {
     public class Timeline
     {
-        Dictionary<string, string> Milestones = new Dictionary<string, string>();
+        public string date { get; set; }
+        public string complete { get; set; }
+
+        //Dictionary<string, string> Milestones = new Dictionary<string, string>();
 
         public Timeline() { }
 
-        public Timeline(Dictionary<string, string> milestones)
+        //public Timeline(Dictionary<string, string> milestones)
+        //{
+        //    this.Milestones = milestones;
+        //}
+        public Timeline(string date, string complete)
         {
-            this.Milestones = milestones;
+            this.date = date;
+            this.complete = complete;
+
         }
     }
+    
 
 }
