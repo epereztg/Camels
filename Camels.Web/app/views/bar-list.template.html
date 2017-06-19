@@ -1,25 +1,24 @@
-<!--<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.Current / $ctrl.max * $ctrl.width}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px; ">-->
+﻿<!--<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.Current / $ctrl.max * $ctrl.width}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px; ">-->
 <div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{($ctrl.width*bar.Current) /bar.Total}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px;">
 
   <!-- TaskItem Label over bar-->
   <a class="label " align="left " ui-sref="itemDetail({itemId: $index + 1}) ">{{bar.Label}}-{{bar.Current}} of {{bar.Total}}</a>
 
-  <!--<div class="bar bar-list-item camel ">
+  <div class="bar bar-list-item camel ">
     <img ng-src="{{$ctrl.image}} " height="40" width="40 " top="-5px " />
-  </div>-->
+  </div>
   <!--Milestones-->
-  <!--<div class="milestone tooltip " ng-repeat="mls in bar.Timeline " style="margin-left: {{mls.complete / $ctrl.max * $ctrl.height}}px; ">
-    *
-  </div>-->
+  <div class="milestone" ng-repeat="mls in bar.Timeline " style="margin-left: {{mls.complete / $ctrl.max * $ctrl.height}}px; ">   
+    ♦
+  </div>
 
 </div>
 <div class="link-list">
   <ul>
     <li ng-repeat="bar in $ctrl.data" ui-sref="itemDetail({itemId: $index})">
-      {{bar.Label}} => {{((100*bar.Current)/bar.Total)| number:2}}%
+      <h4>{{bar.Label}} : {{((100*bar.Current)/bar.Total)| number:2}}%</h4>
     </li>
   </ul>
-
 </div>
 
 

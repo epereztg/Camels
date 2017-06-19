@@ -20,6 +20,7 @@
     itemDetail.total = item.data.Total;
     itemDetail.current = item.data.Current;
     itemDetail.itemId = itemId;
+    itemDetail.timeline = item.data.Timeline;
     itemDetail.itemSelected = itemDetail;
 
 
@@ -36,8 +37,10 @@
         'ItemId': itemDetail.itemId,
         'Label': itemDetail.label,
         'Total': itemDetail.total,
-        'Current': itemDetail.current
+        'Current': itemDetail.current,
+        'Timeline':itemDetail.timeline
       }
+      debugger;
       var result = tasksService.saveItem(controllerRoute, obj).success(function (data) {
         data = JSON.parse(data);
         itemDetail.message = data;
@@ -54,6 +57,7 @@
         itemDetail.total = data.Total;
         itemDetail.current = data.Current;
         itemDetail.itemId = data.ItemId;
+        itemDetail.timeline = data.Timeline;
       });
 
 
