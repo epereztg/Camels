@@ -8,7 +8,7 @@ component("barList", {
   bindings: {
     width: '=',
     height: '=',
-    max: '=',
+    max: '=',   
     data: '='
   },
   templateUrl: 'views/bar-list.template.html',

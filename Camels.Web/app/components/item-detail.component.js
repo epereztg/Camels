@@ -8,11 +8,13 @@
   ItemDetailController.$inject = ['item', 'itemId', 'tasksService', '$window'];
 
   //function ItemDetailController($scope, itemId, tasksService) {
-  function ItemDetailController(item, itemId, tasksService) {
+  function ItemDetailController(item, itemId, tasksService, $window) {
     var controllerRoute = 'editDetails';
 
     var itemDetail = this;
-
+    itemDetail.example = {
+      value: 12
+    };
 
     itemDetail.label = item.data.Label;
     itemDetail.total = item.data.Total;

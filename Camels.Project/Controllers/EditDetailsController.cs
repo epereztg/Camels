@@ -21,7 +21,7 @@
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
     {                
-        string jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
+        private string jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
 
         public List<TaskItem> LoadJson()
         {
@@ -50,11 +50,8 @@
         [HttpGet]
         public Object GetItem(int id)
         {
-            string result = string.Empty;
-
-            //string s = ConfigurationManager.AppSettings["JSONPath"];
-            List<TaskItem> items=LoadJson();
-            
+            string result = string.Empty;            
+            List<TaskItem> items=LoadJson();            
             return items.First(q=>q.ItemId.Equals(id));
         }
 
@@ -63,8 +60,7 @@
         public string UpdateTask(TaskItem taskItem)
         {
             string result = String.Empty;
-            string s = this.jsonPath;
-            var sTest = ConfigurationManager.AppSettings["JSONWPath"];// "D:/Projects/CamelsRace/Camels/Camels.Web/app/tasks/tasks.json";
+            string s = this.jsonPath;            
 
             ////Read Json File as array
             List<TaskItem> items = LoadJson();
@@ -83,8 +79,7 @@
 
                 //Serialize json object
                 result = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText(s, result);
-                //System.IO.File.WriteAllText(sTest, result);                
+                System.IO.File.WriteAllText(s, result);                
             }
             else
             {                

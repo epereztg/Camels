@@ -15,10 +15,8 @@ namespace Camels.Project
         {
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
-
-            //var corsAttr = new EnableCorsAttribute("http://localhost:21275/editDetails", "*", "*");
-            //config.EnableCors(corsAttr);
-            config.EnableCors();
+            EnableCrossSiteRequests(config);
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -27,8 +25,15 @@ namespace Camels.Project
                 routeTemplate: "api/{controller}/{ItemId}",
                 defaults: new { id = RouteParameter.Optional }
             );
+        }
 
-        
+        private static void EnableCrossSiteRequests(HttpConfiguration config)
+        {
+            var cors = new EnableCorsAttribute(
+                origins: "http://localhost:21275",
+                headers: "*",
+                methods: "*");
+            config.EnableCors(cors);
         }
     }
 }

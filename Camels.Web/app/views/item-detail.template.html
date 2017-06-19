@@ -1,76 +1,96 @@
 <div class="dashboard-page">
   <div class="container-fluid">
-    <div class="row">
+    <form name="myForm">
+      <div class="row">
 
-      <div class="col-sm-3 col-md-2 sidebar">
-        <div class="text-center">
-          <h2 class="brand">
-            Camel Race<small>GO!</small>
-          </h2>
-          <img src="images/flat-avatar.png" class="user-avatar" /><br />
-          <a ui-sref="login" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
+        <div class="col-sm-3 col-md-2 sidebar">
+          <div class="text-center">
+            <h2 class="brand">
+              Camel Race<small>GO!</small>
+            </h2>
+            <img src="images/flat-avatar.png" class="user-avatar" /><br />
+            <a ui-sref="login" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
+          </div>
+
+          <ul class="nav nav-sidebar">
+            <li ng-class="{active: $state.includes('overview')}"><a ui-sref="overview">Overview <span class="sr-only">(current)</span></a></li>
+            <!--<li ng-class="{active: $state.includes('reports')}"><a ui-sref="reports">Reports</a></li>-->
+          </ul>
+
+
         </div>
 
-        <ul class="nav nav-sidebar">
-          <li ng-class="{active: $state.includes('overview')}"><a ui-sref="overview">Overview <span class="sr-only">(current)</span></a></li>
-          <!--<li ng-class="{active: $state.includes('reports')}"><a ui-sref="reports">Reports</a></li>-->
-        </ul>
-        
-              
-      </div>
-      
-      
-      
 
-      <!--Here-->
+        <div class="container">
+          <div class="detail ">
+            Detail view for element <span>{{itemDetail.itemId}}</span>
+            <div class="col-sm-4">
 
+              <br /> ID: {{itemDetail.itemId}}<br />
 
-
-      <div class="container">
-        <div class="detail ">
-          Detail view for element <span>{{itemDetail.itemId}}</span>
-          <div class="col-sm-4">
-
-            <br /> ID: {{itemDetail.itemId}}<br />
-
-            <br /> Label: <br />
-            <input type="text" ng-model="itemDetail.label" />                      
-            <br /> Total: <br />
-            <input type="text" ng-model="itemDetail.total" />            
-            <br /> Current: <br />
-            <input type="text" ng-model="itemDetail.current" />            
-            <br />         
-            
-
-            <!--Show Dropdown with tasks-->
-            <div style="padding-right: 0;">
-              <span>Selected Load Task: {{itemDetail.itemSelected.Label}}</span>
-              <select class="form-control" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-init="itemDetail.itemSelected" ng-options="task.Label for task in itemDetail.TasksList">
-              </select>
-
-            </div>
-            
-            
-            
-
-            <br />
-            <button ng-click="itemDetail.btnPostCall()">Save</button>
-            <!--<button ui-sref="overview">Home</button>-->   
-            <button ng-click="itemDetail.goback()">Back</button>  
+              <br /> Label: <br />
+              <input type="text" name="inputLabel" ng-model="itemDetail.label" required />
+              <div role="alert">
+                <span class="error" ng-show="myForm.inputLabel.$error.required">
+                  Required value!
+                </span>
+              </div>
 
 
-            <div>
-              <!--<span>JSON content:</span>-->
-              <!--<span>{{itemDetail.message}}</span>-->
+              <br /> Total: <br />
+              <input type="number" name="inputTotal" ng-model="itemDetail.total" required />
+              <div role="alert">
+                <span class="error" ng-show="myForm.inputTotal.$error.required">
+                  Required value!
+                </span>
+                <span class="error" ng-show="myForm.inputTotal.$error.number">
+                  Not valid number!
+                </span>
+              </div>
+
+              <br /> Current: <br />
+              <!--<input type="number" name="inputCurrent" ng-model="itemDetail.current" max="{{itemDetail.total}}"/>-->
+              <input type="number" name="inputCurrent" ng-model="itemDetail.current" min="0" max="{{itemDetail.total}}" required />
+              <br />
+              <div role="alert">
+                <span class="error" ng-show="myForm.inputCurrent.$error.required">
+                  Required value!
+                </span>
+                <span class="error" ng-show="myForm.inputCurrent.$error.number">
+                  Not valid number!
+                </span>
+                <span class="error" ng-show="myForm.inputCurrent.$error.max">
+                  Current value cannot be greater than Total!
+                </span>
+              </div>
+              <br />
+              <!--Show Dropdown with tasks-->
+              <div style="padding-right: 0;">
+                <span>Selected Load Task: {{itemDetail.itemSelected.Label}}</span>
+                <select class="form-control" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-init="itemDetail.itemSelected" ng-options="task.Label for task in itemDetail.TasksList"></select>
+
+              </div>
+
+
+
+
+              <br />
+              <button ng-click="itemDetail.btnPostCall()">Save</button>
+              <!--<button ui-sref="overview">Home</button>-->
+              <button ng-click="itemDetail.goBack()">Back</button>
+
+
+              <div>
+                <!--<span>JSON content:</span>-->
+                <!--<span>{{itemDetail.message}}</span>-->
+              </div>
             </div>
           </div>
         </div>
-        <!--Here-->
-
-
       </div>
-    </div>
+    </form>
   </div>
+</div>
 
 
 
