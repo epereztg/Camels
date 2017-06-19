@@ -44,9 +44,10 @@
 
             <!--Show Dropdown with tasks-->
             <div style="padding-right: 0;">
-              <select class="form-control" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-init="itemDetail.itemSelected" ng-options="task.Label for task in itemDetail.StateList">                             
-              </select>              
               <span>Selected Load Task: {{itemDetail.itemSelected.Label}}</span>
+              <select class="form-control" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-init="itemDetail.itemSelected" ng-options="task.Label for task in itemDetail.TasksList">
+              </select>
+
             </div>
             
             
@@ -54,7 +55,8 @@
 
             <br />
             <button ng-click="itemDetail.btnPostCall()">Save</button>
-            <button ui-sref="overview">Home</button>   
+            <!--<button ui-sref="overview">Home</button>-->   
+            <button ng-click="itemDetail.goback()">Back</button>  
 
 
             <div>

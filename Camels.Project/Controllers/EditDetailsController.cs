@@ -72,9 +72,9 @@ namespace Camels.Project.Controllers
             ////Read Json File as array
             this.items = LoadJson(s);
             ////Get selected product in json file
-            var jsonProduct = items.Where(q => q.ItemId.Equals(taskItem.ItemId)).Single();
+            var jsonProduct = this.items.First(q => q.ItemId.Equals(taskItem.ItemId));            
 
-            
+
             if (taskItem.Current <= taskItem.Total)
             {
                 jsonProduct.Total = taskItem.Total;
