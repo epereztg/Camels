@@ -60,7 +60,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
           function($stateParams, TasksService) {
             var items;           
             var controllerRoute = 'editDetails';
-            TasksService.GetApiCall(controllerRoute).success(function (data) {
+            TasksService.getList(controllerRoute).success(function (data) {
               data = JSON.parse(data);
               return data;
             });

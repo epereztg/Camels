@@ -73,17 +73,15 @@ angular
                         var controllerRoute = 'editDetails';
 
                         //Call Using Backend:
-                        return TasksService.GetApiCall(controllerRoute).success(function (data) {
+                        return TasksService.GetApiCall(controllerRoute).success(function (items) {
 
-                            data = JSON.parse(data);
-
-
-                            var id = _(data)
-                            .filter(c => c.ItemId === parseInt($stateParams.itemId))
-                            .map('ItemId')
-                            .value();
-
-                            return data[id];
+                          items = JSON.parse(items);
+                            
+                          var id = _.result(_.find(items, function (obj) {
+                              return obj.ItemId === parseInt($stateParams.itemId);
+                            }), 'ItemId');
+                           
+                          return items[id];
                         });
 
                         ////Call Using AngularJS Service:                
