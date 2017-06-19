@@ -12,22 +12,19 @@
     var controllerRoute = 'editDetails';
 
     var itemDetail = this;
-    itemDetail.example = {
-      value: 12
-    };
 
     itemDetail.label = item.data.Label;
     itemDetail.total = item.data.Total;
     itemDetail.current = item.data.Current;
     itemDetail.itemId = itemId;
     itemDetail.timeline = item.data.Timeline;
-    itemDetail.itemSelected = itemDetail;
+    //itemDetail.itemSelected = item.data.ItemId;
 
 
     //Read from JSON with backend
     itemDetail.result = tasksService.getItems(controllerRoute).success(function (data) {
       data = JSON.parse(data);
-      itemDetail.TasksList = data;
+      itemDetail.TasksList = data;     
     });
 
 

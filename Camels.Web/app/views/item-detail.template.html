@@ -19,7 +19,7 @@
           <!--Show Dropdown with tasks-->
           <div style="padding-right: 0;">
             <span>Selected Task: {{itemDetail.itemSelected.Label}}</span>
-            <select class="form-control" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-init="itemDetail.itemSelected" ng-options="task.Label for task in itemDetail.TasksList"></select>
+            <select class="form-control" ng-model="itemDetail.itemSelected= itemDetail.itemId" ng-change="itemDetail.onTaskChange()" ng-options="task.Label for task in itemDetail.TasksList track by task.ItemId"></select>
           </div>
         </div>
 
