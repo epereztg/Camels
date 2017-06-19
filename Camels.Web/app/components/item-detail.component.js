@@ -22,10 +22,10 @@
 
 
     //Read from JSON with backend
-    //itemDetail.result = tasksService.getItemsList(controllerRoute).success(function (data) {
-    //  data = JSON.parse(data);
-    //  itemDetail.TasksList = data;
-    //});
+    itemDetail.result = tasksService.getItems(controllerRoute).success(function (data) {
+      data = JSON.parse(data);
+      itemDetail.TasksList = data;
+    });
 
 
     //Save Task details button
@@ -48,11 +48,10 @@
 
       tasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).success(function (data) {
         //data = JSON.parse(data);               
-        itemDetail.label = data.Label;
-        itemDetail.label = data.Label;
+        itemDetail.label = data.Label;        
         itemDetail.total = data.Total;
         itemDetail.current = data.Current;
-        itemDetail.itemId = data.itemId;
+        itemDetail.itemId = data.ItemId;
       });
 
 

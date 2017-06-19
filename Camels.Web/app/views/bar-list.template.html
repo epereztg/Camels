@@ -1,6 +1,6 @@
-<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.current / $ctrl.max * $ctrl.width}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px; ">
+<div ng-repeat="bar in $ctrl.data" class="bar bar-list-item " style="height:{{$ctrl.width / $ctrl.data.length - 45}}px;width:{{bar.Current / $ctrl.max * $ctrl.width}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px; ">
   <!-- TaskItem Label over bar-->
-  <a class="label " align="left " ui-sref="itemDetail({itemId: $index}) ">{{bar.label}}-{{bar.current}} of {{bar.total}}</a>
+  <a class="label " align="left " ui-sref="itemDetail({itemId: $index}) ">{{bar.Label}}-{{bar.Current}} of {{bar.Total}}</a>
 
   <!--<div class="bar bar-list-item camel ">
     <img ng-src="{{$ctrl.image}} " height="40" width="40 " top="-5px " />
@@ -9,7 +9,9 @@
   <!--Milestones-->
   <!-- <div class="milestone tooltip " ng-repeat="mls in bar.milestones " style="margin-left: {{mls.complete / $ctrl.max * $ctrl.height}}px; ">
   </div> -->
+
 </div>
+
 
 <div class="link-list">
   <ul>

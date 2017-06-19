@@ -21,12 +21,14 @@
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
     {                
+        string jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
 
-        public List<TaskItem> LoadJson(string s)
+        public List<TaskItem> LoadJson()
         {
             List<TaskItem> items;
 
-            s = AppDomain.CurrentDomain.BaseDirectory + s;
+            //s = AppDomain.CurrentDomain.BaseDirectory + s;
+            string s = this.jsonPath;
             using (System.IO.StreamReader r = new StreamReader(s))
             {
                 string json = r.ReadToEnd();
@@ -40,7 +42,7 @@
         public string GetDropdownList()
         {            
             string s = ConfigurationManager.AppSettings["JSONPath"];
-            List<TaskItem> items = LoadJson(s);
+            List<TaskItem> items = LoadJson();
             return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(items);           
         }
        
@@ -50,8 +52,8 @@
         {
             string result = string.Empty;
 
-            string s = ConfigurationManager.AppSettings["JSONPath"];
-            List<TaskItem> items=LoadJson(s);
+            //string s = ConfigurationManager.AppSettings["JSONPath"];
+            List<TaskItem> items=LoadJson();
             
             return items.First(q=>q.ItemId.Equals(id));
         }
@@ -61,23 +63,24 @@
         public string UpdateTask(TaskItem taskItem)
         {
             string result = String.Empty;
-            string s = ConfigurationManager.AppSettings["JSONPath"];
+            string s = this.jsonPath;
             var sTest = ConfigurationManager.AppSettings["JSONWPath"];// "D:/Projects/CamelsRace/Camels/Camels.Web/app/tasks/tasks.json";
 
             ////Read Json File as array
-            List<TaskItem> items = LoadJson(s);
+            List<TaskItem> items = LoadJson();
             ////Get selected product in json file
             var jsonProduct = items.First(q => q.ItemId.Equals(taskItem.ItemId));            
-
+            var idx = items.FindIndex(i => i.ItemId.Equals(taskItem.ItemId));
 
             if (taskItem.Current <= taskItem.Total)
             {
                 jsonProduct.Total = taskItem.Total;
                 jsonProduct.Label = taskItem.Label;
-                jsonProduct.Current = taskItem.Current;
-                jsonProduct.Timeline = taskItem.Timeline;
+                jsonProduct.Current = taskItem.Current;                
 
-                items[jsonProduct.ItemId] = jsonProduct;
+                //Update Item
+                items[idx] = jsonProduct;
+
                 //Serialize json object
                 result = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
                 System.IO.File.WriteAllText(s, result);
