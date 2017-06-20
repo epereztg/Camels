@@ -1,15 +1,13 @@
 describe('Factory: tasksService', function () {
   'use strict';
 
-  var myService = null;
-  var responseData = null;
-  var items = null;
-  var $httpBackend;
+  var tasksService, $httpBackend;;
+
 
   beforeEach(module('core.services'));
 
 
-  beforeEach(inject(function(_tasksService_) {
+  beforeEach(inject(function (_tasksService_, _$httpBackend_) {
     tasksService = _tasksService_;
     $httpBackend = _$httpBackend_;
   }));

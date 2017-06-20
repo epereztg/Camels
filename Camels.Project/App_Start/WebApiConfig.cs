@@ -27,9 +27,7 @@ namespace Camels.Project
         }
 
         private static void EnableCrossSiteRequests(HttpConfiguration config)
-        {
-            var corsAttr = new EnableCorsAttribute("http://localhost:41011", "*", "*", "Content-Disposition");
-
+        {            
             var cors = new EnableCorsAttribute(
                 origins: "http://localhost:41011",
                 headers: "*",

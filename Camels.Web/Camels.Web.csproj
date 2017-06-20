@@ -123,6 +123,7 @@
   <ItemGroup>
     <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\js\lodash.core.js" />
+    <Content Include="app\js\lodash.js" />
     <Content Include="app\styles\main.css" />
     <Content Include="app\views\base.html" />
     <Content Include="app\views\dashboard.html" />
@@ -172,7 +173,7 @@
     <Content Include="app\scripts\controllers\dashboard.js" />
     <Content Include="app\scripts\controllers\login.js" />
     <Content Include="app\services\services.module.js" />
-    <Content Include="app\services\task.service.js" />
+    <Content Include="app\services\task.api.js" />
     <Content Include="app\styles\app.animation.css" />
     <Content Include="app\styles\app.css" />
     <Content Include="app\styles\fonts\glyphicons-halflings-regular.svg" />

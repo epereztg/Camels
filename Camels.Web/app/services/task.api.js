@@ -5,15 +5,6 @@ service.factory('tasksService', function ($http) {
 
 
   return {
-    //Use service 
-    getList: function () {
-      return $http.get('tasks/tasks.json').then(function (response) {
-        return response.data;
-      },
-        function () {
-          throw 'There was an error getting data';
-        });
-    },
     getItems: function (controllerRoute) {
       result = $http.get('http://localhost:21275/' + controllerRoute).success(function (data, status) {
         result = (data);
