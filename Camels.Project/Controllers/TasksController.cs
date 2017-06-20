@@ -1,21 +1,21 @@
 ﻿namespace Camels.Project.Controllers
 {
     using System.Collections.Generic;
-    using System.Configuration;
     using System.Web.Http;
-    using Camels.Project.Models;
-    using Camels.Project.Services;
+    using Models;
+    using Services;
+    using System;
+    using System.Configuration;
 
     [RoutePrefix("tasks")]
     public class TasksController : ApiController
-    {                            
-
+    {
+        private static readonly string JsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
         [Route("")]
         [HttpGet]
         public List<TaskItem> GetItems()
-        {           
-            var s = ConfigurationManager.AppSettings["JSONPath"];
-            return JsonService.LoadJson();
+        {                       
+            return JsonService.LoadJson(JsonPath);
         }
  
     }

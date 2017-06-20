@@ -45,12 +45,6 @@ angular
           parent: 'dashboard',
           templateUrl: 'views/dashboard/overview.html'
         })
-      .state('reports',
-        {
-          url: '/reports',
-          parent: 'dashboard',
-          templateUrl: 'views/dashboard/reports.html'
-        })
       .state('itemDetail',
         {
           url: '/item-detail/{itemId}',

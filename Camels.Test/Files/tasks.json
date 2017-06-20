@@ -1,0 +1,50 @@
+[
+  {
+    "ItemId": 1,
+    "Label": "Task1_modified",
+    "Total": 100,
+    "Current": 10,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "5"
+      },
+      {
+        "date": "20170503",
+        "complete": "15"
+      },
+      {
+        "date": "20170503",
+        "complete": "25"
+      },
+      {
+        "date": "20170503",
+        "complete": "35"
+      },
+      {
+        "date": "20170503",
+        "complete": "12"
+      }
+    ]
+  },
+  {
+    "ItemId": 2,
+    "Label": "Task2_modified",
+    "Total": 200,
+    "Current": 20,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "22"
+      },
+      {
+        "date": "20170503",
+        "complete": "46"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      }
+    ]
+  }
+]

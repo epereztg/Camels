@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Camels.Project.Models
+﻿namespace Camels.Project.Models
 {
+    using System.Collections.Generic;
+
     public class TaskItem
     {
         public int ItemId { get; set; }
@@ -12,11 +9,6 @@ namespace Camels.Project.Models
         public int Total { get; set; }
         public int Current { get; set; }
         public List<Timeline> Timeline { get; set; }
-
-        //Dictionary<string, string> Timeline { get; set; }
-        //public Timeline Timeline{ get; set; }
-        //Dictionary<int, DateTime> Milestones = new Dictionary<int, DateTime>();
-
 
         public TaskItem() { }
 

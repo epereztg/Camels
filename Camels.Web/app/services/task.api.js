@@ -16,16 +16,6 @@
          
         });
       },
-
-      //getItem: function (controllerRoute, id) {
-      //  result = $http.get(baseUrl + controllerRoute + '/' + id).success(function (data, status) {
-      //    result = (data);
-
-      //  }).error(function () {
-      //    alert("Something went wrong with getItem");
-      //  });
-      //  return result;
-      //},
       getItem: function (controllerRoute, id) {
         return $http({
           method: 'GET',

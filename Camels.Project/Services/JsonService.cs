@@ -1,37 +1,33 @@
-﻿using Camels.Project.Models;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Web;
-using Newtonsoft.Json;
-
-namespace Camels.Project.Services
+﻿namespace Camels.Project.Services
 {
-    public class JsonService
-    {
-        private static readonly string JsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
+    using Camels.Project.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using Newtonsoft.Json;
 
-        public static List<TaskItem> LoadJson()
+    public class JsonService
+    {        
+
+        public static List<TaskItem> LoadJson(string path)
         {
             List<TaskItem> items;
 
-            using (System.IO.StreamReader r = new StreamReader(JsonPath))
+            using (StreamReader r = new StreamReader(path))
             {
                 var json = r.ReadToEnd();
                 items = JsonConvert.DeserializeObject<List<TaskItem>>(json);
             }
             return items;
         }
-        public static void SaveJson(List<TaskItem> items)
+        public static void SaveJson(List<TaskItem> items, string path)
         {
             if (items == null) { return; }
 
             try
             {
-                var result = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText(JsonPath, result);
+                var result = JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
+                System.IO.File.WriteAllText(path, result);
             }
             catch (Exception ex)
             {

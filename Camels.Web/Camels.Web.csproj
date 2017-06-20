@@ -243,8 +243,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\bar-detail\" />
-    <Folder Include="app\bar-list\" />
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
   </ItemGroup>
