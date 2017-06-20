@@ -122,8 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\images\camelSnipping.PNG" />
-    <Content Include="app\js\lodash.core.js" />
     <Content Include="app\js\lodash.js" />
+    <Content Include="app\services\tasks.service.js" />
     <Content Include="app\styles\main.css" />
     <Content Include="app\views\base.html" />
     <Content Include="app\views\dashboard.html" />

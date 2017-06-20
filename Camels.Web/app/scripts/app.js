@@ -17,8 +17,7 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-    //$urlRouterProvider.otherwise('/login');//original
+    $urlRouterProvider.when('/dashboard', '/dashboard/overview');    
     $urlRouterProvider.otherwise('dashboard/overview');
 
     $stateProvider
@@ -32,15 +31,13 @@ angular
         {
           url: '/login',
           parent: 'base',
-          templateUrl: 'views/login.html'
-          //controller: 'LoginCtrl'
+          templateUrl: 'views/login.html'          
         })
       .state('dashboard',
         {
           url: '/dashboard',
           parent: 'base',
-          templateUrl: 'views/dashboard.html'
-          //controller: 'DashboardCtrl'
+          templateUrl: 'views/dashboard.html'          
         })
       .state('overview',
         {
@@ -71,17 +68,11 @@ angular
               function ($stateParams, tasksService) {
                 var items;
                 var controllerRoute = 'editDetails';
+               
                 //Call Using Backend:
-                return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).success(function (items) {
-                 
-                  return items;
+                return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function (item) {                 
+                  return item;
                 });
-
-                ////Call Using AngularJS Service:                
-                //return tasksService.getList()
-                //  .then(function(items) {
-                //    return items[$stateParams.itemId];
-                //  });
               }
             ]
           }

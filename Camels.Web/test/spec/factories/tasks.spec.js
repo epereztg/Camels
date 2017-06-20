@@ -16,7 +16,16 @@ describe('Factory: tasksService', function () {
   describe('when getting items', function () {
     it('should return data', function () {
       $httpBackend.expectGET(/\/editDetails/).respond('');
-      tasksService.getItems();
+      tasksService.getItems("editDetails");
+      $httpBackend.flush();
+    });
+  });
+
+
+  describe('when getting task detail', function () {
+    it('should return data', function () {
+      $httpBackend.expectGET(/\/editDetails/).respond('');
+      tasksService.getItem("editDetails",1);
       $httpBackend.flush();
     });
   });

@@ -17,7 +17,7 @@ component("graph", {
     var self = this;
     var controllerRoute = 'tasks';
 
-    tasksService.getItems(controllerRoute).success(function (data) {
+    tasksService.getItems(controllerRoute).then(function (data) {
       self.data = data;
       self.max = 0;
 
