@@ -848,7 +848,7 @@ window.Modernizr = (function( window, document, undefined ) {
     // test page: paulirish.com/demo/inline-svg
     tests['inlinesvg'] = function() {
       var div = document.createElement('div');
-      div.innerHTML = '<jsonPathvg/>';
+      div.innerHTML = '<JsonServicePathvg/>';
       return (div.firstChild && div.firstChild.namespaceURI) == ns.svg;
     };
 

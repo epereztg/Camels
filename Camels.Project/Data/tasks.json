@@ -115,7 +115,7 @@
     "ItemId": 5,
     "Label": "Task5",
     "Total": 96,
-    "Current": 96,
+    "Current": 95,
     "Timeline": [
       {
         "date": "20170503",
@@ -271,7 +271,7 @@
       },
       {
         "date": "20170503",
-        "complete": "80"
+        "complete": "82"
       },
       {
         "date": "20170503",
@@ -299,7 +299,7 @@
       },
       {
         "date": "20170503",
-        "complete": "8"
+        "complete": "82"
       },
       {
         "date": "20170503",
@@ -311,7 +311,7 @@
     "ItemId": 12,
     "Label": "Task12",
     "Total": 200,
-    "Current": 200,
+    "Current": 20,
     "Timeline": [
       {
         "date": "20170503",

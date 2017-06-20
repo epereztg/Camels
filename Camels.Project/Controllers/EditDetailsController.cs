@@ -1,45 +1,24 @@
-﻿namespace Camels.Project.Controllers
+﻿
+
+namespace Camels.Project.Controllers
 {
     using System;
     using System.Collections.Generic;
     using System.Configuration;
-    using System.IO;
     using System.Linq;
-    using System.Web;
-    using System.Web.Configuration;
-    using System.Web.Http.Cors;
-    //using System.Web.Mvc;
-    using Newtonsoft.Json;
     using System.Web.Http;
-    using System.Web.Http.Routing;
-    using System.Web.Script.Serialization;
     using Camels.Project.Models;
-    using System.Collections;
-    
+    using Camels.Project.Services;
+
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
     {                
-        private string jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
-
-        public List<TaskItem> LoadJson()
-        {
-            List<TaskItem> items;
-            
-            string s = this.jsonPath;
-            using (System.IO.StreamReader r = new StreamReader(s))
-            {
-                string json = r.ReadToEnd();
-                items= JsonConvert.DeserializeObject<List<TaskItem>>(json);
-            }
-            return items;
-        }
-
         [Route("")]
         [HttpGet]
         public string GetDropdownList()
         {            
             string s = ConfigurationManager.AppSettings["JSONPath"];
-            List<TaskItem> items = LoadJson();
+            List<TaskItem> items = JsonService.LoadJson();
             return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(items);           
         }
        
@@ -48,7 +27,7 @@
         public Object GetItem(int id)
         {
             string result = string.Empty;            
-            List<TaskItem> items=LoadJson();            
+            List<TaskItem> items= JsonService.LoadJson();            
             return items.First(q=>q.ItemId.Equals(id));
         }
 
@@ -56,28 +35,32 @@
         [Route("")]     
         public string UpdateTask(TaskItem taskItem)
         {
-            string result = String.Empty;
-            string s = this.jsonPath;            
+            string result = String.Empty;            
 
-            ////Read Json File as array
-            List<TaskItem> items = LoadJson();
-            ////Get selected product in json file
-            var jsonProduct = items.First(q => q.ItemId.Equals(taskItem.ItemId));            
+            //Read Json File
+            List<TaskItem> items = JsonService.LoadJson();
+
+           
+
+            //Get selected item
+            var jsonItem = items.First(q => q.ItemId.Equals(taskItem.ItemId));            
             var idx = items.FindIndex(i => i.ItemId.Equals(taskItem.ItemId));
 
             if (taskItem.Current <= taskItem.Total)
             {
-                jsonProduct.Total = taskItem.Total;
-                jsonProduct.Label = taskItem.Label;
-                jsonProduct.Current = taskItem.Current;
-                jsonProduct.Timeline = taskItem.Timeline;              
+                jsonItem.Total = taskItem.Total;
+                jsonItem.Label = taskItem.Label;
+                jsonItem.Current = taskItem.Current;
+                jsonItem.Timeline = taskItem.Timeline;              
 
                 //Update Item
-                items[idx] = jsonProduct;
+                items[idx] = jsonItem;
 
-                //Serialize json object
-                result = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText(s, result);                
+                //Serialize JsonService object
+                JsonService.SaveJson(items);
+
+                //result = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
+                //System.IO.File.WriteAllText(s, result);                
             }
             else
             {                
