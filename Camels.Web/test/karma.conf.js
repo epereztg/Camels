@@ -34,8 +34,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
 
       'app/services/services.module.js',
-      'app/services/task.service.js',
-      'app/js/lodash/lodash.min.js',
+      'app/services/task.service.js',      
 
       'app/components/components.module.js',
       'app/components/graph.component.js',

@@ -1,6 +1,6 @@
-'use strict';
+describe('Factory: tasksService', function () {
+  'use strict';
 
-describe('Factory: tasksService', function() {
   var myService = null;
   var responseData = null;
   var items = null;
@@ -8,51 +8,26 @@ describe('Factory: tasksService', function() {
 
   beforeEach(module('core.services'));
 
-  // beforeEach(inject(function($injector) {
-  //     // Set up the mock http service responses
-  //     $httpBackend = $injector.get('$httpBackend');
-  //
-  //   }
 
-  beforeEach(inject(function(_TasksService_) {
-    myService = _TasksService_;
-    $httpBackend = $injector.get('$httpBackend');
-  }));
-  //});
-  //Example
-  var tasksService;
- 
-  it('can get an instance', inject(function(tasksService) {
-
-    expect(tasksService).toBeDefined();
+  beforeEach(inject(function(_tasksService_) {
+    tasksService = _tasksService_;
+    $httpBackend = _$httpBackend_;
   }));
 
-  it('should return 12 items', function() {
 
-    myService.getList()
-      .then(function(items) {
-        responseData = items;
-      });
-    console.log(items);
-    expect(responseData.length).toBe(12);
-
-
+  describe('when getting items', function () {
+    it('should return data', function () {
+      $httpBackend.expectGET(/\/editDetails/).respond('');
+      tasksService.getItems();
+      $httpBackend.flush();
+    });
   });
 
-});
-////e).toBeDefined();
-//}));
 
-it('should return 12 items', function() {
 
-  myService.getList()
-    .then(function(items) {
-      responseData = items;
-    });
-  console.log(items);
-  expect(responseData.length).toBe(12);
 
 
 });
 
-//});
+
+
