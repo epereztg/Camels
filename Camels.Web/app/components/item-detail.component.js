@@ -4,10 +4,8 @@
   angular.module('core.components')
     .controller('ItemDetailController', ItemDetailController);
 
-  // 'item' is injected through state's resolve
   ItemDetailController.$inject = ['item', 'itemId', 'tasksService', '$window'];
-
-  //function ItemDetailController($scope, itemId, tasksService) {
+  
   function ItemDetailController(item, itemId, tasksService, $window) {
     var controllerRoute = 'editDetails';
 
@@ -17,8 +15,7 @@
     itemDetail.total = item.data.Total;
     itemDetail.current = item.data.Current;
     itemDetail.itemId = itemId;
-    itemDetail.timeline = item.data.Timeline;
-    //itemDetail.itemSelected = item.data.ItemId;
+    itemDetail.timeline = item.data.Timeline;    
 
 
     //Read from JSON with backend
@@ -36,8 +33,7 @@
         'Total': itemDetail.total,
         'Current': itemDetail.current,
         'Timeline':itemDetail.timeline
-      }
-      debugger;
+      }      
       var result = tasksService.saveItem(controllerRoute, obj).success(function (data) {
         data = JSON.parse(data);
         itemDetail.message = data;
@@ -48,8 +44,7 @@
     //On DropDownList Change 
     itemDetail.onTaskChange = function () {
 
-      tasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).success(function (data) {
-        //data = JSON.parse(data);               
+      tasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).success(function (data) {        
         itemDetail.label = data.Label;        
         itemDetail.total = data.Total;
         itemDetail.current = data.Current;

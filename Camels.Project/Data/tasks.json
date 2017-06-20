@@ -3,7 +3,7 @@
     "ItemId": 1,
     "Label": "Task1",
     "Total": 80,
-    "Current": 29,
+    "Current": 80,
     "Timeline": [
       {
         "date": "20170503",
@@ -175,7 +175,7 @@
     "Timeline": [
       {
         "date": "20170503",
-        "complete": "2"
+        "complete": "25"
       },
       {
         "date": "20170503",
@@ -227,7 +227,7 @@
     "ItemId": 9,
     "Label": "Task9",
     "Total": 200,
-    "Current": 140,
+    "Current": 146,
     "Timeline": [
       {
         "date": "20170503",
@@ -283,7 +283,7 @@
     "ItemId": 11,
     "Label": "Task11",
     "Total": 500,
-    "Current": 200,
+    "Current": 40,
     "Timeline": [
       {
         "date": "20170503",

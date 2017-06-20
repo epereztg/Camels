@@ -15,9 +15,7 @@
     using System.Web.Script.Serialization;
     using Camels.Project.Models;
     using System.Collections;
-
-
-    [EnableCors(origins: "http://localhost:21275", headers: "*", methods: "*")]
+    
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
     {                
@@ -26,8 +24,7 @@
         public List<TaskItem> LoadJson()
         {
             List<TaskItem> items;
-
-            //s = AppDomain.CurrentDomain.BaseDirectory + s;
+            
             string s = this.jsonPath;
             using (System.IO.StreamReader r = new StreamReader(s))
             {

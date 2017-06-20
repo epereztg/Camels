@@ -21,7 +21,7 @@ describe('Factory: tasksService', function() {
   //});
   //Example
   var tasksService;
-  //tasksService
+ 
   it('can get an instance', inject(function(tasksService) {
 
     expect(tasksService).toBeDefined();
