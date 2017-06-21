@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels.Web", "Camels.Web\Camels.Web.csproj", "{38E82342-3F64-441C-AFFC-171E273BE610}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C6E1CE4-6D32-4619-882E-26942B187A2B} = {6C6E1CE4-6D32-4619-882E-26942B187A2B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels.Test", "Camels.Test\Camels.Test.csproj", "{1F62FF1C-D371-456E-B2DD-662376DA8B48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels.Project", "Camels.Project\Camels.Project.csproj", "{6C6E1CE4-6D32-4619-882E-26942B187A2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camels.Api", "Camels.Api\Camels.Api.csproj", "{6C6E1CE4-6D32-4619-882E-26942B187A2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

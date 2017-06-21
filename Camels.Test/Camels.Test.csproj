@@ -55,9 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Camels.Project\Camels.Project.csproj">
+    <ProjectReference Include="..\Camels.Project\Camels.Api.csproj">
       <Project>{6c6e1ce4-6d32-4619-882e-26942b187a2b}</Project>
-      <Name>Camels.Project</Name>
+      <Name>Camels.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
