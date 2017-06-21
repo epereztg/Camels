@@ -137,14 +137,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="gulpfile.js" />
     <Content Include="app\tasks\tasks.json" />
+    <None Include="Properties\PublishProfiles\develop.web.pubxml" />
+    <None Include="Properties\PublishProfiles\development.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="test\.jshintrc" />
-    <Content Include="test\karma.conf.js.orig" />
-    <Content Include="test\spec\factories\tasks.spec.js.orig" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -189,16 +189,9 @@
     <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
     <Content Include="bin\Microsoft.ApplicationInsights.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bower_components\angular-animate\angular-animate.js" />
     <Content Include="bower_components\angular-animate\angular-animate.min.js" />
     <Content Include="bower_components\angular-animate\index.js" />
-    <Content Include="bower_components\angular-aria\angular-aria.js" />
-    <Content Include="bower_components\angular-aria\angular-aria.min.js" />
-    <Content Include="bower_components\angular-aria\index.js" />
-    <Content Include="bower_components\angular-cookies\angular-cookies.js" />
-    <Content Include="bower_components\angular-cookies\angular-cookies.min.js" />
-    <Content Include="bower_components\angular-cookies\index.js" />
     <Content Include="bower_components\angular-messages\angular-messages.js" />
     <Content Include="bower_components\angular-messages\angular-messages.min.js" />
     <Content Include="bower_components\angular-messages\index.js" />
@@ -218,17 +211,6 @@
     <Content Include="bower_components\angular-touch\angular-touch.js" />
     <Content Include="bower_components\angular-touch\angular-touch.min.js" />
     <Content Include="bower_components\angular-touch\index.js" />
-    <Content Include="bower_components\angular-ui-router\karma.conf.js" />
-    <Content Include="bower_components\angular-ui-router\migrate\migratewarn.js" />
-    <Content Include="bower_components\angular-ui-router\release\angular-ui-router.js" />
-    <Content Include="bower_components\angular-ui-router\release\angular-ui-router.min.js" />
-    <Content Include="bower_components\angular-ui-router\release\resolveService.js" />
-    <Content Include="bower_components\angular-ui-router\release\resolveService.min.js" />
-    <Content Include="bower_components\angular-ui-router\release\stateEvents.js" />
-    <Content Include="bower_components\angular-ui-router\release\stateEvents.min.js" />
-    <Content Include="bower_components\angular-ui-router\release\ui-router-angularjs.js" />
-    <Content Include="bower_components\angular-ui-router\release\ui-router-angularjs.min.js" />
-    <Content Include="bower_components\angular-ui-router\rollup.config.js" />
     <Content Include="bower_components\angular\angular-csp.css" />
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
@@ -245,6 +227,10 @@
   <ItemGroup>
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
+    <Folder Include="bower_components\angular-aria\" />
+    <Folder Include="bower_components\angular-cookies\" />
+    <Folder Include="bower_components\angular-ui-router\migrate\" />
+    <Folder Include="bower_components\angular-ui-router\release\" />
   </ItemGroup>
   <!-- <ItemGroup> -->
   <!-- <TypeScriptCompile Include="node_modules\ajv\lib\ajv.d.ts" /> -->

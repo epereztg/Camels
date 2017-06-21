@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Releases\20170620</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include=".gitattributes">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include=".gitignore">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/404.html">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/components/bar-list.component.js">
+      <publishTime>06/19/2017 15:24:40</publishTime>
+    </File>
+    <File Include="app/components/components.module.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/components/graph.component.js">
+      <publishTime>06/20/2017 13:40:28</publishTime>
+    </File>
+    <File Include="app/components/item-detail.component.js">
+      <publishTime>06/20/2017 14:49:58</publishTime>
+    </File>
+    <File Include="app/favicon.ico">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/images/camelSnipping.PNG">
+      <publishTime>06/15/2017 12:30:32</publishTime>
+    </File>
+    <File Include="app/images/flat-avatar.png">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/images/walkingCamel.gif">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/images/yeoman.png">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/index.html">
+      <publishTime>06/20/2017 12:57:17</publishTime>
+    </File>
+    <File Include="app/js/angular-animate.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/js/angular-ui-router.min.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/js/angular.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/js/lodash.js">
+      <publishTime>06/20/2017 12:19:36</publishTime>
+    </File>
+    <File Include="app/scripts/app.js">
+      <publishTime>06/20/2017 15:44:00</publishTime>
+    </File>
+    <File Include="app/scripts/controllers/dashboard.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/scripts/controllers/login.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/services/services.module.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/services/task.api.js">
+      <publishTime>06/20/2017 15:43:02</publishTime>
+    </File>
+    <File Include="app/services/tasks.service.js">
+      <publishTime>06/20/2017 14:52:58</publishTime>
+    </File>
+    <File Include="app/styles/app.animation.css">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/styles/app.css">
+      <publishTime>06/20/2017 08:19:35</publishTime>
+    </File>
+    <File Include="app/styles/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/styles/main.css">
+      <publishTime>06/19/2017 16:44:43</publishTime>
+    </File>
+    <File Include="app/tasks/tasks.json">
+      <publishTime>06/16/2017 08:30:14</publishTime>
+    </File>
+    <File Include="app/views/bar-list.template.html">
+      <publishTime>06/20/2017 08:19:35</publishTime>
+    </File>
+    <File Include="app/views/base.html">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/views/dashboard.html">
+      <publishTime>06/19/2017 16:55:03</publishTime>
+    </File>
+    <File Include="app/views/dashboard/overview.html">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/views/dashboard/reports.html">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="app/views/graph.template.html">
+      <publishTime>06/19/2017 16:30:49</publishTime>
+    </File>
+    <File Include="app/views/home.template.html">
+      <publishTime>06/19/2017 10:51:17</publishTime>
+    </File>
+    <File Include="app/views/item-detail.template.html">
+      <publishTime>06/20/2017 08:19:35</publishTime>
+    </File>
+    <File Include="app/views/login.html">
+      <publishTime>06/15/2017 10:44:57</publishTime>
+    </File>
+    <File Include="bin/Camels.dll">
+      <publishTime>06/20/2017 17:17:08</publishTime>
+    </File>
+    <File Include="bin/Less.dll">
+      <publishTime>06/15/2017 09:34:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/15/2017 09:34:17</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/14/2017 08:12:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>06/15/2017 09:34:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>06/15/2017 09:34:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>06/15/2017 09:34:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>06/15/2017 09:34:17</publishTime>
+    </File>
+    <File Include="bower_components/angular-animate/angular-animate.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-animate/angular-animate.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-animate/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-messages/angular-messages.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-messages/angular-messages.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-messages/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-mocks/angular-mocks.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-mocks/ngAnimateMock.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-mocks/ngMock.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-mocks/ngMockE2E.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-resource/angular-resource.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-resource/angular-resource.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-resource/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-route/angular-route.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-route/angular-route.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-route/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-sanitize/angular-sanitize.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-sanitize/angular-sanitize.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-sanitize/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-touch/angular-touch.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-touch/angular-touch.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular-touch/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular/angular-csp.css">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular/angular.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular/angular.min.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="bower_components/angular/index.js">
+      <publishTime>06/15/2017 10:04:27</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/15/2017 10:02:20</publishTime>
+    </File>
+    <File Include="gulpfile.js">
+      <publishTime>06/15/2017 10:02:20</publishTime>
+    </File>
+    <File Include="gulpfile_less.js">
+      <publishTime>06/15/2017 10:02:20</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.map">
+      <publishTime>06/15/2017 10:02:19</publishTime>
+    </File>
+    <File Include="test/.jshintrc">
+      <publishTime>06/15/2017 10:02:20</publishTime>
+    </File>
+    <File Include="test/karma.conf.js">
+      <publishTime>06/20/2017 11:44:26</publishTime>
+    </File>
+    <File Include="test/spec/factories/tasks.spec.js">
+      <publishTime>06/20/2017 14:55:54</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/20/2017 17:05:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

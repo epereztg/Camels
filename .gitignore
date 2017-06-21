@@ -8,5 +8,6 @@
 *.orig
 .vs/*
 Camels.Test/obj/*
+Camels.Test/obj/*
 Camels.Web/obj/*
 Camels.Project/obj/*
