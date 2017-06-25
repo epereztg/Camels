@@ -29,7 +29,7 @@ namespace Camels.Project
         private static void EnableCrossSiteRequests(HttpConfiguration config)
         {            
             var cors = new EnableCorsAttribute(
-                origins: "http://localhost:41011",
+                origins: "http://localhost:41011,https://localhost:1447,http://localhost/Camels.Web",
                 headers: "*",
                 methods: "*"
             );

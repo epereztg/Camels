@@ -3,7 +3,8 @@
 
   service.factory('tasksApi', function ($http) {
     var result;
-    var baseUrl = 'http://localhost:21275/';
+      //var baseUrl = 'http://localhost:21275/';
+    var baseUrl = 'http://localhost/Camels.Api/';
 
     return {
       getItems: function (controllerRoute) {

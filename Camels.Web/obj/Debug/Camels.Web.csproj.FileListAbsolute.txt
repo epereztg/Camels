@@ -73,7 +73,6 @@ C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camel
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\System.Web.Http.Cors.dll
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\System.Web.Http.dll
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\Less.pdb
-C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\Newtonsoft.Json.xml
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\System.Net.Http.Formatting.xml
 C:\Users\elenaptg\Documents\Visual Studio 2015\Projects\CamelsRace2\Camels\Camels.Web\bin\System.Web.Http.xml
