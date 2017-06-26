@@ -1,12 +1,11 @@
 (function (global, angular) {
   var service = angular.module('core.services');
 
-  service.factory('tasksApi', function ($http) {
+  service.factory('tasksApi', function ($http, $location) {
     var result;
-      //var baseUrl = 'http://localhost:21275/';
-    //var baseUrl = 'https://localhost/Camels.Api/';
-    var baseUrl = 'https://localhost:1443/Camels.Api/';
-    
+    //  var baseUrl = 'http://localhost:21275/';        //Local config 
+    var baseUrl = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/Camels.Api/'; //appserver7 config
+
 
     return {
       getItems: function (controllerRoute) {
