@@ -3,8 +3,8 @@
 
   service.factory('tasksApi', function ($http, $location) {
     var result;
-    //  var baseUrl = 'http://localhost:21275/';        //Local config 
-    var baseUrl = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/Camels.Api/'; //appserver7 config
+      var baseUrl = 'http://localhost:21275/';        //Local config 
+    //var baseUrl = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/Camels.Api/'; //appserver7 config
 
 
     return {
