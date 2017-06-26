@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Camel Race</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <script src="js/angular.js"></script>
+  <script src="js/angular-animate.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+  <script src="js/lodash.js"></script>
+
+  <script src="services/services.module.js"></script>
+  <script src="services/task.api.js"></script>
+  <script src="services/tasks.service.js"></script>
+
+  <script src="components/components.module.js"></script>
+  <script src="components/graph.component.js"></script>
+  <script src="components/bar-list.component.js"></script>
+  <script src="components/item-detail.component.js"></script>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/dashboard.js"></script>
+
+  <!-- Styles -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/app.css" />
+  <link rel="stylesheet" href="styles/app.animation.css" />
+  <link rel="stylesheet" href="styles/main.css">
+
+</head>
+
+<body ng-app="app">
+  <div class="tabs">
+    <a ui-sref="overview" ui-sref-active="activeTab">Home</a>
+  </div>
+  <ui-view></ui-view>
+</body>
+
+</html>
