@@ -34,20 +34,14 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
 
       'app/services/services.module.js',
-      'app/services/task.service.js',      
+      'app/services/tasks.service.js',      
 
       'app/components/components.module.js',
       'app/components/graph.component.js',
       'app/components/bar-list.component.js',
       'app/components/item-detail.component.js',
 
-      'app/services/services.module.js',
-      'app/services/task.service.js',
-
-      'app/components/components.module.js',
-      'app/components/graph.component.js',
-      'app/components/bar-list.component.js',
-      'app/components/item-detail.component.js',
+   
 
 
       'app/js/app.module.js',
