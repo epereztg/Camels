@@ -7,8 +7,9 @@
 /bower_components
 *.orig
 .vs/*
-Camels.Test/obj/*
+Camels.Api/obj/*
 Camels.Test/obj/*
 Camels.Web/obj/*
-Camels.Project/obj/*
 Camels/obj/*
+/packages
+obj/*
