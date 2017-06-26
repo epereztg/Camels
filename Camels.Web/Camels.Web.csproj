@@ -124,6 +124,8 @@
     <Content Include="app\favicon.ico" />
     <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\js\lodash.js" />
+    <Content Include="app\scripts\controllers\dashboard.js" />
+    <Content Include="app\scripts\controllers\login.js" />
     <Content Include="app\services\tasks.service.js" />
     <Content Include="app\styles\main.css" />
     <Content Include="app\views\base.html" />
@@ -223,7 +225,6 @@
   <ItemGroup>
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
-    <Folder Include="app\scripts\controllers\" />
     <Folder Include="bower_components\angular-aria\" />
     <Folder Include="bower_components\angular-cookies\" />
     <Folder Include="bower_components\angular-ui-router\migrate\" />
