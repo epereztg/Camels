@@ -7,7 +7,7 @@ using Owin;
 using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
 
-[assembly: OwinStartup(typeof(Camels.Project.Startup))]
+//[assembly: OwinStartup(typeof(Camels.Project.Startup))]
 
 namespace Camels.Project
 {
@@ -17,25 +17,14 @@ namespace Camels.Project
         {
 
             var httpConfiguration = new HttpConfiguration();
-            app.Map("/api", appBuilder => ConfigureApi(app, httpConfiguration));
-           
-
-            //var corsAttr = new EnableCorsAttribute("http://localhost:21275", "*", "*", "Content-Disposition");
-            
-            //httpConfiguration.EnableCors(corsAttr);            
-
+            app.Map("/api", appBuilder => ConfigureApi(app, httpConfiguration));          
 
         }
 
         private static void ConfigureApi(IAppBuilder apiApp, HttpConfiguration config)
         {
 
-            //ApiConfiguration;
-            //config.Routes.MapHttpRoute(
-            //    name: "DefaultApi",
-            //    routeTemplate: "{controller}/{ItemId}",
-            //    defaults: new { ItemId = RouteParameter.Optional });
-
+   
         }
 
     }

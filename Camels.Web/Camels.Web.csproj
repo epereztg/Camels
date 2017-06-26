@@ -129,7 +129,6 @@
     <Content Include="app\views\base.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\dashboard\overview.html" />
-    <Content Include="app\views\dashboard\reports.html" />
     <Content Include="app\views\login.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -170,8 +169,6 @@
     <Content Include="app\js\angular-ui-router.min.js" />
     <Content Include="app\js\angular.js" />
     <Content Include="app\scripts\app.js" />
-    <Content Include="app\scripts\controllers\dashboard.js" />
-    <Content Include="app\scripts\controllers\login.js" />
     <Content Include="app\services\services.module.js" />
     <Content Include="app\services\task.api.js" />
     <Content Include="app\styles\app.animation.css" />
@@ -215,7 +212,6 @@
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
-    <Content Include="gulpfile_less.js" />
     <Content Include="test\karma.conf.js" />
     <Content Include="test\spec\factories\tasks.spec.js" />
     <Content Include="Web.config" />
@@ -227,6 +223,7 @@
   <ItemGroup>
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
+    <Folder Include="app\scripts\controllers\" />
     <Folder Include="bower_components\angular-aria\" />
     <Folder Include="bower_components\angular-cookies\" />
     <Folder Include="bower_components\angular-ui-router\migrate\" />
