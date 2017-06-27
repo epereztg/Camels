@@ -1,10 +1,10 @@
 (function (global, angular) {
   var service = angular.module('core.services');
 
-  service.factory('tasksApi', function ($http, $location) {
-    var result;
-    //  var baseUrl = 'http://localhost:21275/';        //Local config 
-    var baseUrl = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/Camels.Api/'; //appserver7 config
+  //service.factory('tasksApi', function ($http, $location) {
+  service.factory('tasksApi', function ($http, $window, envApi, $location) {
+    var result;   
+    var baseUrl = $location.protocol() + '://' + $location.host() + ':' + envApi.localPort + '/' + envApi.baseUrl;
 
 
     return {
@@ -14,8 +14,7 @@
           url: baseUrl + controllerRoute,
           headers: {
             'Content-Type': 'application/json'
-          }
-         
+          }         
         });
       },
       getItem: function (controllerRoute, id) {
@@ -24,12 +23,9 @@
           url: baseUrl + controllerRoute + '/' + id,
           headers: {
             'Content-Type': 'application/json'
-          }
-         
+          }         
         });
       },
-
-
       saveItem: function (controllerRoute, obj) {
         return $http({
           method: 'POST',

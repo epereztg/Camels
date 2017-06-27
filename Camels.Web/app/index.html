@@ -6,6 +6,8 @@
   <title>Camel Race</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
+  
+
 
   <script src="js/angular.js"></script>
   <script src="js/angular-animate.js"></script>
@@ -15,16 +17,23 @@
   <script src="services/services.module.js"></script>
   <script src="services/task.api.js"></script>
   <script src="services/tasks.service.js"></script>
+  
 
   <script src="components/components.module.js"></script>
   <script src="components/graph.component.js"></script>
   <script src="components/bar-list.component.js"></script>
   <script src="components/item-detail.component.js"></script>
 
-  <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/login.js"></script>
-  <script src="scripts/controllers/dashboard.js"></script>
 
+  <script src="config/env.api.js"></script>
+  <script src="config/env.service.js"></script>
+  <script src="config/env.component.js"></script>
+
+  
+
+  <script src="scripts/app.js"></script>
+  
+ 
   <!-- Styles -->
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles/app.css" />
@@ -34,10 +43,16 @@
 </head>
 
 <body ng-app="app">
-  <div class="tabs">
-    <a ui-sref="overview" ui-sref-active="activeTab">Home</a>
-  </div>
-  <ui-view></ui-view>
+<!--<div class="tabs">
+  <a ui-sref="overview" ui-sref-active="activeTab">Home</a>
+</div>-->
+<ui-view></ui-view>
+  
+  
+  
+<script>
+
+</script>
 </body>
 
 </html>

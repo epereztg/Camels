@@ -82,8 +82,20 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -112,6 +124,14 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -121,11 +141,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\config\env.api.js" />
+    <Content Include="app\config\env.service.js" />
+    <Content Include="app\config\env.component.js" />
     <Content Include="app\favicon.ico" />
     <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\js\lodash.js" />
-    <Content Include="app\scripts\controllers\dashboard.js" />
-    <Content Include="app\scripts\controllers\login.js" />
     <Content Include="app\services\tasks.service.js" />
     <Content Include="app\styles\main.css" />
     <Content Include="app\views\base.html" />
@@ -139,6 +160,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="gulpfile.js" />
     <Content Include="app\tasks\tasks.json" />
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\develop.web.pubxml" />
     <None Include="Properties\PublishProfiles\development.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -215,16 +237,24 @@
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
     <Content Include="test\karma.conf.js" />
+    <Content Include="test\spec\factories\env.spec.js" />
     <Content Include="test\spec\factories\tasks.spec.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <!-- <Compile Include="node_modules\node-gyp\lib\Find-VS2017.cs" /> -->
+    <!-- <Compile Include="Config.cs" /> -->
+    <!-- <Compile Include="ConfigurationController.cs" /> -->
+    <Compile Include="app\tasks\Config.cs" />
+    <Compile Include="app\controllers\ConfigurationController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
+    <Folder Include="app\NewFolder1\" />
+    <Folder Include="app\scripts\controllers\" />
     <Folder Include="bower_components\angular-aria\" />
     <Folder Include="bower_components\angular-cookies\" />
     <Folder Include="bower_components\angular-ui-router\migrate\" />
@@ -255,6 +285,8 @@
           <DevelopmentServerPort>41011</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1443/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:1443/Camels/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
