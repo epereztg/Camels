@@ -34,10 +34,18 @@
     };
 
     this.saveItem = function (controllerRoute, obj) {
-      return tasksApi.saveItem(controllerRoute, obj)
-        .then(function (response) {
-          return response.data;
-        });
+      return configApi.get().then(function (config) {
+        var configObj = {
+          appName: config.ApplicationName,
+          localPort: config.LocalPort
+        };
+
+        return tasksApi.saveItem(configObj, controllerRoute,obj)
+          .then(function (response) {
+            return response.data;
+          });
+
+      });
     };
 
 

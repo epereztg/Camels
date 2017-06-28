@@ -54,7 +54,7 @@
                 items[idx] = jsonItem;
 
                 //Serialize JsonService object
-                JsonService.SaveJson(items, JsonPath);               
+                 JsonService.SaveJson(items, JsonPath);               
             }
             else
             {                

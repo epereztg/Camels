@@ -12,7 +12,7 @@
       getItems: function (config, controllerRoute) {
         return $http({
           method: 'GET',
-          url: buildBaseUrl(config.appName, config.localPort) + '/' + controllerRoute,
+          url: buildBaseUrl(config.appName, config.localPort) +  controllerRoute,
           headers: {
             'Content-Type': 'application/json'
           }
@@ -21,16 +21,16 @@
       getItem: function (config, controllerRoute, id) {
         return $http({
           method: 'GET',
-          url: buildBaseUrl(config.appName, config.localPort) + '/' + controllerRoute + '/' + id,
+          url: buildBaseUrl(config.appName, config.localPort) + controllerRoute + '/' + id,
           headers: {
             'Content-Type': 'application/json'
           }
         });
       },    
-      saveItem: function (controllerRoute, obj) {
+      saveItem: function (config,controllerRoute, obj) {
         return $http({
-          method: 'POST',
-          url: baseUrl + controllerRoute,
+          method: 'POST',          
+          url: buildBaseUrl(config.appName, config.localPort) + controllerRoute,
           header: {
             'Content-Type': 'application/json'
           },

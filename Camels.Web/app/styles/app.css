@@ -8,7 +8,6 @@
   /*margin: 60px auto;*/
   margin: 100px 0px 100px 330px;
   position: relative;
-  overflow-y: scroll;
 }
 
 .y {
@@ -66,12 +65,12 @@
     opacity: 1;
   }
 
-.label {
+/*.label {
   position: absolute;
   margin-top: -30px;
   font-weight: bold;
   white-space: nowrap;
-}
+}*/
 /*Bars (Graph lines)*/
 .bar {
   position: absolute;
@@ -101,6 +100,7 @@
 .bar.bar-list-item a {
   position: absolute;
   margin-top: -30px;
+  font-size: 24px;
   font-weight: bold;
   white-space: nowrap;
   background: none;

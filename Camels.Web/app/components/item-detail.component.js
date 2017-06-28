@@ -4,9 +4,9 @@
   angular.module('core.components')
     .controller('ItemDetailController', ItemDetailController);
 
-  ItemDetailController.$inject = [ 'item', 'itemId',  'tasksService', '$window'];
+  ItemDetailController.$inject = [ 'item', 'itemId',  'tasksService','configApi', '$window'];
   
-  function ItemDetailController( item, itemId, tasksService, $window) {   
+  function ItemDetailController( item, itemId, tasksService,configApi, $window) {   
 
     var controllerRoute = 'editDetails';
 
@@ -36,8 +36,9 @@
         'Timeline':itemDetail.timeline
       }      
       var result = tasksService.saveItem(controllerRoute, obj).then(function (data) {
-        data = JSON.parse(data);
-        itemDetail.message = data;
+        //data = JSON.parse(data);
+        //itemDetail.message = data;
+        $window.history.back();
       });
     };
 
