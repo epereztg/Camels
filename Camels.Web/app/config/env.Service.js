@@ -15,18 +15,6 @@
 
     };
 
-    //this.getBaseUrl = function () {
-    //  if (this.baseUrl == null) {
-    //    return envApi.get()
-    //      .then(function(response) {
-    //        return response.BaseUrl;
-    //      });
-    //  } else {
-    //    return this.baseUrl;
-    //  }
-
-    //};
-
     this.getLocalPort = function () {
       return envApi.get()
         .then(function (response) {

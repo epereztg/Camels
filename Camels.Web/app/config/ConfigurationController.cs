@@ -10,7 +10,7 @@
     {
       return new InitialConfig
       {
-        BaseUrl = ConfigurationManager.AppSettings["baseUrl"],
+        ApplicationName = ConfigurationManager.AppSettings["applicationName"],
         LocalPort = ConfigurationManager.AppSettings["localPort"]
       };
     }

@@ -4,9 +4,9 @@
   angular.module('core.components')
     .controller('ItemDetailController', ItemDetailController);
 
-  ItemDetailController.$inject = ['baseUrl', 'localPort', 'item', 'itemId', 'envService', 'tasksService', '$window'];
+  ItemDetailController.$inject = [ 'item', 'itemId',  'tasksService', '$window'];
   
-  function ItemDetailController(baseUrl, localPort, item, itemId, envService, tasksService, $window) {
+  function ItemDetailController( item, itemId, tasksService, $window) {
     //envService.setBaseUrl(baseUrl);
     //envService.setLocalPort(localPort);
 
