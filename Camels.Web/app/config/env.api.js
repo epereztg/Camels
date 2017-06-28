@@ -4,8 +4,9 @@
   service.factory('envApi', function ($http, $location) {
 
     //Url to call configuration controller
-    //var url = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/configuration/'; 
-    var url ='../configuration/';
+    var url = '../configuration/';
+    var baseUrl;
+    var localPort;
 
     return {
       get: function () {
@@ -15,10 +16,10 @@
           headers: {
             'Content-Type': 'application/json'
           }
-        }).then(function (result) {         
+        }).then(function (result) {
           return result.data;
         });
-      },        
+      },
       setBaseUrl: function (obj) {
         this.baseUrl = obj;
       },

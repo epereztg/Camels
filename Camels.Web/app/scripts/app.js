@@ -17,9 +17,6 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    //$urlRouterProvider.when('/dashboard', '/dashboard/overview');    
-    //$urlRouterProvider.otherwise('dashboard/overview');
-
     $urlRouterProvider.otherwise('dashboard');
 
     $stateProvider
@@ -40,16 +37,18 @@ angular
           url: '/dashboard',
           parent: 'base',
           templateUrl: 'views/dashboard.html',
-          controller: 'envController',   
+          controller: 'envController',
           resolve: {
-            baseUrl: ['envService',
-              function (envService) {                  
+            baseUrl: [
+              'envService',
+              function (envService) {
                 return envService.getBaseUrl().then(function (it) {
                   return it;
                 });
               }
             ],
-            localPort: ['envService',
+            localPort: [
+              'envService',
               function (envService) {
                 return envService.getLocalPort().then(function (item) {
                   return item;
@@ -65,24 +64,63 @@ angular
           templateUrl: 'views/item-detail.template.html',
           controller: 'ItemDetailController as itemDetail',
           resolve: {
+            baseUrl: ['envService',
+              function (envService) {
+                return envService.getBaseUrl().then(function (baseurl) {
+                  envService.setBaseUrl(baseurl);
+                 
+                  return baseurl;
+                });
+              }
+            ],
+            localPort: ['envService',
+              function (envService) {
+                return envService.getLocalPort().then(function (port) {
+                  envService.setLocalPort(port);
+                  return port;
+                });
+              }
+            ],
             itemId: [
-              '$stateParams', 'tasksService',
+              '$stateParams', 'envService',
               function ($stateParams) {
                 return $stateParams.itemId;
               }
             ],
             item: [
-              '$stateParams', 'tasksService',
-              function ($stateParams, tasksService) {
-                var items;
-                var controllerRoute = 'editDetails';
+              '$stateParams', 'tasksService', 'envService',
+                function ($stateParams, tasksService, envService) {                  
+                  var controllerRoute = 'editDetails';
+                  //return envService.getBaseUrl().then(function (baseurl) {
+                  //  tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function (item) {
+                  //    return item;
+                  //  });
+                  return envService.getLocalPort().then(function(localPort) {
+                    if (localPort != null) {
+                      tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function(item) {
+                        return item;
+                      });
 
-                //Call Using Backend:
-                return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function (item) {
-                  return item;
-                });
-              }
+                    }
+                    else console.log('sssssssssssssssssssssss');
+                  });
+                  //  .then(function (item) {
+                  //  if(localPort!=null){
+                  //  tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function(item) {
+                  //    return item;                    
+                  //  });
+                  //  }
+                  //});
+
+
+                  //Call Using Backend: (not waiting for config promise)
+                  //return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function (item) {
+                  //  return item;
+                  //});
+                }
             ]
+                        
+          
           }
         });
 

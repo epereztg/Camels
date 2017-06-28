@@ -4,6 +4,7 @@
   function TasksService(tasksApi) {
 
     this.getItems = function (filter) {
+      console.log(filter);
       return tasksApi.getItems(filter)
             .then(function (response) {
               return response.data;

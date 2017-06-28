@@ -4,8 +4,7 @@
   //service.factory('tasksApi', function ($http, $location) {
   service.factory('tasksApi', function ($http, $window, envApi, $location) {
     var result;   
-    var baseUrl = $location.protocol() + '://' + $location.host() + ':' + envApi.localPort + '/' + envApi.baseUrl;
-
+    var baseUrl = $location.protocol() + '://' + $location.host() + ':' + envApi.localPort + '/' + envApi.baseUrl;       
 
     return {
       getItems: function (controllerRoute) {
