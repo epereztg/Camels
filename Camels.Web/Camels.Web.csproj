@@ -142,8 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\config\env.api.js" />
-    <Content Include="app\config\env.service.js" />
-    <Content Include="app\config\env.component.js" />
     <Content Include="app\favicon.ico" />
     <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\js\lodash.js" />

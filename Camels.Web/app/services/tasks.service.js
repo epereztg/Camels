@@ -1,7 +1,7 @@
 ﻿(function (global, angular) {
   'use strict';
 
-  function TasksService(tasksApi, envApi) {
+  function tasksService(tasksApi, envApi) {
 
     this.getItems = function (controllerRoute) {     
       return envApi.get().then(function(config) {        
@@ -33,14 +33,6 @@
       });
     };
 
-    //this.getItem = function (controllerRoute, taskId) {
-    //  return tasksApi.getItem(controllerRoute, taskId)
-    //        .then(function (response) {
-    //          return response.data;
-    //        });
-    //};
-
-
     this.saveItem = function (controllerRoute, obj) {
       return tasksApi.saveItem(controllerRoute, obj)
         .then(function (response) {
@@ -56,6 +48,6 @@
     };
   }
   angular.module('core.services')
-        .factory('tasksService', TasksService);
+        .factory('tasksService', tasksService);
 
 })(this, angular);
