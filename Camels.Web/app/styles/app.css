@@ -4,15 +4,14 @@ body {
 
 .chart {
   border-left: 1px solid black;
-  /*y axis*/
+  /*x axis*/
   border-bottom: 1px solid black;
-  /*x axis*/
-  border-right: 1px solid black;
-  /*x axis*/
+  /*y axis*/
+  border-right: 1px solid black;  
   margin: 60px auto;
   position: relative;
-  list-style: none;
-  padding: 0;
+  /*list-style: none;
+  padding: 0;*/
 }
 
 .y {

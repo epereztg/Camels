@@ -45,7 +45,6 @@ angular
             baseUrl: ['envService',
               function (envService) {                  
                 return envService.getBaseUrl().then(function (it) {
-                  console.log('app.js baseurl' + it);
                   return it;
                 });
               }
@@ -53,7 +52,6 @@ angular
             localPort: ['envService',
               function (envService) {
                 return envService.getLocalPort().then(function (item) {
-                  console.log('app.js port:' + item);
                   return item;
                 });
               }

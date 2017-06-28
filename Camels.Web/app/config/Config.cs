@@ -1,4 +1,4 @@
-﻿namespace Camels.app.Tasks
+﻿namespace Camels.app.config
 {
   public class InitialConfig
   {   

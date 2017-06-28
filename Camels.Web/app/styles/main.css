@@ -1067,7 +1067,7 @@ html {
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #fff;
@@ -4687,11 +4687,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .label {
   display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
+  padding: .2em .6em .3em .-10em;  
+  font-size: 24px;
   font-weight: bold;
-  line-height: 1;
-  /*color: #fff;*/
+  line-height: 1;  
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;

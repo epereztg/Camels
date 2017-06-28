@@ -5,7 +5,8 @@
   <div class="y" style="width:{{$ctrl.height}}px;">{{$ctrl.yAxisLabel}}</div>
 
   <!--Horizontal axis text-->
-  <div class="x">{{$ctrl.xAxisLabel}}</div>
+  <div class="x" style="height:{{$ctrl.height}}px;">{{$ctrl.xAxisLabel}}</div>
+  <!--<div class="x">{{$ctrl.xAxisLabel}}</div>-->
 
   <!-- Data -->
   <bar-list width="$ctrl.width" height="$ctrl.height" max="$ctrl.max" data="$ctrl.data"></bar-list>
