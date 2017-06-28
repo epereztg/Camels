@@ -237,8 +237,8 @@
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
     <Content Include="test\karma.conf.js" />
-    <Content Include="test\spec\factories\env.spec.js" />
-    <Content Include="test\spec\factories\tasks.spec.js" />
+    <Content Include="test\spec\services\env.spec.js" />
+    <Content Include="test\spec\services\tasks.spec.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -246,14 +246,14 @@
     <!-- <Compile Include="Config.cs" /> -->
     <!-- <Compile Include="ConfigurationController.cs" /> -->
     <Compile Include="app\tasks\Config.cs" />
-    <Compile Include="app\controllers\ConfigurationController.cs" />
+    <Compile Include="app\config\ConfigurationController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\controllers\" />
     <Folder Include="app\graph\" />
     <Folder Include="app\home\" />
-    <Folder Include="app\NewFolder1\" />
     <Folder Include="app\scripts\controllers\" />
     <Folder Include="bower_components\angular-aria\" />
     <Folder Include="bower_components\angular-cookies\" />
