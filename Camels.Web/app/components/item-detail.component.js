@@ -6,9 +6,7 @@
 
   ItemDetailController.$inject = [ 'item', 'itemId',  'tasksService', '$window'];
   
-  function ItemDetailController( item, itemId, tasksService, $window) {
-    //envService.setBaseUrl(baseUrl);
-    //envService.setLocalPort(localPort);
+  function ItemDetailController( item, itemId, tasksService, $window) {   
 
     var controllerRoute = 'editDetails';
 

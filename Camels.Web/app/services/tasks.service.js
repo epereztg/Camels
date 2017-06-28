@@ -3,35 +3,42 @@
 
   function TasksService(tasksApi, envApi) {
 
-    this.getItems = function (filter) {
-      console.log(filter);
-
-      return envApi.get().then(function(config) {
-        debugger;
+    this.getItems = function (controllerRoute) {     
+      return envApi.get().then(function(config) {        
           var configObj = {
             appName: config.ApplicationName,
             localPort: config.LocalPort
           };
 
-          return tasksApi.getItemsWithApplicationName(configObj, filter)
+          return tasksApi.getItems(configObj, controllerRoute)
           .then(function (response) {
             return response.data;
           });
 
       });
-
-      //return tasksApi.getItems(filter)
-      //      .then(function (response) {
-      //        return response.data;
-      //      });
     };
 
     this.getItem = function (controllerRoute, taskId) {
-      return tasksApi.getItem(controllerRoute, taskId)
-            .then(function (response) {
-              return response.data;
-            });
+      return envApi.get().then(function (config) {        
+        var configObj = {
+          appName: config.ApplicationName,
+          localPort: config.LocalPort
+        };
+
+        return tasksApi.getItem(configObj, controllerRoute, taskId)
+          .then(function (response) {
+            return response.data;
+          });
+
+      });
     };
+
+    //this.getItem = function (controllerRoute, taskId) {
+    //  return tasksApi.getItem(controllerRoute, taskId)
+    //        .then(function (response) {
+    //          return response.data;
+    //        });
+    //};
 
 
     this.saveItem = function (controllerRoute, obj) {
