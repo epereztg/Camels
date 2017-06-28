@@ -1,7 +1,7 @@
 (function (global, angular) {
   var service = angular.module('core.services');
   
-  service.factory('tasksApi', function ($http, $window, envApi, $location) {
+  service.factory('tasksApi', function ($http, $window, configApi, $location) {
     var result;  
 
     var buildBaseUrl = function(appName, localPort) {

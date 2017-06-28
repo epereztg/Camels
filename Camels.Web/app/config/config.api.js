@@ -1,7 +1,7 @@
 ﻿(function (global, angular) {
   var service = angular.module('core.services');
 
-  service.factory('envApi', function ($http, $location) {
+  service.factory('configApi', function ($http, $location) {
 
     //Url to call configuration controller
     var url = '../configuration/';

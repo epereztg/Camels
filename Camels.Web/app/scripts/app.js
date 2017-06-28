@@ -47,14 +47,14 @@ angular
           controller: 'ItemDetailController as itemDetail',
           resolve: {           
             itemId: [
-              '$stateParams', 'envService',
+              '$stateParams',
               function ($stateParams) {
                 return $stateParams.itemId;
               }
             ],
             item: [
-              '$stateParams', 'tasksService', 'envService',
-                function ($stateParams, tasksService, envService) {                  
+              '$stateParams', 'tasksService', 
+                function ($stateParams, tasksService) {                  
                   var controllerRoute = 'editDetails';
                 
                   //Call Using Backend: (not waiting for config promise)

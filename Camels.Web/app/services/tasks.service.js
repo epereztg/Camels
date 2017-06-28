@@ -1,10 +1,10 @@
 ﻿(function (global, angular) {
   'use strict';
 
-  function tasksService(tasksApi, envApi) {
+  function tasksService(tasksApi, configApi) {
 
     this.getItems = function (controllerRoute) {     
-      return envApi.get().then(function(config) {        
+      return configApi.get().then(function (config) {
           var configObj = {
             appName: config.ApplicationName,
             localPort: config.LocalPort
@@ -19,7 +19,7 @@
     };
 
     this.getItem = function (controllerRoute, taskId) {
-      return envApi.get().then(function (config) {        
+      return configApi.get().then(function (config) {
         var configObj = {
           appName: config.ApplicationName,
           localPort: config.LocalPort
