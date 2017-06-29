@@ -181,6 +181,5 @@ D:\Projects\CamelsRace\Camels\Camels.Api\bin\Microsoft.Owin.Security.Google.xml
 D:\Projects\CamelsRace\Camels\Camels.Api\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Projects\CamelsRace\Camels\Camels.Api\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Projects\CamelsRace\Camels\Camels.Api\bin\System.Web.Http.Owin.xml
-D:\Projects\CamelsRace\Camels\Camels.Api\obj\Debug\Camels.Api.csprojResolveAssemblyReference.cache
 D:\Projects\CamelsRace\Camels\Camels.Api\obj\Debug\Camels.Project.dll
 D:\Projects\CamelsRace\Camels\Camels.Api\obj\Debug\Camels.Project.pdb

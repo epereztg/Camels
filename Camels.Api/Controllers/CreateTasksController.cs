@@ -9,7 +9,7 @@ namespace Camels.Project.Controllers
   using System;
   using System.Configuration;
 
-  [RoutePrefix("createtask")]
+  [RoutePrefix("create")]
   public class CreateTasksController : ApiController
   {
     private static readonly string JsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
@@ -21,13 +21,16 @@ namespace Camels.Project.Controllers
 
       //Read Json File
       List<TaskItem> items = JsonService.LoadJson(JsonPath);
+      List<Timeline> timeline = new List<Timeline>();
+      timeline.Add(new Timeline("20171212", "1"));
 
       var jsonItem = new TaskItem
       {
+        ItemId = items.Count+1,
         Total = taskItem.Total,
         Label = taskItem.Label,
         Current = taskItem.Current,
-        Timeline = null
+        Timeline = timeline
       };
 
       //TODO when milestones required
@@ -37,7 +40,7 @@ namespace Camels.Project.Controllers
 
       //Serialize JsonService object
       JsonService.SaveJson(items, JsonPath);
-            
+
     }
 
   }

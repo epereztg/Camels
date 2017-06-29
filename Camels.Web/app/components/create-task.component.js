@@ -4,35 +4,24 @@
   angular.module('core.components')
     .controller('CreateTaskController', CreateTaskController);
 
-  CreateTaskController.$inject = ['tasksService', '$window'];
+  CreateTaskController.$inject = ['tasksService', '$window','$scope'];
   
-  function CreateTaskController(tasksService,$window) {
+  function CreateTaskController(tasksService, $window, $scope) {
 
-    var controllerRoute = 'createtask';
-
-    var itemDetail = this;
-
-    //itemDetail.label = item.Label;
-    //itemDetail.total = item.Total;
-    //itemDetail.current = item.Current;
-    //itemDetail.itemId = itemId;
-    //itemDetail.timeline = item.Timeline;    
+    var controllerRoute = 'create';
 
 
-    //Read from JSON with backend
-    itemDetail.result = tasksService.getItems(controllerRoute).then(function (data) {
-      data = JSON.parse(data);
-      itemDetail.TasksList = data;     
-    });
+    $scope.itemId;
+    $scope.label;
 
 
     //Save Task details button
-    itemDetail.btnPostCall = function () {
+    $scope.btnPostCall = function () {            
       var obj = {
-        'ItemId': itemDetail.itemId,
-        'Label': itemDetail.label,
-        'Total': itemDetail.total,
-        'Current': itemDetail.current       
+        'ItemId': this.itemId,
+        'Label': $scope.label,
+        'Total': this.total,
+        'Current': this.current
       }      
       var result = tasksService.createItem(controllerRoute, obj).then(function (data) {
         $window.history.back();
@@ -40,7 +29,7 @@
 
     };
 
-    itemDetail.goBack = function () {
+    $scope.goBack = function () {
       $window.history.back();
     };
 

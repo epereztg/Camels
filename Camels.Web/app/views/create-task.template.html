@@ -26,10 +26,9 @@
           </h2>
 
           <div class="col-sm-4">
-            <span class="jsonlabel">ID:</span>
-            {{itemDetail.itemId}}<br />
+
             <span class="jsonlabel">Label:</span>
-            <input type="text" placeholder="Task name" name="inputLabel" ng-model="itemDetail.label" required />
+            <input type="text" placeholder="Task name" name="inputLabel" ng-model="label" required />
             <div role="alert">
               <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputLabel.$error.required">
                 Required value!
@@ -38,7 +37,7 @@
 
 
             <span class="jsonlabel">Total:</span>
-            <input type="number" placeholder="Estimated Total Time" name="inputTotal" ng-model="itemDetail.total" required />
+            <input type="number" placeholder="Estimated Total Time" name="inputTotal" ng-model="total" required />
             <div role="alert">
               <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputTotal.$error.required">
                 Required value!
@@ -50,7 +49,7 @@
 
 
             <span class="jsonlabel">Current:</span>
-            <input type="number" placeholder="Estimated progress" name="inputCurrent" ng-model="itemDetail.current" max="{{itemDetail.total}}" required />
+            <input type="number" placeholder="Estimated progress" name="inputCurrent" ng-model="current" max="{{total}}" required />
             <br />
             <div role="alert">
               <span class="error" ng-show="createTaskForm.inputCurrent.$error.number">
@@ -62,8 +61,9 @@
             </div>
             <br />
 
-            <button type="submit" ng-disabled="createTaskForm.$invalid" ng-click="itemDetail.btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
-            <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
+            <button type="submit" ng-disabled="createTaskForm.$invalid" ng-click="btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
+            
+            <button ng-click="goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
 
           </div>
 
