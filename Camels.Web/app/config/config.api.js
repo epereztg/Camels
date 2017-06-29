@@ -36,19 +36,11 @@
    
       return promise;
     }
-
-    var setBaseUrl= function (obj) {
-      this.baseUrl = obj;
-    }
-    var setLocalPort = function (obj) {
-      this.localPort = obj;
-    }
+   
 
     return {
       getConfig: getConfig,
-      get: get,
-      setBaseUrl:setBaseUrl,
-      setLocalPort: setLocalPort
+      get: get   
     }
 
   }

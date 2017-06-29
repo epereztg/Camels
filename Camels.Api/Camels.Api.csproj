@@ -210,6 +210,7 @@
   <ItemGroup>
     <Compile Include="ApiConfiguration.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CreateTasksController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="Controllers\EditDetailsController.cs" />
     <Compile Include="Global.asax.cs">

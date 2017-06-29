@@ -5,11 +5,11 @@
 
     this.baseUrl = envApi.baseUrl;
     this.localPort = envApi.localPort;
-    
+
 
     this.getBaseUrl = function () {
       return envApi.get()
-        .then(function (response) {          
+        .then(function (response) {
           return response.BaseUrl;
         });
 
@@ -22,23 +22,13 @@
         });
 
     };
-  
-    
-    this.setBaseUrl = function (obj) {
-      return envApi.setBaseUrl(obj);
-    };
-    this.setLocalPort = function (obj) {
-      return envApi.setLocalPort(obj);
-    };
-
 
     return {
       baseUrl: this.baseUrl,
       localPort: this.localPort,
       getLocalPort: this.getLocalPort,
-      getBaseUrl: this.getBaseUrl,
-      setBaseUrl: this.setBaseUrl,
-      setLocalPort: this.setLocalPort
+      getBaseUrl: this.getBaseUrl
+
     };
   }
   angular.module('core.services')

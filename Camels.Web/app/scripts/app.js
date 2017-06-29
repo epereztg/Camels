@@ -36,10 +36,15 @@ angular
         {
           url: '/dashboard',
           parent: 'base',
-          templateUrl: 'views/dashboard.html'
- 
-
+          templateUrl: 'views/dashboard.html' 
         })
+      .state('createTask',
+        {
+          url: '/createTask',
+          parent: 'base',
+          templateUrl: 'views/create-task.template.html',
+          controller: 'CreateTaskController as createTask'
+        })    
       .state('itemDetail',
         {
           url: '/item-detail/{itemId}',

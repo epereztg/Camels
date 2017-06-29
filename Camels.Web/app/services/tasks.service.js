@@ -48,11 +48,27 @@
       });
     };
 
+    this.createItem = function (controllerRoute, obj) {
+      return configApi.get().then(function (config) {
+        var configObj = {
+          appName: config.ApplicationName,
+          localPort: config.LocalPort
+        };
+
+        return tasksApi.createItem(configObj, controllerRoute, obj)
+          .then(function (response) {
+            return response.data;
+          });
+
+      });
+    };
+
 
     return {
       getItems: this.getItems,
       getItem: this.getItem,
-      saveItem: this.saveItem
+      saveItem: this.saveItem,
+      createItem: this.createItem
     };
   }
   angular.module('core.services')

@@ -42,6 +42,22 @@
           }).error(function () {
             alert("Something went wrong in the post call");
           });
+      },
+      createItem: function (config, controllerRoute, obj) {
+        return $http({
+            method: 'POST',
+            url: buildBaseUrl(config.appName, config.localPort) + controllerRoute,
+            header: {
+              'Content-Type': 'application/json'
+            },
+            data: obj
+          })
+          .success(function (data) {
+            result = (data);
+
+          }).error(function () {
+            alert("Something went wrong in the post call");
+          });
       }
 
     }

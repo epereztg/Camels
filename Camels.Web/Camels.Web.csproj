@@ -141,6 +141,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\create-task.component.js" />
     <Content Include="app\config\config.api.js" />
     <Content Include="app\config\env.service.js" />
     <Content Include="app\favicon.ico" />
@@ -151,6 +152,7 @@
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\dashboard\overview.html" />
     <Content Include="app\views\home.template.html" />
+    <Content Include="app\views\create-task.template.html" />
     <Content Include="app\views\login.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
