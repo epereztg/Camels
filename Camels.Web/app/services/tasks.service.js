@@ -63,12 +63,30 @@
       });
     };
 
+    this.deleteTask = function (controllerRoute, obj) {
+      return configApi.get().then(function (config) {
+        var configObj = {
+          appName: config.ApplicationName,
+          localPort: config.LocalPort
+        };
+
+        return tasksApi.deleteTask(configObj, controllerRoute, obj)
+          .then(function (response) {
+            return response.data;
+          });
+
+      });
+    };
+
+    
+
 
     return {
       getItems: this.getItems,
       getItem: this.getItem,
       saveItem: this.saveItem,
-      createItem: this.createItem
+      createItem: this.createItem,
+      deleteTask: this.deleteTask
     };
   }
   angular.module('core.services')

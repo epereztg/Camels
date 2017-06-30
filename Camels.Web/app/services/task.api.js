@@ -58,6 +58,15 @@
           }).error(function () {
             alert("Something went wrong in the post call");
           });
+      },
+      deleteTask: function (config, controllerRoute, id) {
+        return $http({
+          method: 'POST',
+          url: buildBaseUrl(config.appName, config.localPort) + controllerRoute + '/' + id,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
       }
 
     }

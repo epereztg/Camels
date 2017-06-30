@@ -84,34 +84,6 @@
     ]
   },
   {
-    "ItemId": 4,
-    "Label": "Task44",
-    "Total": 300,
-    "Current": 300,
-    "Timeline": [
-      {
-        "date": "20170503",
-        "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "4"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "8"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
-      }
-    ]
-  },
-  {
     "ItemId": 5,
     "Label": "Task5",
     "Total": 96,
@@ -148,34 +120,6 @@
       {
         "date": "20170503",
         "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "4"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "8"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
-      }
-    ]
-  },
-  {
-    "ItemId": 7,
-    "Label": "Task7",
-    "Total": 122,
-    "Current": 12,
-    "Timeline": [
-      {
-        "date": "20170503",
-        "complete": "25"
       },
       {
         "date": "20170503",

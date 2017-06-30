@@ -27,7 +27,7 @@
 
 
     //Save Task details button
-    itemDetail.btnPostCall = function () {
+    itemDetail.saveItemButton = function () {
       var obj = {
         'ItemId': itemDetail.itemId,
         'Label': itemDetail.label,
@@ -61,7 +61,16 @@
       $window.history.back();
     };
 
-
+    
+    itemDetail.deleteTaskButton = function () {
+      debugger;
+      //var obj = {
+      //  'ItemId': itemDetail.itemId 
+      //}
+      var result = tasksService.deleteTask(controllerRoute, itemDetail.itemId).then(function (data) {
+        $window.history.back();
+      });
+    };
 
   };
 })();
