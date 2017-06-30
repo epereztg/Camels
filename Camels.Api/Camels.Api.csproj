@@ -232,6 +232,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\tasks.json" />
+    <Content Include="Data\tasks.bak.json" />
     <None Include="Properties\PublishProfiles\develop.api.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
