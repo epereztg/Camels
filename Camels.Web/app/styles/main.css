@@ -23,7 +23,7 @@ section,
 summary {
   display: block;
 }
-audio,
+/*audio,
 canvas,
 progress,
 video {
@@ -78,7 +78,7 @@ sup {
 }
 sub {
   bottom: -0.25em;
-}
+}*/
 img {
   border: 0;
 }
@@ -1067,7 +1067,7 @@ html {
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #fff;
@@ -6501,27 +6501,6 @@ button.close {
   bottom: 0;
   background: #ecf0f1;
   color: #666;
-  /*
-     * Base structure
-     */
-  /*
-     * Global add-ons
-     */
-  /*
-     * Top navigation
-     * Hide default border to remove 1px line.
-     */
-  /*
-     * Sidebar
-     */
-  /* Hide for mobile, show later */
-  /* Sidebar navigation */
-  /*
-     * Main content
-     */
-  /*
-     * Placeholder dashboard ideas
-     */
 }
 .dashboard-page .sub-header {
   padding-bottom: 10px;
@@ -6763,7 +6742,7 @@ to prevent collapsing during animation*/
 }
 html,
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 

@@ -143,7 +143,6 @@
   <ItemGroup>
     <Content Include="app\components\create-task.component.js" />
     <Content Include="app\config\config.api.js" />
-    <Content Include="app\config\env.service.js" />
     <Content Include="app\favicon.ico" />
     <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\js\lodash.js" />

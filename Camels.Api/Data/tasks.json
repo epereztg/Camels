@@ -171,7 +171,7 @@
     "ItemId": 7,
     "Label": "Task7",
     "Total": 122,
-    "Current": 0,
+    "Current": 12,
     "Timeline": [
       {
         "date": "20170503",
@@ -340,6 +340,18 @@
     "Label": "testtask",
     "Total": 2,
     "Current": 2,
+    "Timeline": [
+      {
+        "date": "20171212",
+        "complete": "1"
+      }
+    ]
+  },
+  {
+    "ItemId": 14,
+    "Label": "Task14",
+    "Total": 120,
+    "Current": 100,
     "Timeline": [
       {
         "date": "20171212",

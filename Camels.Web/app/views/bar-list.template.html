@@ -1,4 +1,4 @@
-﻿<div ng-repeat="bar in $ctrl.data" ui-sref="itemDetail({itemId: $index + 1})"  class="bar bar-list-item " style="width:{{($ctrl.width*bar.Current) /bar.Total}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px;">
+﻿<div ng-repeat="bar in $ctrl.data" ui-sref="itemDetail({itemId: $index + 1})"  contextmenu="{{$ctrl.lists}}" class="bar bar-list-item " style="width:{{($ctrl.width*bar.Current) /bar.Total}}px; top:{{($index / $ctrl.data.length * $ctrl.width)+45}}px;">
   <!-- TaskItem Label over bar-->
   <a class="bar bar-list-item " align="left " ui-sref="itemDetail({itemId: $index + 1}) ">{{bar.Label}}-{{bar.Current}} of {{bar.Total}}</a>
 
@@ -13,5 +13,7 @@
   <div class="dot" ng-repeat="mls in bar.Timeline" style="margin-left: {{mls.complete / $ctrl.max * $ctrl.height}}px;" data-title="Completed on: {{mls.date}}">
 
   </div>
-
+ 
 </div>
+
+
