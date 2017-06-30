@@ -26,7 +26,7 @@
     public Object GetItem(int id)
     {
       string result = string.Empty;
-      List<TaskItem> items = JsonService.LoadJson(JsonPath);
+      List<TaskItem> items = JsonService.LoadJson(JsonPath);     
       return items.First(q => q.ItemId.Equals(id));
     }
 
