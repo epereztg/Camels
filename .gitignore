@@ -13,3 +13,4 @@ Camels.Web/obj/*
 Camels/obj/*
 /packages
 obj/*
+/TestResults
