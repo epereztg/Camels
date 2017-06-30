@@ -36,8 +36,7 @@
         'Timeline':itemDetail.timeline
       }      
       var result = tasksService.saveItem(controllerRoute, obj).then(function (data) {
-        //data = JSON.parse(data);
-        //itemDetail.message = data;
+        //Save and Back
         $window.history.back();
       });
     };
@@ -53,20 +52,13 @@
         itemDetail.itemId = data.ItemId;
         itemDetail.timeline = data.Timeline;
       });
-
-
     };
 
     itemDetail.goBack = function () {
       $window.history.back();
     };
-
     
-    itemDetail.deleteTaskButton = function () {
-      debugger;
-      //var obj = {
-      //  'ItemId': itemDetail.itemId 
-      //}
+    itemDetail.deleteTaskButton = function () { 
       var result = tasksService.deleteTask(controllerRoute, itemDetail.itemId).then(function (data) {
         $window.history.back();
       });

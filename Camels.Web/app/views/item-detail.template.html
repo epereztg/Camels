@@ -37,7 +37,7 @@
                 <span class="jsonlabel">ID:</span>
                 {{itemDetail.itemId}}<br />
                 <span class="jsonlabel">Label:</span>
-                <input type="text" name="inputLabel" ng-model="itemDetail.label" required />
+                <input type="text" name="inputLabel" ng-model="itemDetail.label" maxlength="255" required />
                 <div role="alert">
                   <span class="error" ng-show="taskDetailForm.inputLabel.$error.required">
                     Required value!

@@ -35,7 +35,7 @@
     "Timeline": [
       {
         "date": "20170503",
-        "complete": "5"
+        "complete": "53"
       },
       {
         "date": "20170503",
@@ -51,7 +51,7 @@
       },
       {
         "date": "20170503",
-        "complete": "12"
+        "complete": "125"
       }
     ]
   },
@@ -80,34 +80,6 @@
       {
         "date": "20170503",
         "complete": "45"
-      }
-    ]
-  },
-  {
-    "ItemId": 4,
-    "Label": "Task4",
-    "Total": 300,
-    "Current": 300,
-    "Timeline": [
-      {
-        "date": "20170503",
-        "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "4"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "8"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
       }
     ]
   },
@@ -148,34 +120,6 @@
       {
         "date": "20170503",
         "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "4"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "8"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
-      }
-    ]
-  },
-  {
-    "ItemId": 7,
-    "Label": "Task7",
-    "Total": 122,
-    "Current": 80,
-    "Timeline": [
-      {
-        "date": "20170503",
-        "complete": "25"
       },
       {
         "date": "20170503",
@@ -332,6 +276,30 @@
       {
         "date": "20170503",
         "complete": "100"
+      }
+    ]
+  },
+  {
+    "ItemId": 13,
+    "Label": "testtask",
+    "Total": 2,
+    "Current": 2,
+    "Timeline": [
+      {
+        "date": "20171212",
+        "complete": "1"
+      }
+    ]
+  },
+  {
+    "ItemId": 14,
+    "Label": "Task14",
+    "Total": 120,
+    "Current": 100,
+    "Timeline": [
+      {
+        "date": "20171212",
+        "complete": "1"
       }
     ]
   }
