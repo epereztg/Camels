@@ -57,6 +57,12 @@
     itemDetail.goBack = function () {
       $window.history.back();
     };
+    itemDetail.delete = function () {
+        $confirm({ text: 'Are you sure you want to delete?' })
+          .then(function () {
+              $scope.deletedConfirm = 'Deleted';
+          });
+    }
     
     itemDetail.deleteTaskButton = function () { 
       var result = tasksService.deleteTask(controllerRoute, itemDetail.itemId).then(function (data) {

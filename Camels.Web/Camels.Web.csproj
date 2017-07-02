@@ -144,6 +144,8 @@
     <Content Include="app\components\create-task.component.js" />
     <Content Include="app\config\config.api.js" />
     <Content Include="app\favicon.ico" />
+    <Content Include="app\images\avatar.png" />
+    <Content Include="app\images\avatart.gif" />
     <Content Include="app\images\camelSnipping.PNG" />
     <Content Include="app\js\lodash.js" />
     <Content Include="app\services\tasks.service.js" />

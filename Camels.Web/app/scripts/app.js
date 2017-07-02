@@ -61,7 +61,7 @@ angular
               '$stateParams', 'tasksService', 
                 function ($stateParams, tasksService) {                  
                   var controllerRoute = 'editDetails';
-                  debugger;
+                 
                   //Call Using Backend: (not waiting for config promise)
                   return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function (item) {
                     return item;

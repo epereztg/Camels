@@ -1,1 +1,198 @@
-[]
+[
+  {
+    "ItemId": 1,
+    "Label": "Task1",
+    "Total": 80,
+    "Current": 80,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "5"
+      },
+      {
+        "date": "20170503",
+        "complete": "15"
+      },
+      {
+        "date": "20170503",
+        "complete": "25"
+      },
+      {
+        "date": "20170503",
+        "complete": "35"
+      },
+      {
+        "date": "20170503",
+        "complete": "12"
+      }
+    ]
+  },
+  {
+    "ItemId": 2,
+    "Label": "Task2",
+    "Total": 75,
+    "Current": 30,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "53"
+      },
+      {
+        "date": "20170503",
+        "complete": "15"
+      },
+      {
+        "date": "20170503",
+        "complete": "25"
+      },
+      {
+        "date": "20170503",
+        "complete": "35"
+      },
+      {
+        "date": "20170503",
+        "complete": "125"
+      }
+    ]
+  },
+  {
+    "ItemId": 5,
+    "Label": "Task5",
+    "Total": 96,
+    "Current": 95,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "4"
+      },
+      {
+        "date": "20170503",
+        "complete": "60"
+      },
+      {
+        "date": "20170503",
+        "complete": "8"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 6,
+    "Label": "Task6",
+    "Total": 104,
+    "Current": 100,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "4"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "8"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 8,
+    "Label": "Task8",
+    "Total": 152,
+    "Current": 150,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "100"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "8"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 11,
+    "Label": "Task11",
+    "Total": 500,
+    "Current": 40,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "4"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "82"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 12,
+    "Label": "Task12",
+    "Total": 200,
+    "Current": 20,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "22"
+      },
+      {
+        "date": "20170503",
+        "complete": "46"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "80"
+      },
+      {
+        "date": "20170503",
+        "complete": "100"
+      }
+    ]
+  }
+]
