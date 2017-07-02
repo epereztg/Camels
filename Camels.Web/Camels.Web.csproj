@@ -247,7 +247,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\scripts\controllers\" />
     <Folder Include="bower_components\angular-aria\" />
     <Folder Include="bower_components\angular-cookies\" />
     <Folder Include="bower_components\angular-ui-router\migrate\" />
