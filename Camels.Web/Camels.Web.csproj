@@ -144,9 +144,7 @@
     <Content Include="app\components\create-task.component.js" />
     <Content Include="app\config\config.api.js" />
     <Content Include="app\favicon.ico" />
-    <Content Include="app\images\avatar.png" />
-    <Content Include="app\images\avatart.gif" />
-    <Content Include="app\images\camelSnipping.PNG" />
+    <Content Include="app\images\flat-avatar.gif" />
     <Content Include="app\js\lodash.js" />
     <Content Include="app\services\tasks.service.js" />
     <Content Include="app\styles\main.css" />
@@ -186,9 +184,7 @@
     <Content Include="app\components\components.module.js" />
     <Content Include="app\components\graph.component.js" />
     <Content Include="app\components\item-detail.component.js" />
-    <Content Include="app\images\flat-avatar.png" />
     <Content Include="app\images\walkingCamel.gif" />
-    <Content Include="app\images\yeoman.png" />
     <Content Include="app\index.html" />
     <Content Include="app\js\angular-animate.js" />
     <Content Include="app\js\angular-ui-router.min.js" />

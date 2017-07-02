@@ -1,7 +1,21 @@
 (function () {
   'use strict';
 
-  angular.module('core.components')
+    angular.module('core.components')
+    .directive('ngConfirmClick', [
+    function () {
+        return {
+            link: function (scope, element, attr) {
+                var msg = attr.ngConfirmClick || "Are you sure?";
+                var clickAction = attr.confirmedClick;
+                element.bind('click', function (event) {
+                    if (window.confirm(msg)) {
+                        scope.$eval(clickAction)
+                    }
+                });
+            }
+        };
+    }])
     .controller('ItemDetailController', ItemDetailController);
 
   ItemDetailController.$inject = [ 'item', 'itemId',  'tasksService','configApi', '$window'];
@@ -57,11 +71,8 @@
     itemDetail.goBack = function () {
       $window.history.back();
     };
-    itemDetail.delete = function () {
-        $confirm({ text: 'Are you sure you want to delete?' })
-          .then(function () {
-              $scope.deletedConfirm = 'Deleted';
-          });
+    itemDetail.sayHi = function () {
+        alert('hi!')
     }
     
     itemDetail.deleteTaskButton = function () { 
