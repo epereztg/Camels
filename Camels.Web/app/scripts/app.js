@@ -11,7 +11,8 @@
 angular
   .module('app', [
     'ui.router',
-     'ngAnimate',
+    'toaster',
+    'ngAnimate',
     'core.components',
     'core.services'
   ])

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-    angular.module('core.components')
+  angular.module('core.components')
     .directive('ngConfirmClick', [
     function () {
         return {
@@ -18,9 +18,9 @@
     }])
     .controller('ItemDetailController', ItemDetailController);
 
-  ItemDetailController.$inject = [ 'item', 'itemId',  'tasksService','configApi', '$window'];
+    ItemDetailController.$inject = ['item', 'itemId', 'tasksService', 'configApi', '$window'];
   
-  function ItemDetailController( item, itemId, tasksService,configApi, $window) {   
+  function ItemDetailController(item, itemId, tasksService, configApi, $window) {
 
     var controllerRoute = 'editDetails';
 
@@ -56,6 +56,7 @@
       var result = tasksService.saveItem(controllerRoute, obj).then(function (data) {
         //Save and Back
         $window.history.back();
+        toasterService.showSuccess();
       });
     };
 

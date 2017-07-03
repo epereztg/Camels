@@ -146,8 +146,13 @@
     <Content Include="app\favicon.ico" />
     <Content Include="app\images\flat-avatar.gif" />
     <Content Include="app\js\lodash.js" />
+    <Content Include="app\js\toaster.js" />
+    <Content Include="app\js\toaster.min.js" />
     <Content Include="app\services\tasks.service.js" />
+    <Content Include="app\services\toaster.service.js" />
     <Content Include="app\styles\main.css" />
+    <Content Include="app\styles\toaster.css" />
+    <Content Include="app\styles\toaster.min.css" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\dashboard\overview.html" />
     <Content Include="app\views\home.template.html" />

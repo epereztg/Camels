@@ -17,13 +17,17 @@ namespace Camels.Project.Controllers
         [HttpPost]
         public void CreateTask(TaskItem taskItem)
         {
+            if (taskItem == null)
+            {
+                throw new InvalidOperationException("Cannot create task");
+            }
             string result = String.Empty;
 
             //Read Json File
             List<TaskItem> items = JsonService.LoadJson(JsonPath);
             List<Timeline> timeline = new List<Timeline>();
             timeline.Add(new Timeline("", ""));
-           
+
             Random random = new Random();
             int uuid = random.Next();
 
@@ -34,7 +38,7 @@ namespace Camels.Project.Controllers
                 Total = taskItem.Total,
                 Label = taskItem.Label,
                 Current = taskItem.Current,
-                Description= taskItem.Description,
+                Description = taskItem.Description,
                 Timeline = timeline
             };
 
@@ -45,6 +49,7 @@ namespace Camels.Project.Controllers
 
             //Serialize JsonService object
             JsonService.SaveJson(items, JsonPath);
+
 
         }
 

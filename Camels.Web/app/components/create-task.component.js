@@ -4,7 +4,7 @@
   angular.module('core.components')
     .controller('CreateTaskController', CreateTaskController);
 
-  CreateTaskController.$inject = ['tasksService', '$window','$scope'];
+  CreateTaskController.$inject = ['tasksService', '$window', '$scope'];
   
   function CreateTaskController(tasksService, $window, $scope) {
 
@@ -20,7 +20,12 @@
         'Description': this.description
       }      
       var result = tasksService.createItem(controllerRoute, obj).then(function (data) {
+        
         $window.history.back();
+       // toasterService.showSuccess();
+      }).error(function () {
+//        toasterService.showError();
+        alert("Error creating new task");
       });
 
     };

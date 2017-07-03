@@ -13,6 +13,7 @@
 
         <ul class="nav nav-sidebar">
           <li ng-class="{active: $state.includes('dashboard')}"><a ui-sref="dashboard">Tasks List <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: $state.includes('createTask')}"><a ui-sref="createTask">Create Task</a></li>
         </ul>
 
         <!--Show Dropdown with tasks-->
@@ -96,17 +97,14 @@
                 </div>
 
 
-                <button type="submit" ng-disabled="taskDetailForm.$invalid" ng-click="itemDetail.saveItemButton()" class="btn btn-white btn-outline btn-sm" style="background: #3ca2e0;">Save</button>
-                <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline  btn-sm" style="background: #3ca2e0;">Cancel</button>
-                <button confirmed-click="itemDetail.deleteTaskButton()" class="btn btn-white btn-outline  btn-sm" style="background: red;"
+                <button type="submit" ng-disabled="taskDetailForm.$invalid" ng-click="itemDetail.saveItemButton()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
+                <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
+                <button confirmed-click="itemDetail.deleteTaskButton()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: red;"
                         ng-confirm-click="Would you like to delete this task?">
                   Delete task
                 </button>
 
               </div>
-
-
-
             </div>
           </form>
         </div>
