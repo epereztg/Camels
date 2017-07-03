@@ -10,7 +10,7 @@
                 var clickAction = attr.confirmedClick;
                 element.bind('click', function (event) {
                     if (window.confirm(msg)) {
-                        scope.$eval(clickAction)
+                      scope.$eval(clickAction);
                     }
                 });
             }
@@ -18,9 +18,9 @@
     }])
     .controller('ItemDetailController', ItemDetailController);
 
-    ItemDetailController.$inject = ['item', 'itemId', 'tasksService', 'configApi', '$window'];
+  ItemDetailController.$inject = ['item', 'itemId', 'tasksService', 'configApi', '$window', 'toaster'];
   
-  function ItemDetailController(item, itemId, tasksService, configApi, $window) {
+  function ItemDetailController(item, itemId, tasksService, configApi, $window, toaster) {
 
     var controllerRoute = 'editDetails';
 
@@ -55,8 +55,8 @@
       }      
       var result = tasksService.saveItem(controllerRoute, obj).then(function (data) {
         //Save and Back
-        $window.history.back();
-        toasterService.showSuccess();
+        $window.history.back();    
+        toaster.pop('info', "Updated", "Task has been updated");
       });
     };
 
@@ -81,6 +81,7 @@
     itemDetail.deleteTaskButton = function () { 
       var result = tasksService.deleteTask(controllerRoute, itemDetail.itemId).then(function (data) {
         $window.history.back();
+        toaster.pop('info', "Deleted", "Task has been deleted");
       });
     };
 

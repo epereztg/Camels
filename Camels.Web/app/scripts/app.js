@@ -10,11 +10,11 @@
  */
 angular
   .module('app', [
-    'ui.router',
-    'toaster',
+    'ui.router',   
     'ngAnimate',
     'core.components',
-    'core.services'
+    'core.services',
+    'toaster'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 

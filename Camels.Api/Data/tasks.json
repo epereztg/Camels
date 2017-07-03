@@ -1,22 +1,325 @@
 [
   {
-    "ItemId": 178411571,
-    "Label": "testtask",
-    "Total": 55,
-    "Current": 5,
-    "Description": "Testetestestetset",
+    "ItemId": 1,
+    "Label": "Task1",
+    "Total": 80,
+    "Current": 80,
+    "Description": null,
     "Timeline": [
       {
-        "date": "",
-        "complete": ""
+        "date": "20170503",
+        "complete": "5"
+      },
+      {
+        "date": "20170503",
+        "complete": "15"
+      },
+      {
+        "date": "20170503",
+        "complete": "25"
+      },
+      {
+        "date": "20170503",
+        "complete": "35"
+      },
+      {
+        "date": "20170503",
+        "complete": "12"
       }
     ]
   },
   {
-    "ItemId": 599761415,
-    "Label": "testtask2",
-    "Total": 900,
-    "Current": 800,
+    "ItemId": 2,
+    "Label": "Task2",
+    "Total": 75,
+    "Current": 30,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "53"
+      },
+      {
+        "date": "20170503",
+        "complete": "15"
+      },
+      {
+        "date": "20170503",
+        "complete": "25"
+      },
+      {
+        "date": "20170503",
+        "complete": "35"
+      },
+      {
+        "date": "20170503",
+        "complete": "125"
+      }
+    ]
+  },
+  {
+    "ItemId": 3,
+    "Label": "Task3",
+    "Total": 62,
+    "Current": 50,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "5"
+      },
+      {
+        "date": "20170503",
+        "complete": "15"
+      },
+      {
+        "date": "20170503",
+        "complete": "25"
+      },
+      {
+        "date": "20170503",
+        "complete": "35"
+      },
+      {
+        "date": "20170503",
+        "complete": "45"
+      }
+    ]
+  },
+  {
+    "ItemId": 5,
+    "Label": "Task5",
+    "Total": 96,
+    "Current": 95,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "4"
+      },
+      {
+        "date": "20170503",
+        "complete": "60"
+      },
+      {
+        "date": "20170503",
+        "complete": "8"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 6,
+    "Label": "Task6",
+    "Total": 104,
+    "Current": 100,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "4"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "8"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 8,
+    "Label": "Task8",
+    "Total": 152,
+    "Current": 150,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "100"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "8"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 9,
+    "Label": "Task9",
+    "Total": 200,
+    "Current": 146,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "20"
+      },
+      {
+        "date": "20170503",
+        "complete": "40"
+      },
+      {
+        "date": "20170503",
+        "complete": "60"
+      },
+      {
+        "date": "20170503",
+        "complete": "80"
+      },
+      {
+        "date": "20170503",
+        "complete": "150"
+      }
+    ]
+  },
+  {
+    "ItemId": 10,
+    "Label": "Task10",
+    "Total": 205,
+    "Current": 145,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "20"
+      },
+      {
+        "date": "20170503",
+        "complete": "40"
+      },
+      {
+        "date": "20170503",
+        "complete": "60"
+      },
+      {
+        "date": "20170503",
+        "complete": "82"
+      },
+      {
+        "date": "20170503",
+        "complete": "150"
+      }
+    ]
+  },
+  {
+    "ItemId": 11,
+    "Label": "Task11",
+    "Total": 500,
+    "Current": 40,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "2"
+      },
+      {
+        "date": "20170503",
+        "complete": "4"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "82"
+      },
+      {
+        "date": "20170503",
+        "complete": "10"
+      }
+    ]
+  },
+  {
+    "ItemId": 12,
+    "Label": "Task12",
+    "Total": 200,
+    "Current": 20,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20170503",
+        "complete": "22"
+      },
+      {
+        "date": "20170503",
+        "complete": "46"
+      },
+      {
+        "date": "20170503",
+        "complete": "6"
+      },
+      {
+        "date": "20170503",
+        "complete": "80"
+      },
+      {
+        "date": "20170503",
+        "complete": "100"
+      }
+    ]
+  },
+  {
+    "ItemId": 13,
+    "Label": "testtask",
+    "Total": 2,
+    "Current": 2,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20171212",
+        "complete": "1"
+      }
+    ]
+  },
+  {
+    "ItemId": 14,
+    "Label": "Task14",
+    "Total": 120,
+    "Current": 100,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "20171212",
+        "complete": "1"
+      }
+    ]
+  },
+  {
+    "ItemId": 1144711535,
+    "Label": "Task13",
+    "Total": 2000,
+    "Current": 989,
     "Description": null,
     "Timeline": [
       {
@@ -26,11 +329,11 @@
     ]
   },
   {
-    "ItemId": 558665999,
-    "Label": "TestT",
-    "Total": 87,
-    "Current": 10,
-    "Description": "UUHHH",
+    "ItemId": 1051757804,
+    "Label": "Task16",
+    "Total": 9999,
+    "Current": 99,
+    "Description": null,
     "Timeline": [
       {
         "date": "",
@@ -39,10 +342,101 @@
     ]
   },
   {
-    "ItemId": 1595443131,
-    "Label": "Tasssk",
-    "Total": 223,
-    "Current": 44,
+    "ItemId": 633056531,
+    "Label": "Task15",
+    "Total": 67,
+    "Current": 6,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 1390025470,
+    "Label": "Task16",
+    "Total": 5,
+    "Current": 5,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 1309596663,
+    "Label": "Task17",
+    "Total": 9090,
+    "Current": 500,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 1345691863,
+    "Label": "Task17",
+    "Total": 9090,
+    "Current": 500,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 1309591900,
+    "Label": "Task17",
+    "Total": 9090,
+    "Current": 500,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 1309591888,
+    "Label": "Task17",
+    "Total": 9090,
+    "Current": 500,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 1403739312,
+    "Label": "Task20",
+    "Total": 7888,
+    "Current": 847,
+    "Description": null,
+    "Timeline": [
+      {
+        "date": "",
+        "complete": ""
+      }
+    ]
+  },
+  {
+    "ItemId": 470457608,
+    "Label": "Task21",
+    "Total": 8989,
+    "Current": 99,
     "Description": null,
     "Timeline": [
       {
