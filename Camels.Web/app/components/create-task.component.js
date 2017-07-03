@@ -19,7 +19,7 @@
         'Current': this.current,
         'Description': this.description
       }
-      var result = tasksService.createItem(controllerRoute, obj).then(function (data) {
+      var result = tasksService.createItem(controllerRoute, obj).then(function(data) {
 
         $window.history.back();
         toaster.pop({
@@ -27,26 +27,22 @@
           title: 'Created',
           body: 'New task Created',
           timeout: 3000
-        });
-
-        // toasterService.showSuccess();
-      }).error(function () {
-        toaster.pop({
-          type: 'error',
-          title: 'Error',
-          body: 'Error creating new task',
-          timeout: 3000
-        });
-        //alert("Error creating new task");
+        });        
       });
+      //  .error(function () {
+      //  toaster.pop({
+      //    type: 'error',
+      //    title: 'Error',
+      //    body: 'Error creating new task',
+      //    timeout: 3000
+      //  });
+      //  //alert("Error creating new task");
+      //});
 
     };
 
     $scope.goBack = function () {
       $window.history.back();
     };
-
-
-
   };
 })();

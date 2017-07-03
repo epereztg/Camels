@@ -65,12 +65,6 @@
     opacity: 1;
   }
 
-/*.label {
-  position: absolute;
-  margin-top: -30px;
-  font-weight: bold;
-  white-space: nowrap;
-}*/
 /*Bars (Graph lines)*/
 .bar {
   position: absolute;
@@ -92,6 +86,7 @@
   height: 50px;
   width: 50px;
 }
+
 .bar.bar-list-item.camel h6 {
   margin-top: 20px;
   font-weight: bold;
@@ -104,15 +99,8 @@
   font-weight: bold;
   white-space: nowrap;
   background: none;
-
-  
 }
-/*.label {
-  position: absolute;
-  margin-top: -30px;
-  font-weight: bold;
-  white-space: nowrap;
-}*/
+
 .bar.camel {
   background: none;
   margin-top: -50px;

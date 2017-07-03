@@ -13,16 +13,19 @@
         <!--Menu-->
         <ul class="nav nav-sidebar">
           <li ng-class="{active: $state.includes('dashboard')}"><a ui-sref="dashboard">Tasks List<span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: $state.includes('createTask')}"><a ui-sref="createTask">Create Task</a></li>
+          <!--<li ng-class="{active: $state.includes('createTask')}"><a ui-sref="createTask">Create Task</a></li>-->
         </ul>
+        
+        <a ui-sref="createTask">
+          <button class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #8FBC8F;vertical-align: bottom;  height:50px; width:250px;">Create New Task</button>
+        </a>
       </div>
 
-
+    
 
       <!--Chart-->
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope">        
-        <graph width="1550" height="800" x-Axis-Label="Race" y-Axis-Label="Ongoing Tasks"></graph>
-        <!--<graph width="600" height="600" x-Axis-Label="Race" y-Axis-Label="Ongoing Tasks"></graph>-->
+        <graph width="1550" height="800" x-Axis-Label="Race" y-Axis-Label="Ongoing Tasks"></graph>        
       </div>
     </div>
 
