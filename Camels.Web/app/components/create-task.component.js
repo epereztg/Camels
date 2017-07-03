@@ -8,20 +8,16 @@
   
   function CreateTaskController(tasksService, $window, $scope) {
 
-    var controllerRoute = 'create';
-
-
-    $scope.itemId;
-    $scope.label;
-
+    var controllerRoute = 'createtask';
 
     //Save Task details button
     $scope.btnPostCall = function () {            
       var obj = {
         'ItemId': this.itemId,
-        'Label': $scope.label,
+        'Label': this.label,
         'Total': this.total,
-        'Current': this.current
+        'Current': this.current,
+        'Description': this.description
       }      
       var result = tasksService.createItem(controllerRoute, obj).then(function (data) {
         $window.history.back();

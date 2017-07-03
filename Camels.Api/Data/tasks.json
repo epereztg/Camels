@@ -1,141 +1,40 @@
 [
   {
-    "ItemId": 1,
-    "Label": "Task1",
-    "Total": 80,
-    "Current": 80,
+    "ItemId": 178411571,
+    "Label": "testtask",
+    "Total": 55,
+    "Current": 5,
+    "Description": "Testetestestetset",
     "Timeline": [
       {
-        "date": "20170503",
-        "complete": "5"
-      },
-      {
-        "date": "20170503",
-        "complete": "15"
-      },
-      {
-        "date": "20170503",
-        "complete": "25"
-      },
-      {
-        "date": "20170503",
-        "complete": "35"
-      },
-      {
-        "date": "20170503",
-        "complete": "12"
+        "date": "",
+        "complete": ""
       }
     ]
   },
   {
-    "ItemId": 6,
-    "Label": "Task6",
-    "Total": 104,
-    "Current": 100,
+    "ItemId": 599761415,
+    "Label": "testtask2",
+    "Total": 900,
+    "Current": 800,
+    "Description": null,
     "Timeline": [
       {
-        "date": "20170503",
-        "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "4"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "8"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
+        "date": "",
+        "complete": ""
       }
     ]
   },
   {
-    "ItemId": 8,
-    "Label": "Task8",
-    "Total": 152,
-    "Current": 150,
+    "ItemId": 558665999,
+    "Label": "TestT",
+    "Total": 87,
+    "Current": 10,
+    "Description": "UUHHH",
     "Timeline": [
       {
-        "date": "20170503",
-        "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "100"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "8"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
-      }
-    ]
-  },
-  {
-    "ItemId": 11,
-    "Label": "Task11",
-    "Total": 500,
-    "Current": 40,
-    "Timeline": [
-      {
-        "date": "20170503",
-        "complete": "2"
-      },
-      {
-        "date": "20170503",
-        "complete": "4"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "82"
-      },
-      {
-        "date": "20170503",
-        "complete": "10"
-      }
-    ]
-  },
-  {
-    "ItemId": 12,
-    "Label": "Task12",
-    "Total": 200,
-    "Current": 60,
-    "Timeline": [
-      {
-        "date": "20170503",
-        "complete": "22"
-      },
-      {
-        "date": "20170503",
-        "complete": "46"
-      },
-      {
-        "date": "20170503",
-        "complete": "6"
-      },
-      {
-        "date": "20170503",
-        "complete": "80"
-      },
-      {
-        "date": "20170503",
-        "complete": "100"
+        "date": "",
+        "complete": ""
       }
     ]
   }

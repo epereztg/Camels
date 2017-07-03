@@ -30,7 +30,10 @@
     itemDetail.total = item.Total;
     itemDetail.current = item.Current;
     itemDetail.itemId = itemId;
-    itemDetail.timeline = item.Timeline;    
+    itemDetail.timeline = item.Timeline;
+    itemDetail.description = item.Description;
+    
+    
 
 
     //Read from JSON with backend
@@ -47,6 +50,7 @@
         'Label': itemDetail.label,
         'Total': itemDetail.total,
         'Current': itemDetail.current,
+        'Description':itemDetail.description,
         'Timeline':itemDetail.timeline
       }      
       var result = tasksService.saveItem(controllerRoute, obj).then(function (data) {
@@ -64,6 +68,7 @@
         itemDetail.total = data.Total;
         itemDetail.current = data.Current;
         itemDetail.itemId = data.ItemId;
+        itemDetail.description =data.description,
         itemDetail.timeline = data.Timeline;
       });
     };
@@ -71,9 +76,6 @@
     itemDetail.goBack = function () {
       $window.history.back();
     };
-    itemDetail.sayHi = function () {
-        alert('hi!')
-    }
     
     itemDetail.deleteTaskButton = function () { 
       var result = tasksService.deleteTask(controllerRoute, itemDetail.itemId).then(function (data) {

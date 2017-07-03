@@ -8,6 +8,7 @@
         public string Label { get; set; }
         public int Total { get; set; }
         public int Current { get; set; }
+        public string Description { get; set; }
         public List<Timeline> Timeline { get; set; }
 
         public TaskItem() { }

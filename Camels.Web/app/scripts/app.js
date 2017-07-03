@@ -4,7 +4,7 @@
  * @ngdoc overview
  * @name yapp
  * @description
- * # yapp
+ * # camelsrace
  *
  * Main module of the application.
  */
@@ -26,17 +26,11 @@ angular
           url: '',
           templateUrl: 'views/base.html'
         })
-      .state('login',
-        {
-          url: '/login',
-          parent: 'base',
-          templateUrl: 'views/login.html'
-        })
       .state('dashboard',
         {
           url: '/dashboard',
           parent: 'base',
-          templateUrl: 'views/dashboard.html' 
+          templateUrl: 'views/dashboard.html'
         })
       .state('createTask',
         {
@@ -44,13 +38,13 @@ angular
           parent: 'base',
           templateUrl: 'views/create-task.template.html',
           controller: 'CreateTaskController as createTask'
-        })    
+        })
       .state('itemDetail',
         {
           url: '/item-detail/{itemId}',
           templateUrl: 'views/item-detail.template.html',
           controller: 'ItemDetailController as itemDetail',
-          resolve: {           
+          resolve: {
             itemId: [
               '$stateParams',
               function ($stateParams) {
@@ -58,23 +52,18 @@ angular
               }
             ],
             item: [
-              '$stateParams', 'tasksService', 
-                function ($stateParams, tasksService) {                  
+              '$stateParams', 'tasksService',
+                function ($stateParams, tasksService) {
                   var controllerRoute = 'editDetails';
-                 
-                  //Call Using Backend: (not waiting for config promise)
+
                   return tasksService.getItem(controllerRoute, parseInt($stateParams.itemId)).then(function (item) {
                     return item;
                   });
                 }
             ]
-                        
-          
+
+
           }
         });
-
   }
-
-
-
   );

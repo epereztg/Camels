@@ -60,6 +60,11 @@
               </span>
             </div>
             <br />
+            
+            
+            <span class="jsonlabel">Description:</span>
+            <textarea rows="4" cols="50" type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
+            <br />
 
             <button type="submit" ng-disabled="createTaskForm.$invalid" ng-click="btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
             
