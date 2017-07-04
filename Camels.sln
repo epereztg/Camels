@@ -15,19 +15,33 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Integration|Any CPU = Integration|Any CPU
+		Main|Any CPU = Main|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{38E82342-3F64-441C-AFFC-171E273BE610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38E82342-3F64-441C-AFFC-171E273BE610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E82342-3F64-441C-AFFC-171E273BE610}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{38E82342-3F64-441C-AFFC-171E273BE610}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{38E82342-3F64-441C-AFFC-171E273BE610}.Main|Any CPU.ActiveCfg = Main|Any CPU
+		{38E82342-3F64-441C-AFFC-171E273BE610}.Main|Any CPU.Build.0 = Main|Any CPU
 		{38E82342-3F64-441C-AFFC-171E273BE610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38E82342-3F64-441C-AFFC-171E273BE610}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Main|Any CPU.ActiveCfg = Main|Any CPU
+		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Main|Any CPU.Build.0 = Main|Any CPU
 		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F62FF1C-D371-456E-B2DD-662376DA8B48}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Main|Any CPU.ActiveCfg = Main|Any CPU
+		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Main|Any CPU.Build.0 = Main|Any CPU
 		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C6E1CE4-6D32-4619-882E-26942B187A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
