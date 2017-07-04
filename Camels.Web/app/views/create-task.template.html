@@ -27,7 +27,7 @@
             <div class="col-sm-4">
 
               <span class="jsonlabel">Label:</span>
-              <input type="text" placeholder="Task name" name="inputLabel" ng-model="label" required />
+              <input type="text" placeholder="Task name" name="inputLabel" ng-model="label" maxlength="40"  required />
               <div role="alert">
                 <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputLabel.$error.required">
                   Required value!
@@ -36,7 +36,7 @@
 
 
               <span class="jsonlabel">Total:</span>
-              <input type="number" placeholder="Estimated Total Time" name="inputTotal" ng-model="total" required />
+              <input type="number" placeholder="Estimated Total Time" name="inputTotal" min="0" ng-model="total" required />
               <div role="alert">
                 <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputTotal.$error.required">
                   Required value!
@@ -44,11 +44,14 @@
                 <span class="error" ng-show="createTaskForm.inputTotal.$error.number">
                   Not valid number!
                 </span>
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
+                  Current value cannot be less than 0!
+                </span>
               </div>
 
 
               <span class="jsonlabel">Current:</span>
-              <input type="number" placeholder="Estimated progress" name="inputCurrent" ng-model="current" max="{{total}}" required />
+              <input type="number" placeholder="Estimated progress" name="inputCurrent" ng-model="current" min="0" max="{{total}}" required />
               <br />
               <div role="alert">
                 <span class="error" ng-show="createTaskForm.inputCurrent.$error.number">
@@ -56,6 +59,9 @@
                 </span>
                 <span class="error" ng-show="createTaskForm.inputCurrent.$error.max">
                   Current value cannot be greater than Total!
+                </span>
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
+                  Current value cannot be less than 0!
                 </span>
               </div>
               <br />
@@ -73,7 +79,7 @@
 
           </div>
 
-          </div>
+        </div>
       </div>
     </form>
   </div>

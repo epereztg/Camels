@@ -12,9 +12,9 @@
         </div>
 
         <ul class="nav nav-sidebar">
-          <li ng-class="{active: $state.includes('dashboard')}"><a ui-sref="dashboard">Tasks List <span class="sr-only">(current)</span></a></li>          
+          <li ng-class="{active: $state.includes('dashboard')}"><a ui-sref="dashboard">Tasks List <span class="sr-only">(current)</span></a></li>
         </ul>
-               
+
 
         <!--Show Dropdown with tasks-->
         <div style="padding-right: 0;">
@@ -22,7 +22,7 @@
           <select class="form-control" ng-init="itemDetail.itemSelected=itemDetail.itemId" ng-model="itemDetail.itemSelected" ng-change="itemDetail.onTaskChange()" ng-options="task.Label for task in itemDetail.TasksList track by task.ItemId"></select>
         </div>
         <br />
-        
+
         <a ui-sref="createTask">
           <button class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #8FBC8F;vertical-align: bottom;  height:50px; width:250px;">Create New Task</button>
         </a>
@@ -33,84 +33,91 @@
 
         <div class="container">
           <form name="taskDetailForm">
-            <div class="detail ">
-              <h2>
-                Detail view for element:
-                <span>{{itemDetail.itemId}}</span>
-              </h2>
-
-              <div class="col-sm-4">
-                <span class="jsonlabel">ID:</span>
-                {{itemDetail.itemId}}<br />
-                <span class="jsonlabel">Label:</span>
-                <input type="text" name="inputLabel" ng-model="itemDetail.label" maxlength="255" required />
-                <div role="alert">
-                  <span class="error" ng-show="taskDetailForm.inputLabel.$error.required">
-                    Required value!
-                  </span>
-                </div>
-
-
-                <span class="jsonlabel">Total:</span>
-                <input type="number" name="inputTotal" ng-model="itemDetail.total" required />
-                <div role="alert">
-                  <span class="error" ng-show="taskDetailForm.inputTotal.$error.required">
-                    Required value!
-                  </span>
-                  <span class="error" ng-show="taskDetailForm.inputTotal.$error.number">
-                    Not valid number!
-                  </span>
-                </div>
-
-
-                <span class="jsonlabel">Current:</span>
-                <input type="number" name="inputCurrent" ng-model="itemDetail.current" max="{{itemDetail.total}}" required />
-                <br />
-                <div role="alert">
-                  <span class="error" ng-show="taskDetailForm.inputCurrent.$error.required">
-                    Required value!
-                  </span>
-                  <span class="error" ng-show="taskDetailForm.inputCurrent.$error.number">
-                    Not valid number!
-                  </span>
-                  <span class="error" ng-show="taskDetailForm.inputCurrent.$error.max">
-                    Current value cannot be greater than Total!
-                  </span>
-                </div>
-                <br />
-                
-
-                <span class="jsonlabel">Description:</span>
-                <textarea rows="4" cols="50" type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
-                <br />
-                
-
-                <!--Milestones-->
-                <h2>Milestones:</h2>
-                <div ng-repeat="mls in itemDetail.timeline">
-                  <div>
-                    <!--Date: <input ng-model="mls.date">-->
-                    <span class="jsonlabel">Date:</span>
-                    <input ng-model="mls.date">
-
-                    <br />
-                    <span class="jsonlabel">Complete:</span>
-                    <input ng-model="mls.complete">
-                    <br />
-                    <br />
-                  </div>
-                </div>
-
-
-                <button type="submit" ng-disabled="taskDetailForm.$invalid" ng-click="itemDetail.saveItemButton()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
-                <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
-                <button confirmed-click="itemDetail.deleteTaskButton()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: red;"
-                        ng-confirm-click="Would you like to delete this task?">
-                  Delete task
-                </button>
-
+            <!--Title-->
+            <h2>
+              Detail view for element:
+              <span>{{itemDetail.itemId}}</span>
+            </h2>
+            <!--Details-->
+            <div class="col-sm-10">
+              <span class="jsonlabel">ID:</span>
+              {{itemDetail.itemId}}<br />
+              <span class="jsonlabel" style="width: 25%;">Label:</span>
+              <input type="text" style="width: 75%;" name="inputLabel" ng-model="itemDetail.label" maxlength="255" required />
+              <div role="alert">
+                <span class="error" ng-show="taskDetailForm.inputLabel.$error.required">
+                  Required value!
+                </span>
               </div>
+
+
+              <span class="jsonlabel">Total:</span>
+              <input type="number" name="inputTotal" ng-model="itemDetail.total" min="0" required />
+              <div role="alert">
+                <span class="error" ng-show="taskDetailForm.inputTotal.$error.required">
+                  Required value!
+                </span>
+                <span class="error" ng-show="taskDetailForm.inputTotal.$error.number">
+                  Not valid number!
+                </span>
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
+                  Current value cannot be less than 0!
+                </span>
+              </div>
+
+
+              <span class="jsonlabel">Current:</span>
+              <input type="number" name="inputCurrent" ng-model="itemDetail.current" min="0" max="{{itemDetail.total}}" required />
+              <br />
+              <div role="alert">
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.required">
+                  Required value!
+                </span>
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.number">
+                  Not valid number!
+                </span>
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.max">
+                  Current value cannot be greater than Total!
+                </span>
+                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
+                  Current value cannot be less than 0!
+                </span>
+              </div>
+              <br />
+
+
+              <span class="jsonlabel">Description:</span>
+              <textarea rows="4" cols="50" type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
+              <br />
+
             </div>
+            <!--Milestones-->
+            <div class="col-sm-10">
+
+              <h2>Milestones:</h2>
+              <div ng-repeat="mls in itemDetail.timeline">
+                <div>
+                  <!--Date: <input ng-model="mls.date">-->
+                  <span class="jsonlabel">Date:</span>
+                  <input ng-model="mls.date">
+
+                  <br />
+                  <span class="jsonlabel">Complete:</span>
+                  <input ng-model="mls.complete">
+                  <br />
+                  <br />
+                </div>
+              </div>
+
+
+              <button type="submit" ng-disabled="taskDetailForm.$invalid" ng-click="itemDetail.saveItemButton()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
+              <button ng-click="itemDetail.goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
+              <button confirmed-click="itemDetail.deleteTaskButton()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: red;"
+                      ng-confirm-click="Would you like to delete this task?">
+                Delete task
+              </button>
+            </div>
+
           </form>
         </div>
       </div>

@@ -153,6 +153,7 @@
     <Content Include="app\styles\main.css" />
     <Content Include="app\styles\toaster.css" />
     <Content Include="app\styles\toaster.min.css" />
+    <Content Include="app\views\base.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\dashboard\overview.html" />
     <Content Include="app\views\home.template.html" />
