@@ -165,8 +165,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="gulpfile.js" />
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\develop.web.pubxml" />
-    <None Include="Properties\PublishProfiles\development.pubxml" />
+    <Content Include="package.json" />
+    <None Include="Properties\PublishProfiles\main_appserver7.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -238,7 +238,6 @@
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
     <Content Include="test\karma.conf.js" />
-    <Content Include="test\spec\services\env.spec.js" />
     <Content Include="test\spec\services\tasks.spec.js" />
     <Content Include="Web.config" />
   </ItemGroup>

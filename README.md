@@ -8,10 +8,10 @@ The initial data are stored in a JSON file that can be edited trough the applica
 
 ## Stack
 * Persistence store: JSON file
-* Backend: C# WebApi
+* Backend: Visual Studio 2015 Project C# WebApi
 * Frontend: AngularJS
-* CSS, HTML
-* Lodash JS
+* JS, CSS, HTML
+* Others: Lodash JS
 
 ### Build
 
@@ -23,8 +23,18 @@ It is a complete project with a build system focused on AngularJS apps and tight
 
 ## Installation
 
+The project itself does not need any installation after download, but karma test and gulp build in web part require and npm / bower install to execute.
 
-### Platform & tools
+Install required libraries to run karma test:
+* cd Camels/Camels.Web
+* npm install -g bower
+* bower install
+* npm test
+
+Install required gulp libraries:
+
+ * npm install --global gulp-cli.
+
 ### Get the Code
 
 Either clone this repository or fork it on GitHub and clone your fork:
