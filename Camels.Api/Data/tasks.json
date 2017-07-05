@@ -288,18 +288,5 @@
         "complete": "100"
       }
     ]
-  },
-  {
-    "ItemId": 1111990449,
-    "Label": "POPOPO",
-    "Total": 9999,
-    "Current": 999,
-    "Description": null,
-    "Timeline": [
-      {
-        "date": "",
-        "complete": ""
-      }
-    ]
   }
 ]
