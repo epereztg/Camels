@@ -15,7 +15,7 @@ namespace Camels.Project.Controllers
         private static readonly string JsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
         [Route("")]
         [HttpPost]
-        public void CreateTask(TaskItem taskItem)
+        public TaskItem CreateTask(TaskItem taskItem)
         {
             if (taskItem == null)
             {
@@ -49,8 +49,7 @@ namespace Camels.Project.Controllers
 
             //Serialize JsonService object
             JsonService.SaveJson(items, JsonPath);
-
-
+            return jsonItem;
         }
 
     }

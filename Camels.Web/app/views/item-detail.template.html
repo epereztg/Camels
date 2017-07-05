@@ -42,8 +42,8 @@
             <div class="col-sm-10">
               <span class="jsonlabel">ID:</span>
               {{itemDetail.itemId}}<br />
-              <span class="jsonlabel" style="width: 25%;">Label:</span>
-              <input type="text" style="width: 75%;" name="inputLabel" ng-model="itemDetail.label" maxlength="255" required />
+              <span class="jsonlabel" >Label:</span>
+              <input type="text" name="inputLabel" ng-model="itemDetail.label" maxlength="255" required />
               <div role="alert">
                 <span class="error" ng-show="taskDetailForm.inputLabel.$error.required">
                   Required value!
@@ -87,7 +87,7 @@
 
 
               <span class="jsonlabel">Description:</span>
-              <textarea rows="4" cols="50" type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
+              <textarea rows="4" cols="40" type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
               <br />
 
             </div>
