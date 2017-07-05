@@ -277,3 +277,6 @@ D:\Projects\Camels\Camels.Api\bin\System.Web.Http.Owin.xml
 D:\Projects\Camels\Camels.Api\obj\Debug\Camels.Api.csprojResolveAssemblyReference.cache
 D:\Projects\Camels\Camels.Api\obj\Debug\Camels.Project.dll
 D:\Projects\Camels\Camels.Api\obj\Debug\Camels.Project.pdb
+D:\Projects\Camels\Camels.Api\bin\NLog.config
+D:\Projects\Camels\Camels.Api\bin\NLog.dll
+D:\Projects\Camels\Camels.Api\bin\NLog.xml
