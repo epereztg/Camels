@@ -4,22 +4,22 @@
   angular.module('core.components')
     .directive('ngConfirmClick', [
     function () {
-        return {
-            link: function (scope, element, attr) {
-                var msg = attr.ngConfirmClick || "Are you sure?";
-                var clickAction = attr.confirmedClick;
-                element.bind('click', function (event) {
-                    if (window.confirm(msg)) {
-                      scope.$eval(clickAction);
-                    }
-                });
+      return {
+        link: function (scope, element, attr) {
+          var msg = attr.ngConfirmClick || "Are you sure?";
+          var clickAction = attr.confirmedClick;
+          element.bind('click', function (event) {
+            if (window.confirm(msg)) {
+              scope.$eval(clickAction);
             }
-        };
+          });
+        }
+      };
     }])
     .controller('ItemDetailController', ItemDetailController);
 
   ItemDetailController.$inject = ['item', 'itemId', 'tasksService', 'configApi', '$window', 'toaster'];
-  
+
   function ItemDetailController(item, itemId, tasksService, configApi, $window, toaster) {
 
     var controllerRoute = 'editDetails';
@@ -32,14 +32,14 @@
     itemDetail.itemId = itemId;
     itemDetail.timeline = item.Timeline;
     itemDetail.description = item.Description;
-    
-    
+
+
 
 
     //Read from JSON with backend
     itemDetail.result = tasksService.getItems(controllerRoute).then(function (data) {
       data = JSON.parse(data);
-      itemDetail.TasksList = data;     
+      itemDetail.TasksList = data;
     });
 
 
@@ -50,26 +50,29 @@
         'Label': itemDetail.label,
         'Total': itemDetail.total,
         'Current': itemDetail.current,
-        'Description':itemDetail.description,
-        'Timeline':itemDetail.timeline
-      }      
+        'Description': itemDetail.description,
+        'Timeline': itemDetail.timeline
+      }
       var result = tasksService.saveItem(controllerRoute, obj).then(function (data) {
         //Save and Back
-        $window.history.back();    
-        toaster.pop('info', "Updated", "Task has been updated");
-      });
+        $window.history.back();
+        toaster.pop('info', "Task has been updated", "Task has been updated");
+      },
+        function error(response) {
+          toaster.error('error', "Task could not be updated", "Task couldn´t be updated");
+        });
     };
 
 
     //On DropDownList Change 
     itemDetail.onTaskChange = function () {
 
-      tasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).then(function (data) {        
-        itemDetail.label = data.Label;        
+      tasksService.getItem(controllerRoute, itemDetail.itemSelected.ItemId).then(function (data) {
+        itemDetail.label = data.Label;
         itemDetail.total = data.Total;
         itemDetail.current = data.Current;
         itemDetail.itemId = data.ItemId;
-        itemDetail.description =data.description,
+        itemDetail.description = data.description,
         itemDetail.timeline = data.Timeline;
       });
     };
@@ -77,12 +80,15 @@
     itemDetail.goBack = function () {
       $window.history.back();
     };
-    
-    itemDetail.deleteTaskButton = function () { 
+
+    itemDetail.deleteTaskButton = function () {
       var result = tasksService.deleteTask(controllerRoute, itemDetail.itemId).then(function (data) {
         $window.history.back();
         toaster.pop('info', "Deleted", "Task has been deleted");
-      });
+      },
+        function error(response) {
+          toaster.error('error', "Task could not be deleted", "Task couldn´t be deleted");
+        });
     };
 
   };

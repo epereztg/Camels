@@ -40,7 +40,7 @@
             result = (data);
 
           }).error(function () {
-            alert("Something went wrong in the post call");
+            //alert("Something went wrong in the post call");
           });
       },
       createItem: function (config, controllerRoute, obj) {
@@ -56,7 +56,7 @@
             result = (data);
 
           }).error(function () {
-            alert("Something went wrong in the post call");
+            //alert("Something went wrong in the post call");
           });
       },
       deleteTask: function (config, controllerRoute, id) {

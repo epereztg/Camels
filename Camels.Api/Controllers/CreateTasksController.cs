@@ -1,6 +1,4 @@
-﻿
-
-namespace Camels.Project.Controllers
+﻿namespace Camels.Project.Controllers
 {
     using System.Collections.Generic;
     using System.Web.Http;
@@ -9,6 +7,7 @@ namespace Camels.Project.Controllers
     using System;
     using System.Configuration;
     using NLog;
+    using System.IO;
 
     [RoutePrefix("createtask")]
     public class CreateTasksController : ApiController
@@ -56,9 +55,10 @@ namespace Camels.Project.Controllers
                 logger.Info("Task {0} saved to: {1}", taskItem.Label, JsonPath);
 
             }
-            catch (Exception ex)
+            catch (IOException ex)
             {
-                logger.Error("Error: Cannot create task {0} to path:{1}", taskItem.Label, JsonPath);
+                logger.Error("Error: Cannot create task {0} to path:{1} -- {2}", taskItem.Label, JsonPath, ex.Message);
+                throw;
             }
             return jsonItem;
         }

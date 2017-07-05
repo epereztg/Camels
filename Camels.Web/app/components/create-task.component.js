@@ -28,16 +28,9 @@
           body: 'New task Created',
           timeout: 3000
         });        
-      });
-      //  .error(function () {
-      //  toaster.pop({
-      //    type: 'error',
-      //    title: 'Error',
-      //    body: 'Error creating new task',
-      //    timeout: 3000
-      //  });
-      //  //alert("Error creating new task");
-      //});
+      }, function error(response) {
+        toaster.error('error', "Task could not be created", "Task couldn´t be created");        
+      });            
 
     };
 

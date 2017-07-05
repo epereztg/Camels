@@ -1,4 +1,4 @@
-﻿using NLog.Targets;
+﻿
 
 namespace Camels.Project.Controllers
 {
@@ -10,6 +10,8 @@ namespace Camels.Project.Controllers
     using Models;
     using Services;
     using NLog;
+    using System.IO;
+    using NLog.Targets;
 
     [RoutePrefix("editDetails")]
     public class EditDetailsController : ApiController
@@ -56,9 +58,10 @@ namespace Camels.Project.Controllers
                 JsonService.SaveJson(items, JsonPath);
                 logger.Info("Task {0} deleted from path: {1}", jsonItem.Label, JsonPath);
             }
-            catch (Exception ex)
+            catch (IOException ex)
             {
-                logger.Error("Error: Cannot delete task {0} from path:{1}", jsonItem.Label, JsonPath);
+                logger.Error("Error: Cannot delete task {0} from path:{1} -- {2}", jsonItem.Label, JsonPath, ex.Message);
+                throw;
             }
             return result;
         }
@@ -96,6 +99,7 @@ namespace Camels.Project.Controllers
                 catch (Exception ex)
                 {
                     logger.Error("Cannot update task {0} from path:{1}", jsonItem.Label, JsonPath);
+                    throw;
                 }
             }
             else
