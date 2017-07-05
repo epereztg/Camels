@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿
 
 namespace Camels.Project.Controllers
 {
@@ -8,10 +8,12 @@ namespace Camels.Project.Controllers
     using Services;
     using System;
     using System.Configuration;
+    using NLog;
 
     [RoutePrefix("createtask")]
     public class CreateTasksController : ApiController
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private static readonly string JsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSONPath"];
         [Route("")]
         [HttpPost]
@@ -47,8 +49,17 @@ namespace Camels.Project.Controllers
             //Create Item        
             items.Add(jsonItem);
 
-            //Serialize JsonService object
-            JsonService.SaveJson(items, JsonPath);
+            try
+            {
+                //Serialize JsonService object
+                JsonService.SaveJson(items, JsonPath);
+                logger.Info("Task {0} saved to: {1}", taskItem.Label, JsonPath);
+
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error: Cannot create task {0} to path:{1}", taskItem.Label, JsonPath);
+            }
             return jsonItem;
         }
 
