@@ -1,8 +1,8 @@
 <div class="dashboard-page">
   <div class="container-fluid">
-    <form name="createTaskForm">
+   
       <div class="row">
-
+        <!--SideBar-->
         <div class="col-sm-3 col-md-2 sidebar">
           <div class="text-center">
             <h2 class="brand">
@@ -19,69 +19,75 @@
 
 
         <div class="container">
-          <div class="col-sm-4 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h2>
-              Create new Task
-            </h2>
+          
+          <!--Form-->
+          <form name="createTaskForm">
+            <div class="col-sm-4 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2>
+                Create new Task
+              </h2>
 
-            <div class="col-sm-4">
+              <div class="col-sm-4">
 
-              <span class="jsonlabel">Label:</span>
-              <input type="text" placeholder="Task name" name="inputLabel" ng-model="label" maxlength="40"  required />
-              <div role="alert">
-                <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputLabel.$error.required">
-                  Required value!
-                </span>
+                <span class="jsonlabel">Label:</span>
+                <input type="text" placeholder="Task name" name="inputLabel" ng-model="label" maxlength="40" required />
+                <div role="alert">
+                  <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputLabel.$error.required">
+                    Required value!
+                  </span>
+                </div>
+
+
+                <span class="jsonlabel">Total:</span>
+                <input type="number" placeholder="Estimated Total Time" name="inputTotal" min="0" ng-model="total" required />
+                <div role="alert">
+                  <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputTotal.$error.required">
+                    Required value!
+                  </span>
+                  <span class="error" ng-show="createTaskForm.inputTotal.$error.number">
+                    Not valid number!
+                  </span>
+                  <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
+                    Current value cannot be less than 0!
+                  </span>
+                </div>
+
+
+                <span class="jsonlabel">Current:</span>
+                <input type="number" placeholder="Estimated progress" name="inputCurrent" ng-model="current" min="0" max="{{total}}" required />
+                <br />
+                <div role="alert">
+                  <span class="error" ng-show="createTaskForm.inputCurrent.$error.number">
+                    Not valid number!
+                  </span>
+                  <span class="error" ng-show="createTaskForm.inputCurrent.$error.max">
+                    Current value cannot be greater than Total!
+                  </span>
+                  <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
+                    Current value cannot be less than 0!
+                  </span>
+                </div>
+                <br />
+
+
+                <span class="jsonlabel">Description:</span>
+                <textarea type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
+                <br />
+
+                <button type="submit" ng-disabled="createTaskForm.$invalid" ng-click="btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
+
+                <button ng-click="goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
+
               </div>
-
-
-              <span class="jsonlabel">Total:</span>
-              <input type="number" placeholder="Estimated Total Time" name="inputTotal" min="0" ng-model="total" required />
-              <div role="alert">
-                <span class="error" ng-show="createTaskForm.$submitted && createTaskForm.inputTotal.$error.required">
-                  Required value!
-                </span>
-                <span class="error" ng-show="createTaskForm.inputTotal.$error.number">
-                  Not valid number!
-                </span>
-                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
-                  Current value cannot be less than 0!
-                </span>
-              </div>
-
-
-              <span class="jsonlabel">Current:</span>
-              <input type="number" placeholder="Estimated progress" name="inputCurrent" ng-model="current" min="0" max="{{total}}" required />
-              <br />
-              <div role="alert">
-                <span class="error" ng-show="createTaskForm.inputCurrent.$error.number">
-                  Not valid number!
-                </span>
-                <span class="error" ng-show="createTaskForm.inputCurrent.$error.max">
-                  Current value cannot be greater than Total!
-                </span>
-                <span class="error" ng-show="taskDetailForm.inputCurrent.$error.min">
-                  Current value cannot be less than 0!
-                </span>
-              </div>
-              <br />
-
-
-              <span class="jsonlabel">Description:</span>
-              <textarea  type="text" name="inputDescription" ng-model="itemDetail.description" maxlength="255"></textarea>
-              <br />
-
-              <button type="submit" ng-disabled="createTaskForm.$invalid" ng-click="btnPostCall()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Save</button>
-
-              <button ng-click="goBack()" class="btn btn-white btn-outline btn-rounded btn-sm" style="background: #3ca2e0;">Cancel</button>
 
             </div>
 
-          </div>
+
+          </form>
 
         </div>
       </div>
-    </form>
+   
   </div>
 </div>
 
