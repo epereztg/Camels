@@ -2,7 +2,7 @@
 .chart {
   border-left: 1px solid black;
   /*x axis*/
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
   /*y axis*/
   border-right: 1px solid black;
   /*margin: 60px auto;*/

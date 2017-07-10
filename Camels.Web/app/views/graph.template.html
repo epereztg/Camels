@@ -1,11 +1,11 @@
-<div class="chart" style="width:{{$ctrl.width}}px; height:{{$ctrl.width}}px;">   
+<!--<div class="chart" style="width:{{$ctrl.width}}px; height:{{$ctrl.height}}px;">-->   
+<div class="chart" style="width:{{$ctrl.width}}px; height:{{($ctrl.data.length*100)}}px;">
   <!-- Labels -->
   <!--Vertical axis text-->
   <div class="y" style="height:{{$ctrl.height}}px;">{{$ctrl.yAxisLabel}}</div>
 
   <!--Horizontal axis text-->
   <!--<div class="x" style="width:{{$ctrl.width}}px;">{{$ctrl.xAxisLabel}}</div>-->
-
   <!-- Data -->
   <bar-list width="$ctrl.width" height="$ctrl.height" max="$ctrl.max" data="$ctrl.data"></bar-list>
 
